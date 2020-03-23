@@ -13,7 +13,7 @@ public class OrderPage extends JFrame {
      */
     public OrderPage() {
         super("Order Page");
-        setSize(1280, 720);
+        setSize(1380, 820);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
@@ -22,185 +22,187 @@ public class OrderPage extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BackGround = new javax.swing.JPanel();
+        Background = new javax.swing.JPanel();
         ElectronicItemPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        ElectronicLabel = new javax.swing.JLabel();
         UtensilItemPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        StationeryItemPanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        HouseHoldApplianceItemPanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        UtensilLabel = new javax.swing.JLabel();
+        HouseholdApplianceItemPanel = new javax.swing.JPanel();
+        HouseholdApplianceLabel = new javax.swing.JLabel();
+        StationaryItemPanel = new javax.swing.JPanel();
+        StationaryLabel = new javax.swing.JLabel();
         AccesoriesItemPanel = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        AccessoriesLabel = new javax.swing.JLabel();
+        ItemsScrollPane = new javax.swing.JScrollPane();
+        ItemsPanel = new javax.swing.JPanel();
         CameraItemPanel = new javax.swing.JPanel();
+        CameraIcon = new javax.swing.JLabel();
         CameraLabel = new javax.swing.JLabel();
-        CameraQty = new javax.swing.JComboBox<>();
-        CameraAddToChart = new javax.swing.JButton();
-        CameraImage = new javax.swing.JLabel();
-        LabelRM1 = new javax.swing.JLabel();
+        CameraCurrency = new javax.swing.JLabel();
         CameraPriceLabel = new javax.swing.JLabel();
-        MousePanelItem = new javax.swing.JPanel();
-        MouseImage = new javax.swing.JLabel();
-        MouseLabel = new javax.swing.JLabel();
-        MouseQty = new javax.swing.JComboBox<>();
-        MouseAddToChart = new javax.swing.JButton();
-        LabelRM = new javax.swing.JLabel();
-        MosuePriceLabel = new javax.swing.JLabel();
-        SmartPhoneItemPanel = new javax.swing.JPanel();
-        SmartPhoneImage = new javax.swing.JLabel();
-        LabelSmartPhone11Pro = new javax.swing.JLabel();
-        SmartPhoneQty = new javax.swing.JComboBox<>();
-        SmartPhoneAddToChart = new javax.swing.JButton();
-        LabelRm = new javax.swing.JLabel();
-        SmartPhonePriceLabel = new javax.swing.JLabel();
-        MonitorItemPanel3 = new javax.swing.JPanel();
-        MonitorImage = new javax.swing.JLabel();
+        CameraQty = new javax.swing.JComboBox<>();
+        CameraAddToCart = new javax.swing.JButton();
+        MonitorItemPanel = new javax.swing.JPanel();
+        MonitorIcon = new javax.swing.JLabel();
         MonitorLabel = new javax.swing.JLabel();
-        MonitorQty = new javax.swing.JComboBox<>();
-        MonitorAddToChart = new javax.swing.JButton();
-        LabelRM2 = new javax.swing.JLabel();
+        MonitorCurrency = new javax.swing.JLabel();
         MonitorPriceLabel = new javax.swing.JLabel();
-        SmartWatchItemPanel = new javax.swing.JPanel();
-        SmartPhoneImage4 = new javax.swing.JLabel();
-        SmartWatchLabel1 = new javax.swing.JLabel();
-        SmartWatchQty = new javax.swing.JComboBox<>();
-        SmartWatchAddToChart = new javax.swing.JButton();
-        LabelRM3 = new javax.swing.JLabel();
-        SmartWatchPriceLabel = new javax.swing.JLabel();
-        KeyBoardItemPanel = new javax.swing.JPanel();
-        KeyBoardImage = new javax.swing.JLabel();
-        KeyBoardLabel = new javax.swing.JLabel();
-        KeyBoardQty = new javax.swing.JComboBox<>();
-        KeyBoardAddToChart = new javax.swing.JButton();
-        LabelRM4 = new javax.swing.JLabel();
-        KeyBoardPriceLabel = new javax.swing.JLabel();
-        SpoonItemPanel = new javax.swing.JPanel();
-        SpoonImage = new javax.swing.JLabel();
-        SpoonLabel = new javax.swing.JLabel();
-        SpoonQty = new javax.swing.JComboBox<>();
-        SpoonAddToChart = new javax.swing.JButton();
-        LabelRM8 = new javax.swing.JLabel();
-        SpoonPriceLabel = new javax.swing.JLabel();
+        MonitorQty = new javax.swing.JComboBox<>();
+        MonitorAddToCart = new javax.swing.JButton();
+        MouseItemPanel = new javax.swing.JPanel();
+        MouseIcon = new javax.swing.JLabel();
+        MouseLabel = new javax.swing.JLabel();
+        MouseCurrency = new javax.swing.JLabel();
+        MosuePriceLabel = new javax.swing.JLabel();
+        MouseQty = new javax.swing.JComboBox<>();
+        MouseAddToCart = new javax.swing.JButton();
+        SmartphoneItemPanel = new javax.swing.JPanel();
+        SmartphoneIcon = new javax.swing.JLabel();
+        Smartphone11ProLabel = new javax.swing.JLabel();
+        SmartphoneCurrency = new javax.swing.JLabel();
+        SmartPhonePriceLabel = new javax.swing.JLabel();
+        SmartphoneQty = new javax.swing.JComboBox<>();
+        SmartphoneAddToCart = new javax.swing.JButton();
+        SmartwatchItemPanel = new javax.swing.JPanel();
+        SmartwatchIcon = new javax.swing.JLabel();
+        SmartwatchLabel = new javax.swing.JLabel();
+        SmartwatchCurrency = new javax.swing.JLabel();
+        SmartwatchPriceLabel = new javax.swing.JLabel();
+        SmartwatchQty = new javax.swing.JComboBox<>();
+        SmartwatchAddToCart = new javax.swing.JButton();
+        KeyboardItemPanel = new javax.swing.JPanel();
+        KeyboardIcon = new javax.swing.JLabel();
+        KeyboardLabel = new javax.swing.JLabel();
+        KeyboardCurrency = new javax.swing.JLabel();
+        KeyboardPriceLabel = new javax.swing.JLabel();
+        KeyboardQty = new javax.swing.JComboBox<>();
+        KeyboardAddToCart = new javax.swing.JButton();
         ForkItemPanel = new javax.swing.JPanel();
-        CameraLabel1 = new javax.swing.JLabel();
-        ForkQty = new javax.swing.JComboBox<>();
-        ForkAddToChart = new javax.swing.JButton();
-        LabelRM9 = new javax.swing.JLabel();
+        ForkIcon = new javax.swing.JLabel();
+        ForkLabel = new javax.swing.JLabel();
+        ForkCurrency = new javax.swing.JLabel();
         ForkPriceLabel = new javax.swing.JLabel();
-        ForkImage = new javax.swing.JLabel();
-        PlateItemPanel = new javax.swing.JPanel();
-        PlateImage = new javax.swing.JLabel();
-        PlateLabel = new javax.swing.JLabel();
-        PlateQty = new javax.swing.JComboBox<>();
-        PlateAddToChart = new javax.swing.JButton();
-        LabelRm1 = new javax.swing.JLabel();
-        PlatePriceLabel = new javax.swing.JLabel();
+        ForkQty = new javax.swing.JComboBox<>();
+        ForkAddToCart = new javax.swing.JButton();
+        SpoonItemPanel = new javax.swing.JPanel();
+        SpoonIcon = new javax.swing.JLabel();
+        SpoonLabel = new javax.swing.JLabel();
+        SpoonCurrency = new javax.swing.JLabel();
+        SpoonPriceLabel = new javax.swing.JLabel();
+        SpoonQty = new javax.swing.JComboBox<>();
+        SpoonAddToCart = new javax.swing.JButton();
         KnifeItemPanel = new javax.swing.JPanel();
-        KnifeImage = new javax.swing.JLabel();
+        KnifeIcon = new javax.swing.JLabel();
         KnifeLabel = new javax.swing.JLabel();
-        KnifeQty = new javax.swing.JComboBox<>();
-        KnifeAddToChart = new javax.swing.JButton();
-        LabelRM7 = new javax.swing.JLabel();
+        KnifeCurrency = new javax.swing.JLabel();
         KnifePriceLabel = new javax.swing.JLabel();
-        WrenchItemPanel = new javax.swing.JPanel();
-        WrenchImage = new javax.swing.JLabel();
-        WrenchLabel = new javax.swing.JLabel();
-        WrenchQty = new javax.swing.JComboBox<>();
-        WrenchAddToChart = new javax.swing.JButton();
-        LabelRM14 = new javax.swing.JLabel();
-        WrenchPriceLabel = new javax.swing.JLabel();
-        SmartWatchItemPanel2 = new javax.swing.JPanel();
-        ScissorsImage = new javax.swing.JLabel();
-        ScissorLabel = new javax.swing.JLabel();
-        ScissorQty = new javax.swing.JComboBox<>();
-        ScissorhAddToChart = new javax.swing.JButton();
-        LabelRM12 = new javax.swing.JLabel();
-        ScissorhPriceLabel = new javax.swing.JLabel();
+        KnifeQty = new javax.swing.JComboBox<>();
+        KnifeAddToCart = new javax.swing.JButton();
+        PlateItemPanel = new javax.swing.JPanel();
+        PlateIcon = new javax.swing.JLabel();
+        PlateLabel = new javax.swing.JLabel();
+        PlateCurrency = new javax.swing.JLabel();
+        PlatePriceLabel = new javax.swing.JLabel();
+        PlateQty = new javax.swing.JComboBox<>();
+        PlateAddToCart = new javax.swing.JButton();
         SawItemPanel = new javax.swing.JPanel();
+        SawIcon = new javax.swing.JLabel();
         SawLabel = new javax.swing.JLabel();
-        SawQty = new javax.swing.JComboBox<>();
-        SawAddToChart = new javax.swing.JButton();
-        LabelRM15 = new javax.swing.JLabel();
+        SawCurrency = new javax.swing.JLabel();
         SawPriceLabel = new javax.swing.JLabel();
-        SawImage = new javax.swing.JLabel();
-        ScrewDriverItemPanel = new javax.swing.JPanel();
-        ScrewDriverImage = new javax.swing.JLabel();
-        ScrewDriverLabel = new javax.swing.JLabel();
-        ScrewDriverQty = new javax.swing.JComboBox<>();
-        ScrewDriverAddToChart = new javax.swing.JButton();
-        LabelRm2 = new javax.swing.JLabel();
-        ScrewDriverPriceLabel = new javax.swing.JLabel();
-        SwissArmyKnifePanelItem = new javax.swing.JPanel();
-        SwissArmyKnifeImage = new javax.swing.JLabel();
+        SawQty = new javax.swing.JComboBox<>();
+        SawAddToCart = new javax.swing.JButton();
+        WrenchItemPanel = new javax.swing.JPanel();
+        WrenchIcon = new javax.swing.JLabel();
+        WrenchLabel = new javax.swing.JLabel();
+        WrenchCurrency = new javax.swing.JLabel();
+        WrenchPriceLabel = new javax.swing.JLabel();
+        WrenchQty = new javax.swing.JComboBox<>();
+        WrenchAddToCart = new javax.swing.JButton();
+        SwissArmyKnifeItemPanel = new javax.swing.JPanel();
+        SwissArmyKnifeIcon = new javax.swing.JLabel();
         SwissArmyKnifeLabel = new javax.swing.JLabel();
-        SwissArmyKnifeQty = new javax.swing.JComboBox<>();
-        SwissArmyKnifeAddToChart = new javax.swing.JButton();
-        LabelRM13 = new javax.swing.JLabel();
+        SwissArmyKnifeCurrency = new javax.swing.JLabel();
         SwissArmyKnifePriceLabel = new javax.swing.JLabel();
-        BraceletItemPanel = new javax.swing.JPanel();
-        BraceletImage = new javax.swing.JLabel();
-        BraceletLabel = new javax.swing.JLabel();
-        BraceletQty = new javax.swing.JComboBox<>();
-        BraceletAddToChart = new javax.swing.JButton();
-        LabelRM6 = new javax.swing.JLabel();
-        BraceletPriceLabel = new javax.swing.JLabel();
-        WatchItemPanel = new javax.swing.JPanel();
-        WatchImage = new javax.swing.JLabel();
-        WatchLabel = new javax.swing.JLabel();
-        WatchQty = new javax.swing.JComboBox<>();
-        WatchAddToChart = new javax.swing.JButton();
-        LabelRM16 = new javax.swing.JLabel();
-        WatchPriceLabel = new javax.swing.JLabel();
-        MarkerItemPanel = new javax.swing.JPanel();
-        MarkerImage = new javax.swing.JLabel();
-        MarkerLabel = new javax.swing.JLabel();
-        MarkerQty = new javax.swing.JComboBox<>();
-        MarkerAddToChart = new javax.swing.JButton();
-        LabelRM18 = new javax.swing.JLabel();
-        MarkerPriceLabel = new javax.swing.JLabel();
+        SwissArmyKnifeQty = new javax.swing.JComboBox<>();
+        SwissArmyKnifeAddToCart = new javax.swing.JButton();
+        ScrewdriverItemPanel = new javax.swing.JPanel();
+        ScrewdriverIcon = new javax.swing.JLabel();
+        ScrewdriverLabel = new javax.swing.JLabel();
+        ScrewdriverCurrency = new javax.swing.JLabel();
+        ScrewdriverPriceLabel = new javax.swing.JLabel();
+        ScrewdriverQty = new javax.swing.JComboBox<>();
+        ScrewdriverAddToCart = new javax.swing.JButton();
         BookItemPanel = new javax.swing.JPanel();
+        BookIcon = new javax.swing.JLabel();
         BookLabel = new javax.swing.JLabel();
-        BookQty = new javax.swing.JComboBox<>();
-        BookAddToChart = new javax.swing.JButton();
-        LabelRM19 = new javax.swing.JLabel();
+        BookCurrency = new javax.swing.JLabel();
         BookPriceLabel = new javax.swing.JLabel();
-        BookImage = new javax.swing.JLabel();
-        MousePanelItem1 = new javax.swing.JPanel();
-        PencilImage = new javax.swing.JLabel();
+        BookQty = new javax.swing.JComboBox<>();
+        BookAddToCart = new javax.swing.JButton();
+        MarkerItemPanel = new javax.swing.JPanel();
+        MarkerIcon = new javax.swing.JLabel();
+        MarkerLabel = new javax.swing.JLabel();
+        MarkerCurrency = new javax.swing.JLabel();
+        MarkerPriceLabel = new javax.swing.JLabel();
+        MarkerQty = new javax.swing.JComboBox<>();
+        MarkerAddToCart = new javax.swing.JButton();
+        PencilItemPanel = new javax.swing.JPanel();
+        PencilIcon = new javax.swing.JLabel();
         PencilLabel = new javax.swing.JLabel();
-        PencilQty = new javax.swing.JComboBox<>();
-        PencilAddToChart = new javax.swing.JButton();
-        LabelRM17 = new javax.swing.JLabel();
+        PencilCurrency = new javax.swing.JLabel();
         PencilPriceLabel = new javax.swing.JLabel();
-        NecklessItemPanel = new javax.swing.JPanel();
-        NecklessImages = new javax.swing.JLabel();
-        NecklessLabel = new javax.swing.JLabel();
-        NecklessQty = new javax.swing.JComboBox<>();
-        NecklessAddToChart = new javax.swing.JButton();
-        LabelRm3 = new javax.swing.JLabel();
-        NecklessPriceLabel = new javax.swing.JLabel();
-        KeyBoardItemPanel5 = new javax.swing.JPanel();
-        GlassesImage = new javax.swing.JLabel();
+        PencilQty = new javax.swing.JComboBox<>();
+        PencilAddToCart = new javax.swing.JButton();
+        ScissorItemPanel = new javax.swing.JPanel();
+        ScissorIcon = new javax.swing.JLabel();
+        ScissorLabel = new javax.swing.JLabel();
+        ScissorCurrency = new javax.swing.JLabel();
+        ScissorPriceLabel = new javax.swing.JLabel();
+        ScissorQty = new javax.swing.JComboBox<>();
+        ScissorAddToCart = new javax.swing.JButton();
+        NecklaceItemPanel = new javax.swing.JPanel();
+        NecklaceIcon = new javax.swing.JLabel();
+        NecklaceLabel = new javax.swing.JLabel();
+        NecklaceCurrency = new javax.swing.JLabel();
+        NecklacePriceLabel = new javax.swing.JLabel();
+        NecklaceQty = new javax.swing.JComboBox<>();
+        NecklaceAddToCart = new javax.swing.JButton();
+        WatchItemPanel = new javax.swing.JPanel();
+        WatchIcon = new javax.swing.JLabel();
+        WatchLabel = new javax.swing.JLabel();
+        WatchCurrency = new javax.swing.JLabel();
+        WatchPriceLabel = new javax.swing.JLabel();
+        WatchQty = new javax.swing.JComboBox<>();
+        WatchAddToCart = new javax.swing.JButton();
+        BraceletItemPanel = new javax.swing.JPanel();
+        BraceletIcon = new javax.swing.JLabel();
+        BraceletLabel = new javax.swing.JLabel();
+        BraceletCurrency = new javax.swing.JLabel();
+        BraceletPriceLabel = new javax.swing.JLabel();
+        BraceletQty = new javax.swing.JComboBox<>();
+        BraceletAddToCart = new javax.swing.JButton();
+        GlassesItemPanel = new javax.swing.JPanel();
+        GlassesIcon = new javax.swing.JLabel();
         GlassesLabel = new javax.swing.JLabel();
-        GlassesQty = new javax.swing.JComboBox<>();
-        GlassesAddToChart = new javax.swing.JButton();
-        LabelRM21 = new javax.swing.JLabel();
+        GlassesCurrency = new javax.swing.JLabel();
         GlassesPriceLabel = new javax.swing.JLabel();
+        GlassesQty = new javax.swing.JComboBox<>();
+        GlassesAddToCart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 720));
+        setResizable(false);
 
-        BackGround.setMaximumSize(null);
-        BackGround.setPreferredSize(new java.awt.Dimension(1280, 720));
+        Background.setBackground(new java.awt.Color(153, 153, 153));
+        Background.setPreferredSize(new java.awt.Dimension(1280, 720));
+        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ElectronicItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Electronic");
+        ElectronicLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ElectronicLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ElectronicLabel.setText("Electronic");
 
         javax.swing.GroupLayout ElectronicItemPanelLayout = new javax.swing.GroupLayout(ElectronicItemPanel);
         ElectronicItemPanel.setLayout(ElectronicItemPanelLayout);
@@ -208,19 +210,21 @@ public class OrderPage extends JFrame {
             ElectronicItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ElectronicItemPanelLayout.createSequentialGroup()
                 .addGap(86, 86, 86)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ElectronicLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         ElectronicItemPanelLayout.setVerticalGroup(
             ElectronicItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+            .addComponent(ElectronicLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
+
+        Background.add(ElectronicItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 213, -1, -1));
 
         UtensilItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Utensil");
+        UtensilLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UtensilLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UtensilLabel.setText("Utensil");
 
         javax.swing.GroupLayout UtensilItemPanelLayout = new javax.swing.GroupLayout(UtensilItemPanel);
         UtensilItemPanel.setLayout(UtensilItemPanelLayout);
@@ -228,80 +232,90 @@ public class OrderPage extends JFrame {
             UtensilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UtensilItemPanelLayout.createSequentialGroup()
                 .addGap(86, 86, 86)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UtensilLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         UtensilItemPanelLayout.setVerticalGroup(
             UtensilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+            .addComponent(UtensilLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
 
-        StationeryItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        Background.add(UtensilItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 213, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Household Appliance");
+        HouseholdApplianceItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
-        javax.swing.GroupLayout StationeryItemPanelLayout = new javax.swing.GroupLayout(StationeryItemPanel);
-        StationeryItemPanel.setLayout(StationeryItemPanelLayout);
-        StationeryItemPanelLayout.setHorizontalGroup(
-            StationeryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+        HouseholdApplianceLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        HouseholdApplianceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        HouseholdApplianceLabel.setText("Household Appliance");
+
+        javax.swing.GroupLayout HouseholdApplianceItemPanelLayout = new javax.swing.GroupLayout(HouseholdApplianceItemPanel);
+        HouseholdApplianceItemPanel.setLayout(HouseholdApplianceItemPanelLayout);
+        HouseholdApplianceItemPanelLayout.setHorizontalGroup(
+            HouseholdApplianceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(HouseholdApplianceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
         );
-        StationeryItemPanelLayout.setVerticalGroup(
-            StationeryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+        HouseholdApplianceItemPanelLayout.setVerticalGroup(
+            HouseholdApplianceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(HouseholdApplianceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
 
-        HouseHoldApplianceItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        Background.add(HouseholdApplianceItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 213, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Stationery");
+        StationaryItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
-        javax.swing.GroupLayout HouseHoldApplianceItemPanelLayout = new javax.swing.GroupLayout(HouseHoldApplianceItemPanel);
-        HouseHoldApplianceItemPanel.setLayout(HouseHoldApplianceItemPanelLayout);
-        HouseHoldApplianceItemPanelLayout.setHorizontalGroup(
-            HouseHoldApplianceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+        StationaryLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        StationaryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        StationaryLabel.setText("Stationary");
+
+        javax.swing.GroupLayout StationaryItemPanelLayout = new javax.swing.GroupLayout(StationaryItemPanel);
+        StationaryItemPanel.setLayout(StationaryItemPanelLayout);
+        StationaryItemPanelLayout.setHorizontalGroup(
+            StationaryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(StationaryLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
         );
-        HouseHoldApplianceItemPanelLayout.setVerticalGroup(
-            HouseHoldApplianceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+        StationaryItemPanelLayout.setVerticalGroup(
+            StationaryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(StationaryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
+
+        Background.add(StationaryItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 213, -1, -1));
 
         AccesoriesItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Accessories");
+        AccessoriesLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        AccessoriesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AccessoriesLabel.setText("Accessories");
 
         javax.swing.GroupLayout AccesoriesItemPanelLayout = new javax.swing.GroupLayout(AccesoriesItemPanel);
         AccesoriesItemPanel.setLayout(AccesoriesItemPanelLayout);
         AccesoriesItemPanelLayout.setHorizontalGroup(
             AccesoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+            .addComponent(AccessoriesLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
         );
         AccesoriesItemPanelLayout.setVerticalGroup(
             AccesoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+            .addComponent(AccessoriesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
 
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        Background.add(AccesoriesItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 213, 240, -1));
 
+        ItemsScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ItemsScrollPane.setPreferredSize(new java.awt.Dimension(1260, 440));
+
+        CameraItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         CameraItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        CameraIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Camera.png"))); // NOI18N
 
         CameraLabel.setText("Camera");
 
-        CameraQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        CameraAddToChart.setText("add to chart");
-
-        CameraImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Camera.png"))); // NOI18N
-
-        LabelRM1.setText("RM");
+        CameraCurrency.setText("RM");
 
         CameraPriceLabel.setText("2400");
+
+        CameraQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        CameraAddToCart.setText("add to cart");
 
         javax.swing.GroupLayout CameraItemPanelLayout = new javax.swing.GroupLayout(CameraItemPanel);
         CameraItemPanel.setLayout(CameraItemPanelLayout);
@@ -311,350 +325,330 @@ public class OrderPage extends JFrame {
                 .addContainerGap()
                 .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CameraItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(CameraPriceLabel))
-                    .addComponent(CameraLabel)
-                    .addGroup(CameraItemPanelLayout.createSequentialGroup()
                         .addComponent(CameraQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(CameraAddToChart))
-                    .addComponent(CameraImage, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(CameraAddToCart))
+                    .addGroup(CameraItemPanelLayout.createSequentialGroup()
+                        .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CameraItemPanelLayout.createSequentialGroup()
+                                .addComponent(CameraCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CameraPriceLabel))
+                            .addComponent(CameraLabel)
+                            .addComponent(CameraIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         CameraItemPanelLayout.setVerticalGroup(
             CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CameraItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(CameraImage, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CameraIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(CameraLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CameraCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(CameraPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CameraQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CameraAddToChart))
-                .addContainerGap())
+                    .addComponent(CameraAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        MousePanelItem.setPreferredSize(new java.awt.Dimension(160, 160));
+        MonitorItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        MonitorItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        MouseImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mouse.png"))); // NOI18N
-
-        MouseLabel.setText("Mouse");
-
-        MouseQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        MouseAddToChart.setText("add to chart");
-
-        LabelRM.setText("RM");
-
-        MosuePriceLabel.setText("800");
-
-        javax.swing.GroupLayout MousePanelItemLayout = new javax.swing.GroupLayout(MousePanelItem);
-        MousePanelItem.setLayout(MousePanelItemLayout);
-        MousePanelItemLayout.setHorizontalGroup(
-            MousePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MousePanelItemLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MousePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MousePanelItemLayout.createSequentialGroup()
-                        .addComponent(LabelRM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(MosuePriceLabel))
-                    .addComponent(MouseLabel)
-                    .addGroup(MousePanelItemLayout.createSequentialGroup()
-                        .addComponent(MouseQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(MouseAddToChart))
-                    .addComponent(MouseImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        MousePanelItemLayout.setVerticalGroup(
-            MousePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MousePanelItemLayout.createSequentialGroup()
-                .addComponent(MouseImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(MouseLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MousePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MosuePriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MousePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MouseQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MouseAddToChart))
-                .addContainerGap())
-        );
-
-        SmartPhoneItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        SmartPhoneImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Picture1.png"))); // NOI18N
-
-        LabelSmartPhone11Pro.setText("Smart phone 11 pro");
-
-        SmartPhoneQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        SmartPhoneAddToChart.setText("add to chart");
-
-        LabelRm.setText("RM");
-
-        SmartPhonePriceLabel.setText("800");
-
-        javax.swing.GroupLayout SmartPhoneItemPanelLayout = new javax.swing.GroupLayout(SmartPhoneItemPanel);
-        SmartPhoneItemPanel.setLayout(SmartPhoneItemPanelLayout);
-        SmartPhoneItemPanelLayout.setHorizontalGroup(
-            SmartPhoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartPhoneItemPanelLayout.createSequentialGroup()
-                .addComponent(SmartPhoneImage)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(SmartPhoneItemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(SmartPhoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SmartPhoneItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRm)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SmartPhonePriceLabel))
-                    .addComponent(LabelSmartPhone11Pro)
-                    .addGroup(SmartPhoneItemPanelLayout.createSequentialGroup()
-                        .addComponent(SmartPhoneQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SmartPhoneAddToChart)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        SmartPhoneItemPanelLayout.setVerticalGroup(
-            SmartPhoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartPhoneItemPanelLayout.createSequentialGroup()
-                .addComponent(SmartPhoneImage)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LabelSmartPhone11Pro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartPhoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SmartPhonePriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SmartPhoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SmartPhoneQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartPhoneAddToChart))
-                .addContainerGap())
-        );
-
-        MonitorItemPanel3.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        MonitorImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Monitor.png"))); // NOI18N
+        MonitorIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Monitor.png"))); // NOI18N
 
         MonitorLabel.setText("Monitor");
 
-        MonitorQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        MonitorAddToChart.setText("add to chart");
-
-        LabelRM2.setText("RM");
+        MonitorCurrency.setText("RM");
 
         MonitorPriceLabel.setText("300");
 
-        javax.swing.GroupLayout MonitorItemPanel3Layout = new javax.swing.GroupLayout(MonitorItemPanel3);
-        MonitorItemPanel3.setLayout(MonitorItemPanel3Layout);
-        MonitorItemPanel3Layout.setHorizontalGroup(
-            MonitorItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MonitorItemPanel3Layout.createSequentialGroup()
+        MonitorQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        MonitorAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout MonitorItemPanelLayout = new javax.swing.GroupLayout(MonitorItemPanel);
+        MonitorItemPanel.setLayout(MonitorItemPanelLayout);
+        MonitorItemPanelLayout.setHorizontalGroup(
+            MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MonitorItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(MonitorItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MonitorItemPanel3Layout.createSequentialGroup()
-                        .addComponent(LabelRM2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(MonitorPriceLabel))
-                    .addComponent(MonitorLabel)
-                    .addGroup(MonitorItemPanel3Layout.createSequentialGroup()
+                .addGroup(MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MonitorItemPanelLayout.createSequentialGroup()
                         .addComponent(MonitorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(MonitorAddToChart))
-                    .addComponent(MonitorImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(MonitorAddToCart))
+                    .addGroup(MonitorItemPanelLayout.createSequentialGroup()
+                        .addGroup(MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MonitorItemPanelLayout.createSequentialGroup()
+                                .addComponent(MonitorCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(MonitorPriceLabel))
+                            .addComponent(MonitorLabel)
+                            .addComponent(MonitorIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        MonitorItemPanel3Layout.setVerticalGroup(
-            MonitorItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MonitorItemPanel3Layout.createSequentialGroup()
-                .addComponent(MonitorImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+        MonitorItemPanelLayout.setVerticalGroup(
+            MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MonitorItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MonitorIcon)
                 .addGap(17, 17, 17)
                 .addComponent(MonitorLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MonitorItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MonitorCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MonitorPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MonitorItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MonitorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MonitorAddToChart))
-                .addContainerGap())
+                    .addComponent(MonitorAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        SmartWatchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+        MouseItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        MouseItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        SmartPhoneImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SmartWatch.png"))); // NOI18N
+        MouseIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mouse.png"))); // NOI18N
 
-        SmartWatchLabel1.setText("SmartWatch");
+        MouseLabel.setText("Mouse");
 
-        SmartWatchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        MouseCurrency.setText("RM");
 
-        SmartWatchAddToChart.setText("add to chart");
+        MosuePriceLabel.setText("800");
 
-        LabelRM3.setText("RM");
+        MouseQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
-        SmartWatchPriceLabel.setText("1300");
+        MouseAddToCart.setText("add to cart");
 
-        javax.swing.GroupLayout SmartWatchItemPanelLayout = new javax.swing.GroupLayout(SmartWatchItemPanel);
-        SmartWatchItemPanel.setLayout(SmartWatchItemPanelLayout);
-        SmartWatchItemPanelLayout.setHorizontalGroup(
-            SmartWatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartWatchItemPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout MouseItemPanelLayout = new javax.swing.GroupLayout(MouseItemPanel);
+        MouseItemPanel.setLayout(MouseItemPanelLayout);
+        MouseItemPanelLayout.setHorizontalGroup(
+            MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MouseItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SmartWatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SmartWatchItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SmartWatchPriceLabel))
-                    .addComponent(SmartWatchLabel1)
-                    .addGroup(SmartWatchItemPanelLayout.createSequentialGroup()
-                        .addComponent(SmartWatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SmartWatchAddToChart))
-                    .addComponent(SmartPhoneImage4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        SmartWatchItemPanelLayout.setVerticalGroup(
-            SmartWatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartWatchItemPanelLayout.createSequentialGroup()
-                .addComponent(SmartPhoneImage4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(SmartWatchLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartWatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SmartWatchPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SmartWatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SmartWatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartWatchAddToChart))
+                .addGroup(MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MouseItemPanelLayout.createSequentialGroup()
+                        .addComponent(MouseQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(MouseAddToCart))
+                    .addGroup(MouseItemPanelLayout.createSequentialGroup()
+                        .addGroup(MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MouseItemPanelLayout.createSequentialGroup()
+                                .addComponent(MouseCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(MosuePriceLabel))
+                            .addComponent(MouseLabel)
+                            .addComponent(MouseIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        KeyBoardItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        KeyBoardImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Keyboard.png"))); // NOI18N
-
-        KeyBoardLabel.setText("KeyBoard");
-
-        KeyBoardQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        KeyBoardAddToChart.setText("add to chart");
-
-        LabelRM4.setText("RM");
-
-        KeyBoardPriceLabel.setText("1300");
-
-        javax.swing.GroupLayout KeyBoardItemPanelLayout = new javax.swing.GroupLayout(KeyBoardItemPanel);
-        KeyBoardItemPanel.setLayout(KeyBoardItemPanelLayout);
-        KeyBoardItemPanelLayout.setHorizontalGroup(
-            KeyBoardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeyBoardItemPanelLayout.createSequentialGroup()
+        MouseItemPanelLayout.setVerticalGroup(
+            MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MouseItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(KeyBoardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(KeyBoardItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(KeyBoardPriceLabel))
-                    .addComponent(KeyBoardLabel)
-                    .addGroup(KeyBoardItemPanelLayout.createSequentialGroup()
-                        .addComponent(KeyBoardQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(KeyBoardAddToChart))
-                    .addComponent(KeyBoardImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        KeyBoardItemPanelLayout.setVerticalGroup(
-            KeyBoardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeyBoardItemPanelLayout.createSequentialGroup()
-                .addComponent(KeyBoardImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(KeyBoardLabel)
+                .addComponent(MouseIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MouseLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(KeyBoardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(KeyBoardPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(KeyBoardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(KeyBoardQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(KeyBoardAddToChart))
-                .addContainerGap())
+                .addGroup(MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MouseCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MosuePriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MouseQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MouseAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        SpoonItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+        SmartphoneItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        SmartphoneItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        SpoonImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spoon.png"))); // NOI18N
+        SmartphoneIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Picture1.png"))); // NOI18N
 
-        SpoonLabel.setText("Spoon");
+        Smartphone11ProLabel.setText("Smartphone 11 Pro");
 
-        SpoonQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SmartphoneCurrency.setText("RM");
 
-        SpoonAddToChart.setText("add to chart");
+        SmartPhonePriceLabel.setText("800");
 
-        LabelRM8.setText("RM");
+        SmartphoneQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
-        SpoonPriceLabel.setText("2");
+        SmartphoneAddToCart.setText("add to cart");
 
-        javax.swing.GroupLayout SpoonItemPanelLayout = new javax.swing.GroupLayout(SpoonItemPanel);
-        SpoonItemPanel.setLayout(SpoonItemPanelLayout);
-        SpoonItemPanelLayout.setHorizontalGroup(
-            SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SpoonItemPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout SmartphoneItemPanelLayout = new javax.swing.GroupLayout(SmartphoneItemPanel);
+        SmartphoneItemPanel.setLayout(SmartphoneItemPanelLayout);
+        SmartphoneItemPanelLayout.setHorizontalGroup(
+            SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                .addComponent(SmartphoneIcon)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SpoonItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SpoonPriceLabel))
-                    .addComponent(SpoonLabel)
-                    .addGroup(SpoonItemPanelLayout.createSequentialGroup()
-                        .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SpoonAddToChart))
-                    .addComponent(SpoonImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                        .addComponent(SmartphoneQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(SmartphoneAddToCart))
+                    .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                        .addGroup(SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                                .addComponent(SmartphoneCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SmartPhonePriceLabel))
+                            .addComponent(Smartphone11ProLabel))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        SpoonItemPanelLayout.setVerticalGroup(
-            SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SpoonItemPanelLayout.createSequentialGroup()
-                .addComponent(SpoonImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(SpoonLabel)
+        SmartphoneItemPanelLayout.setVerticalGroup(
+            SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                .addComponent(SmartphoneIcon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SpoonPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SpoonAddToChart))
+                .addComponent(Smartphone11ProLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                        .addGroup(SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SmartphoneCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SmartPhonePriceLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SmartphoneQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(SmartphoneAddToCart)))
                 .addContainerGap())
         );
 
+        SmartwatchItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        SmartwatchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        SmartwatchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SmartWatch.png"))); // NOI18N
+
+        SmartwatchLabel.setText("Smartwatch");
+
+        SmartwatchCurrency.setText("RM");
+
+        SmartwatchPriceLabel.setText("1300");
+
+        SmartwatchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        SmartwatchAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout SmartwatchItemPanelLayout = new javax.swing.GroupLayout(SmartwatchItemPanel);
+        SmartwatchItemPanel.setLayout(SmartwatchItemPanelLayout);
+        SmartwatchItemPanelLayout.setHorizontalGroup(
+            SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
+                        .addGroup(SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
+                                .addComponent(SmartwatchCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SmartwatchPriceLabel))
+                            .addComponent(SmartwatchLabel)
+                            .addComponent(SmartwatchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
+                        .addComponent(SmartwatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SmartwatchAddToCart)
+                        .addGap(25, 25, 25))))
+        );
+        SmartwatchItemPanelLayout.setVerticalGroup(
+            SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
+                .addComponent(SmartwatchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(SmartwatchLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SmartwatchCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SmartwatchPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SmartwatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SmartwatchAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        KeyboardItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        KeyboardItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        KeyboardIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Keyboard.png"))); // NOI18N
+
+        KeyboardLabel.setText("Keyboard");
+
+        KeyboardCurrency.setText("RM");
+
+        KeyboardPriceLabel.setText("1300");
+
+        KeyboardQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        KeyboardAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout KeyboardItemPanelLayout = new javax.swing.GroupLayout(KeyboardItemPanel);
+        KeyboardItemPanel.setLayout(KeyboardItemPanelLayout);
+        KeyboardItemPanelLayout.setHorizontalGroup(
+            KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KeyboardItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(KeyboardItemPanelLayout.createSequentialGroup()
+                        .addComponent(KeyboardQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(KeyboardAddToCart))
+                    .addGroup(KeyboardItemPanelLayout.createSequentialGroup()
+                        .addGroup(KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(KeyboardItemPanelLayout.createSequentialGroup()
+                                .addComponent(KeyboardCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(KeyboardPriceLabel))
+                            .addComponent(KeyboardLabel)
+                            .addComponent(KeyboardIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        KeyboardItemPanelLayout.setVerticalGroup(
+            KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KeyboardItemPanelLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(KeyboardIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(KeyboardLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(KeyboardCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(KeyboardPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(KeyboardQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(KeyboardAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        ForkItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         ForkItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        CameraLabel1.setText("Fork");
+        ForkIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fork.png"))); // NOI18N
 
-        ForkQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ForkLabel.setText("Fork");
 
-        ForkAddToChart.setText("add to chart");
-
-        LabelRM9.setText("RM");
+        ForkCurrency.setText("RM");
 
         ForkPriceLabel.setText("2");
 
-        ForkImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fork.png"))); // NOI18N
+        ForkQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        ForkAddToCart.setText("add to cart");
 
         javax.swing.GroupLayout ForkItemPanelLayout = new javax.swing.GroupLayout(ForkItemPanel);
         ForkItemPanel.setLayout(ForkItemPanelLayout);
@@ -664,101 +658,107 @@ public class OrderPage extends JFrame {
                 .addContainerGap()
                 .addGroup(ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ForkItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ForkPriceLabel))
-                    .addComponent(CameraLabel1)
-                    .addGroup(ForkItemPanelLayout.createSequentialGroup()
                         .addComponent(ForkQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ForkAddToChart))
-                    .addComponent(ForkImage, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(ForkAddToCart))
+                    .addGroup(ForkItemPanelLayout.createSequentialGroup()
+                        .addGroup(ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ForkItemPanelLayout.createSequentialGroup()
+                                .addComponent(ForkCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ForkPriceLabel))
+                            .addComponent(ForkLabel)
+                            .addComponent(ForkIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         ForkItemPanelLayout.setVerticalGroup(
             ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForkItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ForkImage, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ForkIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(CameraLabel1)
+                .addComponent(ForkLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ForkCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ForkPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ForkQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ForkAddToChart))
+                    .addComponent(ForkAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        SpoonItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        SpoonItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        SpoonIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spoon.png"))); // NOI18N
+
+        SpoonLabel.setText("Spoon");
+
+        SpoonCurrency.setText("RM");
+
+        SpoonPriceLabel.setText("2");
+
+        SpoonQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        SpoonAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout SpoonItemPanelLayout = new javax.swing.GroupLayout(SpoonItemPanel);
+        SpoonItemPanel.setLayout(SpoonItemPanelLayout);
+        SpoonItemPanelLayout.setHorizontalGroup(
+            SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SpoonItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SpoonItemPanelLayout.createSequentialGroup()
+                        .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SpoonItemPanelLayout.createSequentialGroup()
+                                .addComponent(SpoonCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SpoonPriceLabel))
+                            .addComponent(SpoonLabel)
+                            .addComponent(SpoonIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 68, Short.MAX_VALUE))
+                    .addGroup(SpoonItemPanelLayout.createSequentialGroup()
+                        .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SpoonAddToCart)))
                 .addContainerGap())
         );
-
-        PlateItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        PlateImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Plate.png"))); // NOI18N
-
-        PlateLabel.setText("Plate");
-
-        PlateQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        PlateAddToChart.setText("add to chart");
-
-        LabelRm1.setText("RM");
-
-        PlatePriceLabel.setText("8");
-
-        javax.swing.GroupLayout PlateItemPanelLayout = new javax.swing.GroupLayout(PlateItemPanel);
-        PlateItemPanel.setLayout(PlateItemPanelLayout);
-        PlateItemPanelLayout.setHorizontalGroup(
-            PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PlateItemPanelLayout.createSequentialGroup()
+        SpoonItemPanelLayout.setVerticalGroup(
+            SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SpoonItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PlateItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRm1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(PlatePriceLabel))
-                    .addComponent(PlateLabel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(PlateItemPanelLayout.createSequentialGroup()
-                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PlateImage)
-                    .addGroup(PlateItemPanelLayout.createSequentialGroup()
-                        .addComponent(PlateQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(PlateAddToChart)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        PlateItemPanelLayout.setVerticalGroup(
-            PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PlateItemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PlateImage)
-                .addGap(32, 32, 32)
-                .addComponent(PlateLabel)
+                .addComponent(SpoonIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(SpoonLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PlatePriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PlateQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PlateAddToChart)))
+                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SpoonCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SpoonPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SpoonAddToCart))
+                .addGap(12, 12, 12))
         );
 
+        KnifeItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         KnifeItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        KnifeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Knife.png"))); // NOI18N
+        KnifeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Knife.png"))); // NOI18N
 
         KnifeLabel.setText("Knife");
 
-        KnifeQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        KnifeAddToChart.setText("add to chart");
-
-        LabelRM7.setText("RM");
+        KnifeCurrency.setText("RM");
 
         KnifePriceLabel.setText("6");
+
+        KnifeQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        KnifeAddToCart.setText("add to cart");
 
         javax.swing.GroupLayout KnifeItemPanelLayout = new javax.swing.GroupLayout(KnifeItemPanel);
         KnifeItemPanel.setLayout(KnifeItemPanelLayout);
@@ -768,147 +768,107 @@ public class OrderPage extends JFrame {
                 .addContainerGap()
                 .addGroup(KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(KnifeItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(KnifePriceLabel))
-                    .addComponent(KnifeLabel)
+                        .addGroup(KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(KnifeItemPanelLayout.createSequentialGroup()
+                                .addComponent(KnifeCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(KnifePriceLabel))
+                            .addComponent(KnifeLabel)
+                            .addComponent(KnifeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 67, Short.MAX_VALUE))
                     .addGroup(KnifeItemPanelLayout.createSequentialGroup()
                         .addComponent(KnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(KnifeAddToChart))
-                    .addComponent(KnifeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(KnifeAddToCart)))
+                .addContainerGap())
         );
         KnifeItemPanelLayout.setVerticalGroup(
             KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KnifeItemPanelLayout.createSequentialGroup()
-                .addComponent(KnifeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(KnifeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
                 .addComponent(KnifeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(KnifeCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(KnifePriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(KnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(KnifeAddToChart))
-                .addContainerGap())
+                    .addComponent(KnifeAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        WrenchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+        PlateItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        PlateItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        WrenchImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Wrench.png"))); // NOI18N
+        PlateIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Plate.png"))); // NOI18N
 
-        WrenchLabel.setText("Wrench");
+        PlateLabel.setText("Plate");
 
-        WrenchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        PlateCurrency.setText("RM");
 
-        WrenchAddToChart.setText("add to chart");
+        PlatePriceLabel.setText("8");
 
-        LabelRM14.setText("RM");
+        PlateQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
-        WrenchPriceLabel.setText("30");
+        PlateAddToCart.setText("add to cart");
 
-        javax.swing.GroupLayout WrenchItemPanelLayout = new javax.swing.GroupLayout(WrenchItemPanel);
-        WrenchItemPanel.setLayout(WrenchItemPanelLayout);
-        WrenchItemPanelLayout.setHorizontalGroup(
-            WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout PlateItemPanelLayout = new javax.swing.GroupLayout(PlateItemPanel);
+        PlateItemPanel.setLayout(PlateItemPanelLayout);
+        PlateItemPanelLayout.setHorizontalGroup(
+            PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PlateItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(WrenchItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(WrenchPriceLabel))
-                    .addComponent(WrenchLabel)
-                    .addGroup(WrenchItemPanelLayout.createSequentialGroup()
-                        .addComponent(WrenchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(WrenchAddToChart))
-                    .addComponent(WrenchImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        WrenchItemPanelLayout.setVerticalGroup(
-            WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WrenchItemPanelLayout.createSequentialGroup()
-                .addComponent(WrenchImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(WrenchLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(WrenchPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WrenchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WrenchAddToChart))
+                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PlateItemPanelLayout.createSequentialGroup()
+                        .addComponent(PlateQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(PlateAddToCart))
+                    .addGroup(PlateItemPanelLayout.createSequentialGroup()
+                        .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PlateItemPanelLayout.createSequentialGroup()
+                                .addComponent(PlateCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(PlatePriceLabel))
+                            .addComponent(PlateLabel)
+                            .addComponent(PlateIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        SmartWatchItemPanel2.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        ScissorsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Scissors.png"))); // NOI18N
-
-        ScissorLabel.setText("Scissor");
-
-        ScissorQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        ScissorhAddToChart.setText("add to chart");
-
-        LabelRM12.setText("RM");
-
-        ScissorhPriceLabel.setText("4");
-
-        javax.swing.GroupLayout SmartWatchItemPanel2Layout = new javax.swing.GroupLayout(SmartWatchItemPanel2);
-        SmartWatchItemPanel2.setLayout(SmartWatchItemPanel2Layout);
-        SmartWatchItemPanel2Layout.setHorizontalGroup(
-            SmartWatchItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartWatchItemPanel2Layout.createSequentialGroup()
+        PlateItemPanelLayout.setVerticalGroup(
+            PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PlateItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SmartWatchItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SmartWatchItemPanel2Layout.createSequentialGroup()
-                        .addComponent(LabelRM12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ScissorhPriceLabel))
-                    .addComponent(ScissorLabel)
-                    .addGroup(SmartWatchItemPanel2Layout.createSequentialGroup()
-                        .addComponent(ScissorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ScissorhAddToChart))
-                    .addComponent(ScissorsImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        SmartWatchItemPanel2Layout.setVerticalGroup(
-            SmartWatchItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SmartWatchItemPanel2Layout.createSequentialGroup()
-                .addComponent(ScissorsImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(ScissorLabel)
+                .addComponent(PlateIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(PlateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartWatchItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ScissorhPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SmartWatchItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ScissorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScissorhAddToChart))
-                .addContainerGap())
+                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PlateCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PlatePriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PlateQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PlateAddToCart))
+                .addGap(6, 6, 6))
         );
 
+        SawItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         SawItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        SawIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Saw.png"))); // NOI18N
 
         SawLabel.setText("Saw");
 
-        SawQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        SawAddToChart.setText("add to chart");
-
-        LabelRM15.setText("RM");
+        SawCurrency.setText("RM");
 
         SawPriceLabel.setText("60");
 
-        SawImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Saw.png"))); // NOI18N
+        SawQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        SawAddToCart.setText("add to cart");
 
         javax.swing.GroupLayout SawItemPanelLayout = new javax.swing.GroupLayout(SawItemPanel);
         SawItemPanel.setLayout(SawItemPanelLayout);
@@ -918,298 +878,218 @@ public class OrderPage extends JFrame {
                 .addContainerGap()
                 .addGroup(SawItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SawItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SawPriceLabel))
-                    .addComponent(SawLabel)
-                    .addGroup(SawItemPanelLayout.createSequentialGroup()
                         .addComponent(SawQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SawAddToChart))
-                    .addComponent(SawImage, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(SawAddToCart))
+                    .addGroup(SawItemPanelLayout.createSequentialGroup()
+                        .addGroup(SawItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SawItemPanelLayout.createSequentialGroup()
+                                .addComponent(SawCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SawPriceLabel))
+                            .addComponent(SawLabel)
+                            .addComponent(SawIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         SawItemPanelLayout.setVerticalGroup(
             SawItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SawItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SawImage, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SawIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(SawLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SawItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SawCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(SawPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SawItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SawQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SawAddToChart))
+                    .addComponent(SawAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        WrenchItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        WrenchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        WrenchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Wrench.png"))); // NOI18N
+
+        WrenchLabel.setText("Wrench");
+
+        WrenchCurrency.setText("RM");
+
+        WrenchPriceLabel.setText("30");
+
+        WrenchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        WrenchAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout WrenchItemPanelLayout = new javax.swing.GroupLayout(WrenchItemPanel);
+        WrenchItemPanel.setLayout(WrenchItemPanelLayout);
+        WrenchItemPanelLayout.setHorizontalGroup(
+            WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+                        .addComponent(WrenchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(WrenchAddToCart))
+                    .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+                        .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+                                .addComponent(WrenchCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(WrenchPriceLabel))
+                            .addComponent(WrenchLabel)
+                            .addComponent(WrenchIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        ScrewDriverItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        ScrewDriverImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ScrewDriver.png"))); // NOI18N
-
-        ScrewDriverLabel.setText("Screw Driver");
-
-        ScrewDriverQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        ScrewDriverAddToChart.setText("add to chart");
-
-        LabelRm2.setText("RM");
-
-        ScrewDriverPriceLabel.setText("10");
-
-        javax.swing.GroupLayout ScrewDriverItemPanelLayout = new javax.swing.GroupLayout(ScrewDriverItemPanel);
-        ScrewDriverItemPanel.setLayout(ScrewDriverItemPanelLayout);
-        ScrewDriverItemPanelLayout.setHorizontalGroup(
-            ScrewDriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ScrewDriverItemPanelLayout.createSequentialGroup()
-                .addGroup(ScrewDriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ScrewDriverItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRm2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ScrewDriverPriceLabel))
-                    .addComponent(ScrewDriverLabel)
-                    .addGroup(ScrewDriverItemPanelLayout.createSequentialGroup()
-                        .addComponent(ScrewDriverQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ScrewDriverAddToChart))
-                    .addComponent(ScrewDriverImage, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        ScrewDriverItemPanelLayout.setVerticalGroup(
-            ScrewDriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ScrewDriverItemPanelLayout.createSequentialGroup()
-                .addComponent(ScrewDriverImage, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ScrewDriverLabel)
+        WrenchItemPanelLayout.setVerticalGroup(
+            WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WrenchItemPanelLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(WrenchIcon)
+                .addGap(17, 17, 17)
+                .addComponent(WrenchLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ScrewDriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRm2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ScrewDriverPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ScrewDriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ScrewDriverQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScrewDriverAddToChart)))
+                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WrenchCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(WrenchPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(WrenchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WrenchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WrenchAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        SwissArmyKnifePanelItem.setPreferredSize(new java.awt.Dimension(160, 160));
+        SwissArmyKnifeItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        SwissArmyKnifeItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        SwissArmyKnifeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SwissArmyKnife.png"))); // NOI18N
+        SwissArmyKnifeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SwissArmyKnife.png"))); // NOI18N
 
         SwissArmyKnifeLabel.setText("Swiss Army Knife");
 
-        SwissArmyKnifeQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        SwissArmyKnifeAddToChart.setText("add to chart");
-
-        LabelRM13.setText("RM");
+        SwissArmyKnifeCurrency.setText("RM");
 
         SwissArmyKnifePriceLabel.setText("70");
 
-        javax.swing.GroupLayout SwissArmyKnifePanelItemLayout = new javax.swing.GroupLayout(SwissArmyKnifePanelItem);
-        SwissArmyKnifePanelItem.setLayout(SwissArmyKnifePanelItemLayout);
-        SwissArmyKnifePanelItemLayout.setHorizontalGroup(
-            SwissArmyKnifePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SwissArmyKnifePanelItemLayout.createSequentialGroup()
+        SwissArmyKnifeQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        SwissArmyKnifeAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout SwissArmyKnifeItemPanelLayout = new javax.swing.GroupLayout(SwissArmyKnifeItemPanel);
+        SwissArmyKnifeItemPanel.setLayout(SwissArmyKnifeItemPanelLayout);
+        SwissArmyKnifeItemPanelLayout.setHorizontalGroup(
+            SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SwissArmyKnifeItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SwissArmyKnifePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SwissArmyKnifePanelItemLayout.createSequentialGroup()
-                        .addComponent(LabelRM13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SwissArmyKnifePriceLabel))
-                    .addComponent(SwissArmyKnifeLabel)
-                    .addGroup(SwissArmyKnifePanelItemLayout.createSequentialGroup()
+                .addGroup(SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SwissArmyKnifeItemPanelLayout.createSequentialGroup()
                         .addComponent(SwissArmyKnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SwissArmyKnifeAddToChart))
-                    .addComponent(SwissArmyKnifeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(SwissArmyKnifeAddToCart))
+                    .addGroup(SwissArmyKnifeItemPanelLayout.createSequentialGroup()
+                        .addGroup(SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SwissArmyKnifeItemPanelLayout.createSequentialGroup()
+                                .addComponent(SwissArmyKnifeCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SwissArmyKnifePriceLabel))
+                            .addComponent(SwissArmyKnifeLabel)
+                            .addComponent(SwissArmyKnifeIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        SwissArmyKnifePanelItemLayout.setVerticalGroup(
-            SwissArmyKnifePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SwissArmyKnifePanelItemLayout.createSequentialGroup()
-                .addComponent(SwissArmyKnifeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+        SwissArmyKnifeItemPanelLayout.setVerticalGroup(
+            SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SwissArmyKnifeItemPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(SwissArmyKnifeIcon)
                 .addGap(17, 17, 17)
                 .addComponent(SwissArmyKnifeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SwissArmyKnifePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SwissArmyKnifeCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(SwissArmyKnifePriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SwissArmyKnifePanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SwissArmyKnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SwissArmyKnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SwissArmyKnifeAddToChart))
-                .addContainerGap())
+                    .addComponent(SwissArmyKnifeAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        BraceletItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+        ScrewdriverItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        ScrewdriverItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        BraceletImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bracelet.png"))); // NOI18N
+        ScrewdriverIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ScrewDriver.png"))); // NOI18N
 
-        BraceletLabel.setText("Bracelet");
+        ScrewdriverLabel.setText("Screwdriver");
 
-        BraceletQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ScrewdriverCurrency.setText("RM");
 
-        BraceletAddToChart.setText("add to chart");
+        ScrewdriverPriceLabel.setText("10");
 
-        LabelRM6.setText("RM");
+        ScrewdriverQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
-        BraceletPriceLabel.setText("300");
+        ScrewdriverAddToCart.setText("add to cart");
 
-        javax.swing.GroupLayout BraceletItemPanelLayout = new javax.swing.GroupLayout(BraceletItemPanel);
-        BraceletItemPanel.setLayout(BraceletItemPanelLayout);
-        BraceletItemPanelLayout.setHorizontalGroup(
-            BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout ScrewdriverItemPanelLayout = new javax.swing.GroupLayout(ScrewdriverItemPanel);
+        ScrewdriverItemPanel.setLayout(ScrewdriverItemPanelLayout);
+        ScrewdriverItemPanelLayout.setHorizontalGroup(
+            ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ScrewdriverItemPanelLayout.createSequentialGroup()
+                .addGroup(ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ScrewdriverItemPanelLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(ScrewdriverQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addComponent(ScrewdriverAddToCart))
+                    .addGroup(ScrewdriverItemPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ScrewdriverItemPanelLayout.createSequentialGroup()
+                                .addComponent(ScrewdriverCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ScrewdriverPriceLabel))
+                            .addComponent(ScrewdriverLabel)
+                            .addComponent(ScrewdriverIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        ScrewdriverItemPanelLayout.setVerticalGroup(
+            ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ScrewdriverItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BraceletItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BraceletPriceLabel))
-                    .addComponent(BraceletLabel)
-                    .addGroup(BraceletItemPanelLayout.createSequentialGroup()
-                        .addComponent(BraceletQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BraceletAddToChart)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
-                .addComponent(BraceletImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        BraceletItemPanelLayout.setVerticalGroup(
-            BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
-                .addComponent(BraceletImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(BraceletLabel)
+                .addComponent(ScrewdriverIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ScrewdriverLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BraceletPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BraceletQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BraceletAddToChart))
-                .addContainerGap())
-        );
-
-        WatchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        WatchImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Watch.png"))); // NOI18N
-
-        WatchLabel.setText("Watch");
-
-        WatchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        WatchAddToChart.setText("add to chart");
-
-        LabelRM16.setText("RM");
-
-        WatchPriceLabel.setText("900");
-
-        javax.swing.GroupLayout WatchItemPanelLayout = new javax.swing.GroupLayout(WatchItemPanel);
-        WatchItemPanel.setLayout(WatchItemPanelLayout);
-        WatchItemPanelLayout.setHorizontalGroup(
-            WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WatchItemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(WatchItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(WatchPriceLabel))
-                    .addComponent(WatchLabel)
-                    .addGroup(WatchItemPanelLayout.createSequentialGroup()
-                        .addComponent(WatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(WatchAddToChart))
-                    .addComponent(WatchImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        WatchItemPanelLayout.setVerticalGroup(
-            WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WatchItemPanelLayout.createSequentialGroup()
-                .addComponent(WatchImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(WatchLabel)
+                .addGroup(ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ScrewdriverCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ScrewdriverPriceLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(WatchPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WatchAddToChart))
-                .addContainerGap())
+                .addGroup(ScrewdriverItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ScrewdriverQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrewdriverAddToCart))
+                .addGap(6, 6, 6))
         );
 
-        MarkerItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        MarkerImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Marker.png"))); // NOI18N
-
-        MarkerLabel.setText("Marker");
-
-        MarkerQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        MarkerAddToChart.setText("add to chart");
-
-        LabelRM18.setText("RM");
-
-        MarkerPriceLabel.setText("3");
-
-        javax.swing.GroupLayout MarkerItemPanelLayout = new javax.swing.GroupLayout(MarkerItemPanel);
-        MarkerItemPanel.setLayout(MarkerItemPanelLayout);
-        MarkerItemPanelLayout.setHorizontalGroup(
-            MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MarkerItemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MarkerItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(MarkerPriceLabel))
-                    .addComponent(MarkerLabel)
-                    .addGroup(MarkerItemPanelLayout.createSequentialGroup()
-                        .addComponent(MarkerQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(MarkerAddToChart))
-                    .addComponent(MarkerImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        MarkerItemPanelLayout.setVerticalGroup(
-            MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MarkerItemPanelLayout.createSequentialGroup()
-                .addComponent(MarkerImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(MarkerLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MarkerPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MarkerQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MarkerAddToChart))
-                .addContainerGap())
-        );
-
+        BookItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         BookItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        BookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Book.png"))); // NOI18N
 
         BookLabel.setText("Book");
 
-        BookQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        BookAddToChart.setText("add to chart");
-
-        LabelRM19.setText("RM");
+        BookCurrency.setText("RM");
 
         BookPriceLabel.setText("8");
 
-        BookImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Book.png"))); // NOI18N
+        BookQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        BookAddToCart.setText("add to cart");
 
         javax.swing.GroupLayout BookItemPanelLayout = new javax.swing.GroupLayout(BookItemPanel);
         BookItemPanel.setLayout(BookItemPanelLayout);
@@ -1219,323 +1099,531 @@ public class OrderPage extends JFrame {
                 .addContainerGap()
                 .addGroup(BookItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BookItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRM19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BookPriceLabel))
-                    .addComponent(BookLabel)
-                    .addGroup(BookItemPanelLayout.createSequentialGroup()
                         .addComponent(BookQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BookAddToChart))
-                    .addComponent(BookImage, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(BookAddToCart))
+                    .addGroup(BookItemPanelLayout.createSequentialGroup()
+                        .addGroup(BookItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BookItemPanelLayout.createSequentialGroup()
+                                .addComponent(BookCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BookPriceLabel))
+                            .addComponent(BookLabel)
+                            .addComponent(BookIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         BookItemPanelLayout.setVerticalGroup(
             BookItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BookItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BookImage, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BookIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(BookLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BookItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BookCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BookPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BookItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BookQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BookAddToChart))
-                .addContainerGap())
+                    .addComponent(BookAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        MousePanelItem1.setPreferredSize(new java.awt.Dimension(160, 160));
+        MarkerItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        MarkerItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        PencilImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Pencil.png"))); // NOI18N
+        MarkerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Marker.png"))); // NOI18N
+
+        MarkerLabel.setText("Marker");
+
+        MarkerCurrency.setText("RM");
+
+        MarkerPriceLabel.setText("3");
+
+        MarkerQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        MarkerAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout MarkerItemPanelLayout = new javax.swing.GroupLayout(MarkerItemPanel);
+        MarkerItemPanel.setLayout(MarkerItemPanelLayout);
+        MarkerItemPanelLayout.setHorizontalGroup(
+            MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MarkerItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MarkerItemPanelLayout.createSequentialGroup()
+                        .addComponent(MarkerQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(MarkerAddToCart))
+                    .addGroup(MarkerItemPanelLayout.createSequentialGroup()
+                        .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MarkerItemPanelLayout.createSequentialGroup()
+                                .addComponent(MarkerCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(MarkerPriceLabel))
+                            .addComponent(MarkerLabel)
+                            .addComponent(MarkerIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        MarkerItemPanelLayout.setVerticalGroup(
+            MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MarkerItemPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(MarkerIcon)
+                .addGap(34, 34, 34)
+                .addComponent(MarkerLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MarkerCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MarkerPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MarkerItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MarkerQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MarkerAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        PencilItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        PencilItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        PencilIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Pencil.png"))); // NOI18N
 
         PencilLabel.setText("Pencil");
 
-        PencilQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        PencilAddToChart.setText("add to chart");
-
-        LabelRM17.setText("RM");
+        PencilCurrency.setText("RM");
 
         PencilPriceLabel.setText("2");
 
-        javax.swing.GroupLayout MousePanelItem1Layout = new javax.swing.GroupLayout(MousePanelItem1);
-        MousePanelItem1.setLayout(MousePanelItem1Layout);
-        MousePanelItem1Layout.setHorizontalGroup(
-            MousePanelItem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MousePanelItem1Layout.createSequentialGroup()
+        PencilQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        PencilAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout PencilItemPanelLayout = new javax.swing.GroupLayout(PencilItemPanel);
+        PencilItemPanel.setLayout(PencilItemPanelLayout);
+        PencilItemPanelLayout.setHorizontalGroup(
+            PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PencilItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(MousePanelItem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MousePanelItem1Layout.createSequentialGroup()
-                        .addComponent(LabelRM17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(PencilPriceLabel))
-                    .addComponent(PencilLabel)
-                    .addGroup(MousePanelItem1Layout.createSequentialGroup()
+                .addGroup(PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PencilItemPanelLayout.createSequentialGroup()
                         .addComponent(PencilQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(PencilAddToChart))
-                    .addComponent(PencilImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        MousePanelItem1Layout.setVerticalGroup(
-            MousePanelItem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MousePanelItem1Layout.createSequentialGroup()
-                .addComponent(PencilImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(PencilLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MousePanelItem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PencilPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MousePanelItem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PencilQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PencilAddToChart))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(PencilAddToCart))
+                    .addGroup(PencilItemPanelLayout.createSequentialGroup()
+                        .addGroup(PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PencilItemPanelLayout.createSequentialGroup()
+                                .addComponent(PencilCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(PencilPriceLabel))
+                            .addComponent(PencilLabel)
+                            .addComponent(PencilIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        NecklessItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
-
-        NecklessImages.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Neckless.png"))); // NOI18N
-
-        NecklessLabel.setText("Neckless");
-
-        NecklessQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        NecklessAddToChart.setText("add to chart");
-
-        LabelRm3.setText("RM");
-
-        NecklessPriceLabel.setText("220");
-
-        javax.swing.GroupLayout NecklessItemPanelLayout = new javax.swing.GroupLayout(NecklessItemPanel);
-        NecklessItemPanel.setLayout(NecklessItemPanelLayout);
-        NecklessItemPanelLayout.setHorizontalGroup(
-            NecklessItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NecklessItemPanelLayout.createSequentialGroup()
-                .addGroup(NecklessItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(NecklessItemPanelLayout.createSequentialGroup()
-                        .addComponent(LabelRm3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(NecklessPriceLabel))
-                    .addComponent(NecklessLabel)
-                    .addGroup(NecklessItemPanelLayout.createSequentialGroup()
-                        .addComponent(NecklessQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(NecklessAddToChart))
-                    .addComponent(NecklessImages, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        NecklessItemPanelLayout.setVerticalGroup(
-            NecklessItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NecklessItemPanelLayout.createSequentialGroup()
+        PencilItemPanelLayout.setVerticalGroup(
+            PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PencilItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NecklessImages)
-                .addGap(24, 24, 24)
-                .addComponent(NecklessLabel)
+                .addComponent(PencilIcon)
+                .addGap(26, 26, 26)
+                .addComponent(PencilLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(NecklessItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRm3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(NecklessPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(NecklessItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NecklessQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NecklessAddToChart)))
+                .addGroup(PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PencilCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PencilPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PencilItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PencilQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PencilAddToCart))
+                .addGap(12, 12, 12))
         );
 
-        KeyBoardItemPanel5.setPreferredSize(new java.awt.Dimension(160, 160));
+        ScissorItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        ScissorItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        GlassesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Glasses.png"))); // NOI18N
+        ScissorIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Scissors.png"))); // NOI18N
+
+        ScissorLabel.setText("Scissor");
+
+        ScissorCurrency.setText("RM");
+
+        ScissorPriceLabel.setText("4");
+
+        ScissorQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        ScissorAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout ScissorItemPanelLayout = new javax.swing.GroupLayout(ScissorItemPanel);
+        ScissorItemPanel.setLayout(ScissorItemPanelLayout);
+        ScissorItemPanelLayout.setHorizontalGroup(
+            ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ScissorItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ScissorItemPanelLayout.createSequentialGroup()
+                        .addComponent(ScissorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ScissorAddToCart))
+                    .addGroup(ScissorItemPanelLayout.createSequentialGroup()
+                        .addGroup(ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ScissorItemPanelLayout.createSequentialGroup()
+                                .addComponent(ScissorCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ScissorPriceLabel))
+                            .addComponent(ScissorLabel)
+                            .addComponent(ScissorIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        ScissorItemPanelLayout.setVerticalGroup(
+            ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ScissorItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ScissorIcon)
+                .addGap(34, 34, 34)
+                .addComponent(ScissorLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ScissorCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ScissorPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ScissorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ScissorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScissorAddToCart)))
+        );
+
+        NecklaceItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        NecklaceItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        NecklaceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Neckless.png"))); // NOI18N
+
+        NecklaceLabel.setText("Necklace");
+
+        NecklaceCurrency.setText("RM");
+
+        NecklacePriceLabel.setText("220");
+
+        NecklaceQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        NecklaceAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout NecklaceItemPanelLayout = new javax.swing.GroupLayout(NecklaceItemPanel);
+        NecklaceItemPanel.setLayout(NecklaceItemPanelLayout);
+        NecklaceItemPanelLayout.setHorizontalGroup(
+            NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NecklaceItemPanelLayout.createSequentialGroup()
+                .addGroup(NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(NecklaceItemPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(NecklaceCurrency)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NecklacePriceLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(NecklaceItemPanelLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(NecklaceQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addComponent(NecklaceAddToCart)))
+                .addContainerGap())
+            .addGroup(NecklaceItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NecklaceIcon)
+                    .addComponent(NecklaceLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        NecklaceItemPanelLayout.setVerticalGroup(
+            NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NecklaceItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NecklaceIcon)
+                .addGap(24, 24, 24)
+                .addComponent(NecklaceLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NecklaceCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(NecklacePriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(NecklaceItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NecklaceQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NecklaceAddToCart))
+                .addGap(6, 6, 6))
+        );
+
+        WatchItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        WatchItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        WatchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Watch.png"))); // NOI18N
+
+        WatchLabel.setText("Watch");
+
+        WatchCurrency.setText("RM");
+
+        WatchPriceLabel.setText("900");
+
+        WatchQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        WatchAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout WatchItemPanelLayout = new javax.swing.GroupLayout(WatchItemPanel);
+        WatchItemPanel.setLayout(WatchItemPanelLayout);
+        WatchItemPanelLayout.setHorizontalGroup(
+            WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WatchItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WatchItemPanelLayout.createSequentialGroup()
+                        .addComponent(WatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(WatchAddToCart))
+                    .addGroup(WatchItemPanelLayout.createSequentialGroup()
+                        .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(WatchItemPanelLayout.createSequentialGroup()
+                                .addComponent(WatchCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(WatchPriceLabel))
+                            .addComponent(WatchLabel)
+                            .addComponent(WatchIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        WatchItemPanelLayout.setVerticalGroup(
+            WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WatchItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(WatchIcon)
+                .addGap(26, 26, 26)
+                .addComponent(WatchLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WatchCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(WatchPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(WatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WatchAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        BraceletItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        BraceletItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        BraceletIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bracelet.png"))); // NOI18N
+
+        BraceletLabel.setText("Bracelet");
+
+        BraceletCurrency.setText("RM");
+
+        BraceletPriceLabel.setText("300");
+
+        BraceletQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        BraceletAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout BraceletItemPanelLayout = new javax.swing.GroupLayout(BraceletItemPanel);
+        BraceletItemPanel.setLayout(BraceletItemPanelLayout);
+        BraceletItemPanelLayout.setHorizontalGroup(
+            BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+                        .addComponent(BraceletQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(BraceletAddToCart))
+                    .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+                        .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+                                .addComponent(BraceletCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BraceletPriceLabel))
+                            .addComponent(BraceletLabel)
+                            .addComponent(BraceletIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        BraceletItemPanelLayout.setVerticalGroup(
+            BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BraceletItemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BraceletIcon)
+                .addGap(31, 31, 31)
+                .addComponent(BraceletLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BraceletCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BraceletPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(BraceletItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BraceletQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BraceletAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        GlassesItemPanel.setBackground(new java.awt.Color(153, 153, 153));
+        GlassesItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        GlassesIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Glasses.png"))); // NOI18N
 
         GlassesLabel.setText("Glasses");
 
-        GlassesQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        GlassesAddToChart.setText("add to chart");
-
-        LabelRM21.setText("RM");
+        GlassesCurrency.setText("RM");
 
         GlassesPriceLabel.setText("150");
 
-        javax.swing.GroupLayout KeyBoardItemPanel5Layout = new javax.swing.GroupLayout(KeyBoardItemPanel5);
-        KeyBoardItemPanel5.setLayout(KeyBoardItemPanel5Layout);
-        KeyBoardItemPanel5Layout.setHorizontalGroup(
-            KeyBoardItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeyBoardItemPanel5Layout.createSequentialGroup()
+        GlassesQty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        GlassesAddToCart.setText("add to cart");
+
+        javax.swing.GroupLayout GlassesItemPanelLayout = new javax.swing.GroupLayout(GlassesItemPanel);
+        GlassesItemPanel.setLayout(GlassesItemPanelLayout);
+        GlassesItemPanelLayout.setHorizontalGroup(
+            GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GlassesItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(KeyBoardItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(KeyBoardItemPanel5Layout.createSequentialGroup()
-                        .addComponent(LabelRM21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GlassesPriceLabel))
-                    .addComponent(GlassesLabel)
-                    .addGroup(KeyBoardItemPanel5Layout.createSequentialGroup()
+                .addGroup(GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GlassesItemPanelLayout.createSequentialGroup()
                         .addComponent(GlassesQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(GlassesAddToChart))
-                    .addComponent(GlassesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        KeyBoardItemPanel5Layout.setVerticalGroup(
-            KeyBoardItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeyBoardItemPanel5Layout.createSequentialGroup()
-                .addComponent(GlassesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(GlassesLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(KeyBoardItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRM21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(GlassesPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(KeyBoardItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(GlassesQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GlassesAddToChart))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(GlassesAddToCart))
+                    .addGroup(GlassesItemPanelLayout.createSequentialGroup()
+                        .addGroup(GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(GlassesItemPanelLayout.createSequentialGroup()
+                                .addComponent(GlassesCurrency)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(GlassesPriceLabel))
+                            .addComponent(GlassesLabel)
+                            .addComponent(GlassesIcon))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        GlassesItemPanelLayout.setVerticalGroup(
+            GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GlassesItemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(GlassesIcon)
+                .addGap(26, 26, 26)
+                .addComponent(GlassesLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GlassesCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GlassesPriceLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GlassesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GlassesQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GlassesAddToCart))
+                .addGap(12, 12, 12))
+        );
+
+        javax.swing.GroupLayout ItemsPanelLayout = new javax.swing.GroupLayout(ItemsPanel);
+        ItemsPanel.setLayout(ItemsPanelLayout);
+        ItemsPanelLayout.setHorizontalGroup(
+            ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ItemsPanelLayout.createSequentialGroup()
                         .addComponent(CameraItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(MonitorItemPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MonitorItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(MousePanelItem, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SmartPhoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SmartWatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(KeyBoardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(MouseItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ItemsPanelLayout.createSequentialGroup()
                         .addComponent(ForkItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(SpoonItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(PlateItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(ItemsPanelLayout.createSequentialGroup()
                         .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(SwissArmyKnifePanelItem, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ScrewDriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(NecklessItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ItemsPanelLayout.createSequentialGroup()
+                        .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(ItemsPanelLayout.createSequentialGroup()
+                                .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(ItemsPanelLayout.createSequentialGroup()
                                 .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(MousePanelItem1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SmartWatchItemPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(KeyBoardItemPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(363, Short.MAX_VALUE))
+                                .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(GlassesItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE))))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        ItemsPanelLayout.setVerticalGroup(
+            ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(KeyBoardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartWatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MonitorItemPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MousePanelItem, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartPhoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MonitorItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MouseItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CameraItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(SpoonItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ForkItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PlateItemPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
+                    .addComponent(PlateItemPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SwissArmyKnifePanelItem, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScrewDriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MousePanelItem1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartWatchItemPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NecklessItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(KeyBoardItemPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GlassesItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        ItemsScrollPane.setViewportView(ItemsPanel);
 
-        javax.swing.GroupLayout BackGroundLayout = new javax.swing.GroupLayout(BackGround);
-        BackGround.setLayout(BackGroundLayout);
-        BackGroundLayout.setHorizontalGroup(
-            BackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackGroundLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(BackGroundLayout.createSequentialGroup()
-                        .addComponent(ElectronicItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(UtensilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(StationeryItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(HouseHoldApplianceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AccesoriesItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        BackGroundLayout.setVerticalGroup(
-            BackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackGroundLayout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
-                .addGroup(BackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ElectronicItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UtensilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(StationeryItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AccesoriesItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HouseHoldApplianceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
+        Background.add(ItemsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 272, -1, 440));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackGround, javax.swing.GroupLayout.DEFAULT_SIZE, 1285, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackGround, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1544,171 +1632,171 @@ public class OrderPage extends JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AccesoriesItemPanel;
-    private javax.swing.JPanel BackGround;
-    private javax.swing.JButton BookAddToChart;
-    private javax.swing.JLabel BookImage;
+    private javax.swing.JLabel AccessoriesLabel;
+    private javax.swing.JPanel Background;
+    private javax.swing.JButton BookAddToCart;
+    private javax.swing.JLabel BookCurrency;
+    private javax.swing.JLabel BookIcon;
     private javax.swing.JPanel BookItemPanel;
     private javax.swing.JLabel BookLabel;
     private javax.swing.JLabel BookPriceLabel;
     private javax.swing.JComboBox<String> BookQty;
-    private javax.swing.JButton BraceletAddToChart;
-    private javax.swing.JLabel BraceletImage;
+    private javax.swing.JButton BraceletAddToCart;
+    private javax.swing.JLabel BraceletCurrency;
+    private javax.swing.JLabel BraceletIcon;
     private javax.swing.JPanel BraceletItemPanel;
     private javax.swing.JLabel BraceletLabel;
     private javax.swing.JLabel BraceletPriceLabel;
     private javax.swing.JComboBox<String> BraceletQty;
-    private javax.swing.JButton CameraAddToChart;
-    private javax.swing.JLabel CameraImage;
+    private javax.swing.JButton CameraAddToCart;
+    private javax.swing.JLabel CameraCurrency;
+    private javax.swing.JLabel CameraIcon;
     private javax.swing.JPanel CameraItemPanel;
     private javax.swing.JLabel CameraLabel;
-    private javax.swing.JLabel CameraLabel1;
     private javax.swing.JLabel CameraPriceLabel;
     private javax.swing.JComboBox<String> CameraQty;
     private javax.swing.JPanel ElectronicItemPanel;
-    private javax.swing.JButton ForkAddToChart;
-    private javax.swing.JLabel ForkImage;
+    private javax.swing.JLabel ElectronicLabel;
+    private javax.swing.JButton ForkAddToCart;
+    private javax.swing.JLabel ForkCurrency;
+    private javax.swing.JLabel ForkIcon;
     private javax.swing.JPanel ForkItemPanel;
+    private javax.swing.JLabel ForkLabel;
     private javax.swing.JLabel ForkPriceLabel;
     private javax.swing.JComboBox<String> ForkQty;
-    private javax.swing.JButton GlassesAddToChart;
-    private javax.swing.JLabel GlassesImage;
+    private javax.swing.JButton GlassesAddToCart;
+    private javax.swing.JLabel GlassesCurrency;
+    private javax.swing.JLabel GlassesIcon;
+    private javax.swing.JPanel GlassesItemPanel;
     private javax.swing.JLabel GlassesLabel;
     private javax.swing.JLabel GlassesPriceLabel;
     private javax.swing.JComboBox<String> GlassesQty;
-    private javax.swing.JPanel HouseHoldApplianceItemPanel;
-    private javax.swing.JButton KeyBoardAddToChart;
-    private javax.swing.JLabel KeyBoardImage;
-    private javax.swing.JPanel KeyBoardItemPanel;
-    private javax.swing.JPanel KeyBoardItemPanel5;
-    private javax.swing.JLabel KeyBoardLabel;
-    private javax.swing.JLabel KeyBoardPriceLabel;
-    private javax.swing.JComboBox<String> KeyBoardQty;
-    private javax.swing.JButton KnifeAddToChart;
-    private javax.swing.JLabel KnifeImage;
+    private javax.swing.JPanel HouseholdApplianceItemPanel;
+    private javax.swing.JLabel HouseholdApplianceLabel;
+    private javax.swing.JPanel ItemsPanel;
+    private javax.swing.JScrollPane ItemsScrollPane;
+    private javax.swing.JButton KeyboardAddToCart;
+    private javax.swing.JLabel KeyboardCurrency;
+    private javax.swing.JLabel KeyboardIcon;
+    private javax.swing.JPanel KeyboardItemPanel;
+    private javax.swing.JLabel KeyboardLabel;
+    private javax.swing.JLabel KeyboardPriceLabel;
+    private javax.swing.JComboBox<String> KeyboardQty;
+    private javax.swing.JButton KnifeAddToCart;
+    private javax.swing.JLabel KnifeCurrency;
+    private javax.swing.JLabel KnifeIcon;
     private javax.swing.JPanel KnifeItemPanel;
     private javax.swing.JLabel KnifeLabel;
     private javax.swing.JLabel KnifePriceLabel;
     private javax.swing.JComboBox<String> KnifeQty;
-    private javax.swing.JLabel LabelRM;
-    private javax.swing.JLabel LabelRM1;
-    private javax.swing.JLabel LabelRM12;
-    private javax.swing.JLabel LabelRM13;
-    private javax.swing.JLabel LabelRM14;
-    private javax.swing.JLabel LabelRM15;
-    private javax.swing.JLabel LabelRM16;
-    private javax.swing.JLabel LabelRM17;
-    private javax.swing.JLabel LabelRM18;
-    private javax.swing.JLabel LabelRM19;
-    private javax.swing.JLabel LabelRM2;
-    private javax.swing.JLabel LabelRM21;
-    private javax.swing.JLabel LabelRM3;
-    private javax.swing.JLabel LabelRM4;
-    private javax.swing.JLabel LabelRM6;
-    private javax.swing.JLabel LabelRM7;
-    private javax.swing.JLabel LabelRM8;
-    private javax.swing.JLabel LabelRM9;
-    private javax.swing.JLabel LabelRm;
-    private javax.swing.JLabel LabelRm1;
-    private javax.swing.JLabel LabelRm2;
-    private javax.swing.JLabel LabelRm3;
-    private javax.swing.JLabel LabelSmartPhone11Pro;
-    private javax.swing.JButton MarkerAddToChart;
-    private javax.swing.JLabel MarkerImage;
+    private javax.swing.JButton MarkerAddToCart;
+    private javax.swing.JLabel MarkerCurrency;
+    private javax.swing.JLabel MarkerIcon;
     private javax.swing.JPanel MarkerItemPanel;
     private javax.swing.JLabel MarkerLabel;
     private javax.swing.JLabel MarkerPriceLabel;
     private javax.swing.JComboBox<String> MarkerQty;
-    private javax.swing.JButton MonitorAddToChart;
-    private javax.swing.JLabel MonitorImage;
-    private javax.swing.JPanel MonitorItemPanel3;
+    private javax.swing.JButton MonitorAddToCart;
+    private javax.swing.JLabel MonitorCurrency;
+    private javax.swing.JLabel MonitorIcon;
+    private javax.swing.JPanel MonitorItemPanel;
     private javax.swing.JLabel MonitorLabel;
     private javax.swing.JLabel MonitorPriceLabel;
     private javax.swing.JComboBox<String> MonitorQty;
     private javax.swing.JLabel MosuePriceLabel;
-    private javax.swing.JButton MouseAddToChart;
-    private javax.swing.JLabel MouseImage;
+    private javax.swing.JButton MouseAddToCart;
+    private javax.swing.JLabel MouseCurrency;
+    private javax.swing.JLabel MouseIcon;
+    private javax.swing.JPanel MouseItemPanel;
     private javax.swing.JLabel MouseLabel;
-    private javax.swing.JPanel MousePanelItem;
-    private javax.swing.JPanel MousePanelItem1;
     private javax.swing.JComboBox<String> MouseQty;
-    private javax.swing.JButton NecklessAddToChart;
-    private javax.swing.JLabel NecklessImages;
-    private javax.swing.JPanel NecklessItemPanel;
-    private javax.swing.JLabel NecklessLabel;
-    private javax.swing.JLabel NecklessPriceLabel;
-    private javax.swing.JComboBox<String> NecklessQty;
-    private javax.swing.JButton PencilAddToChart;
-    private javax.swing.JLabel PencilImage;
+    private javax.swing.JButton NecklaceAddToCart;
+    private javax.swing.JLabel NecklaceCurrency;
+    private javax.swing.JLabel NecklaceIcon;
+    private javax.swing.JPanel NecklaceItemPanel;
+    private javax.swing.JLabel NecklaceLabel;
+    private javax.swing.JLabel NecklacePriceLabel;
+    private javax.swing.JComboBox<String> NecklaceQty;
+    private javax.swing.JButton PencilAddToCart;
+    private javax.swing.JLabel PencilCurrency;
+    private javax.swing.JLabel PencilIcon;
+    private javax.swing.JPanel PencilItemPanel;
     private javax.swing.JLabel PencilLabel;
     private javax.swing.JLabel PencilPriceLabel;
     private javax.swing.JComboBox<String> PencilQty;
-    private javax.swing.JButton PlateAddToChart;
-    private javax.swing.JLabel PlateImage;
+    private javax.swing.JButton PlateAddToCart;
+    private javax.swing.JLabel PlateCurrency;
+    private javax.swing.JLabel PlateIcon;
     private javax.swing.JPanel PlateItemPanel;
     private javax.swing.JLabel PlateLabel;
     private javax.swing.JLabel PlatePriceLabel;
     private javax.swing.JComboBox<String> PlateQty;
-    private javax.swing.JButton SawAddToChart;
-    private javax.swing.JLabel SawImage;
+    private javax.swing.JButton SawAddToCart;
+    private javax.swing.JLabel SawCurrency;
+    private javax.swing.JLabel SawIcon;
     private javax.swing.JPanel SawItemPanel;
     private javax.swing.JLabel SawLabel;
     private javax.swing.JLabel SawPriceLabel;
     private javax.swing.JComboBox<String> SawQty;
+    private javax.swing.JButton ScissorAddToCart;
+    private javax.swing.JLabel ScissorCurrency;
+    private javax.swing.JLabel ScissorIcon;
+    private javax.swing.JPanel ScissorItemPanel;
     private javax.swing.JLabel ScissorLabel;
+    private javax.swing.JLabel ScissorPriceLabel;
     private javax.swing.JComboBox<String> ScissorQty;
-    private javax.swing.JButton ScissorhAddToChart;
-    private javax.swing.JLabel ScissorhPriceLabel;
-    private javax.swing.JLabel ScissorsImage;
-    private javax.swing.JButton ScrewDriverAddToChart;
-    private javax.swing.JLabel ScrewDriverImage;
-    private javax.swing.JPanel ScrewDriverItemPanel;
-    private javax.swing.JLabel ScrewDriverLabel;
-    private javax.swing.JLabel ScrewDriverPriceLabel;
-    private javax.swing.JComboBox<String> ScrewDriverQty;
-    private javax.swing.JButton SmartPhoneAddToChart;
-    private javax.swing.JLabel SmartPhoneImage;
-    private javax.swing.JLabel SmartPhoneImage4;
-    private javax.swing.JPanel SmartPhoneItemPanel;
+    private javax.swing.JButton ScrewdriverAddToCart;
+    private javax.swing.JLabel ScrewdriverCurrency;
+    private javax.swing.JLabel ScrewdriverIcon;
+    private javax.swing.JPanel ScrewdriverItemPanel;
+    private javax.swing.JLabel ScrewdriverLabel;
+    private javax.swing.JLabel ScrewdriverPriceLabel;
+    private javax.swing.JComboBox<String> ScrewdriverQty;
     private javax.swing.JLabel SmartPhonePriceLabel;
-    private javax.swing.JComboBox<String> SmartPhoneQty;
-    private javax.swing.JButton SmartWatchAddToChart;
-    private javax.swing.JPanel SmartWatchItemPanel;
-    private javax.swing.JPanel SmartWatchItemPanel2;
-    private javax.swing.JLabel SmartWatchLabel1;
-    private javax.swing.JLabel SmartWatchPriceLabel;
-    private javax.swing.JComboBox<String> SmartWatchQty;
-    private javax.swing.JButton SpoonAddToChart;
-    private javax.swing.JLabel SpoonImage;
+    private javax.swing.JLabel Smartphone11ProLabel;
+    private javax.swing.JButton SmartphoneAddToCart;
+    private javax.swing.JLabel SmartphoneCurrency;
+    private javax.swing.JLabel SmartphoneIcon;
+    private javax.swing.JPanel SmartphoneItemPanel;
+    private javax.swing.JComboBox<String> SmartphoneQty;
+    private javax.swing.JButton SmartwatchAddToCart;
+    private javax.swing.JLabel SmartwatchCurrency;
+    private javax.swing.JLabel SmartwatchIcon;
+    private javax.swing.JPanel SmartwatchItemPanel;
+    private javax.swing.JLabel SmartwatchLabel;
+    private javax.swing.JLabel SmartwatchPriceLabel;
+    private javax.swing.JComboBox<String> SmartwatchQty;
+    private javax.swing.JButton SpoonAddToCart;
+    private javax.swing.JLabel SpoonCurrency;
+    private javax.swing.JLabel SpoonIcon;
     private javax.swing.JPanel SpoonItemPanel;
     private javax.swing.JLabel SpoonLabel;
     private javax.swing.JLabel SpoonPriceLabel;
     private javax.swing.JComboBox<String> SpoonQty;
-    private javax.swing.JPanel StationeryItemPanel;
-    private javax.swing.JButton SwissArmyKnifeAddToChart;
-    private javax.swing.JLabel SwissArmyKnifeImage;
+    private javax.swing.JPanel StationaryItemPanel;
+    private javax.swing.JLabel StationaryLabel;
+    private javax.swing.JButton SwissArmyKnifeAddToCart;
+    private javax.swing.JLabel SwissArmyKnifeCurrency;
+    private javax.swing.JLabel SwissArmyKnifeIcon;
+    private javax.swing.JPanel SwissArmyKnifeItemPanel;
     private javax.swing.JLabel SwissArmyKnifeLabel;
-    private javax.swing.JPanel SwissArmyKnifePanelItem;
     private javax.swing.JLabel SwissArmyKnifePriceLabel;
     private javax.swing.JComboBox<String> SwissArmyKnifeQty;
     private javax.swing.JPanel UtensilItemPanel;
-    private javax.swing.JButton WatchAddToChart;
-    private javax.swing.JLabel WatchImage;
+    private javax.swing.JLabel UtensilLabel;
+    private javax.swing.JButton WatchAddToCart;
+    private javax.swing.JLabel WatchCurrency;
+    private javax.swing.JLabel WatchIcon;
     private javax.swing.JPanel WatchItemPanel;
     private javax.swing.JLabel WatchLabel;
     private javax.swing.JLabel WatchPriceLabel;
     private javax.swing.JComboBox<String> WatchQty;
-    private javax.swing.JButton WrenchAddToChart;
-    private javax.swing.JLabel WrenchImage;
+    private javax.swing.JButton WrenchAddToCart;
+    private javax.swing.JLabel WrenchCurrency;
+    private javax.swing.JLabel WrenchIcon;
     private javax.swing.JPanel WrenchItemPanel;
     private javax.swing.JLabel WrenchLabel;
     private javax.swing.JLabel WrenchPriceLabel;
     private javax.swing.JComboBox<String> WrenchQty;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
