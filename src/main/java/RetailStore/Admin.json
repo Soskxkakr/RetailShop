@@ -1,0 +1,10 @@
+{
+    "Admin" : [{
+            "ID" : "A1",
+            "Username" : "john",
+            "Password" : "123",
+            "Name" : "John Doe",
+            "Contact No" : "012312312",
+            "Email" : "john.doe@gmail.com"
+    }]
+}
