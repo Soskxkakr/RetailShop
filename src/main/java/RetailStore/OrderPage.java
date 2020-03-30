@@ -1,5 +1,6 @@
 package RetailStore;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 
 /**
@@ -29,12 +30,13 @@ public class OrderPage extends JFrame {
         UtensilLabel = new javax.swing.JLabel();
         HouseholdApplianceItemPanel = new javax.swing.JPanel();
         HouseholdApplianceLabel = new javax.swing.JLabel();
-        StationaryItemPanel = new javax.swing.JPanel();
+        StationeryItemPanel = new javax.swing.JPanel();
         StationaryLabel = new javax.swing.JLabel();
-        AccesoriesItemPanel = new javax.swing.JPanel();
+        AccessoriesItemPanel = new javax.swing.JPanel();
         AccessoriesLabel = new javax.swing.JLabel();
         ItemsScrollPane = new javax.swing.JScrollPane();
         ItemsPanel = new javax.swing.JPanel();
+        ElectronicCategory = new javax.swing.JPanel();
         CameraItemPanel = new javax.swing.JPanel();
         CameraIcon = new javax.swing.JLabel();
         CameraLabel = new javax.swing.JLabel();
@@ -77,6 +79,7 @@ public class OrderPage extends JFrame {
         KeyboardPriceLabel = new javax.swing.JLabel();
         KeyboardQty = new javax.swing.JComboBox<>();
         KeyboardAddToCart = new javax.swing.JButton();
+        UtensilCategory = new javax.swing.JPanel();
         ForkItemPanel = new javax.swing.JPanel();
         ForkIcon = new javax.swing.JLabel();
         ForkLabel = new javax.swing.JLabel();
@@ -105,6 +108,7 @@ public class OrderPage extends JFrame {
         PlatePriceLabel = new javax.swing.JLabel();
         PlateQty = new javax.swing.JComboBox<>();
         PlateAddToCart = new javax.swing.JButton();
+        HouseholdApplianceCategory = new javax.swing.JPanel();
         SawItemPanel = new javax.swing.JPanel();
         SawIcon = new javax.swing.JLabel();
         SawLabel = new javax.swing.JLabel();
@@ -133,6 +137,7 @@ public class OrderPage extends JFrame {
         ScrewdriverPriceLabel = new javax.swing.JLabel();
         ScrewdriverQty = new javax.swing.JComboBox<>();
         ScrewdriverAddToCart = new javax.swing.JButton();
+        StationeryCategory = new javax.swing.JPanel();
         BookItemPanel = new javax.swing.JPanel();
         BookIcon = new javax.swing.JLabel();
         BookLabel = new javax.swing.JLabel();
@@ -161,6 +166,7 @@ public class OrderPage extends JFrame {
         ScissorPriceLabel = new javax.swing.JLabel();
         ScissorQty = new javax.swing.JComboBox<>();
         ScissorAddToCart = new javax.swing.JButton();
+        AccessoryCategory = new javax.swing.JPanel();
         NecklaceItemPanel = new javax.swing.JPanel();
         NecklaceIcon = new javax.swing.JLabel();
         NecklaceLabel = new javax.swing.JLabel();
@@ -191,7 +197,6 @@ public class OrderPage extends JFrame {
         GlassesAddToCart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         Background.setBackground(new java.awt.Color(153, 153, 153));
@@ -199,6 +204,17 @@ public class OrderPage extends JFrame {
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ElectronicItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        ElectronicItemPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ElectronicItemPanelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ElectronicItemPanelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ElectronicItemPanelMouseExited(evt);
+            }
+        });
 
         ElectronicLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ElectronicLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -221,6 +237,17 @@ public class OrderPage extends JFrame {
         Background.add(ElectronicItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 213, -1, -1));
 
         UtensilItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        UtensilItemPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UtensilItemPanelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                UtensilItemPanelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                UtensilItemPanelMouseExited(evt);
+            }
+        });
 
         UtensilLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         UtensilLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -247,6 +274,17 @@ public class OrderPage extends JFrame {
         HouseholdApplianceLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         HouseholdApplianceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HouseholdApplianceLabel.setText("Household Appliance");
+        HouseholdApplianceLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HouseholdApplianceLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                HouseholdApplianceLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                HouseholdApplianceLabelMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout HouseholdApplianceItemPanelLayout = new javax.swing.GroupLayout(HouseholdApplianceItemPanel);
         HouseholdApplianceItemPanel.setLayout(HouseholdApplianceItemPanelLayout);
@@ -261,46 +299,70 @@ public class OrderPage extends JFrame {
 
         Background.add(HouseholdApplianceItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 213, -1, -1));
 
-        StationaryItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        StationeryItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
         StationaryLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         StationaryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        StationaryLabel.setText("Stationary");
+        StationaryLabel.setText("Stationery");
+        StationaryLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StationaryLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                StationaryLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                StationaryLabelMouseExited(evt);
+            }
+        });
 
-        javax.swing.GroupLayout StationaryItemPanelLayout = new javax.swing.GroupLayout(StationaryItemPanel);
-        StationaryItemPanel.setLayout(StationaryItemPanelLayout);
-        StationaryItemPanelLayout.setHorizontalGroup(
-            StationaryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout StationeryItemPanelLayout = new javax.swing.GroupLayout(StationeryItemPanel);
+        StationeryItemPanel.setLayout(StationeryItemPanelLayout);
+        StationeryItemPanelLayout.setHorizontalGroup(
+            StationeryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(StationaryLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
         );
-        StationaryItemPanelLayout.setVerticalGroup(
-            StationaryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        StationeryItemPanelLayout.setVerticalGroup(
+            StationeryItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(StationaryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
 
-        Background.add(StationaryItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 213, -1, -1));
+        Background.add(StationeryItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 213, -1, -1));
 
-        AccesoriesItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
+        AccessoriesItemPanel.setPreferredSize(new java.awt.Dimension(245, 41));
 
         AccessoriesLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         AccessoriesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AccessoriesLabel.setText("Accessories");
+        AccessoriesLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccessoriesLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AccessoriesLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AccessoriesLabelMouseExited(evt);
+            }
+        });
 
-        javax.swing.GroupLayout AccesoriesItemPanelLayout = new javax.swing.GroupLayout(AccesoriesItemPanel);
-        AccesoriesItemPanel.setLayout(AccesoriesItemPanelLayout);
-        AccesoriesItemPanelLayout.setHorizontalGroup(
-            AccesoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout AccessoriesItemPanelLayout = new javax.swing.GroupLayout(AccessoriesItemPanel);
+        AccessoriesItemPanel.setLayout(AccessoriesItemPanelLayout);
+        AccessoriesItemPanelLayout.setHorizontalGroup(
+            AccessoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(AccessoriesLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
         );
-        AccesoriesItemPanelLayout.setVerticalGroup(
-            AccesoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        AccessoriesItemPanelLayout.setVerticalGroup(
+            AccessoriesItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(AccessoriesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
         );
 
-        Background.add(AccesoriesItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 213, 240, -1));
+        Background.add(AccessoriesItemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 213, 240, -1));
 
         ItemsScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         ItemsScrollPane.setPreferredSize(new java.awt.Dimension(1260, 440));
+
+        ItemsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CameraItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         CameraItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
@@ -326,18 +388,15 @@ public class OrderPage extends JFrame {
                 .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CameraItemPanelLayout.createSequentialGroup()
                         .addComponent(CameraQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CameraAddToCart))
                     .addGroup(CameraItemPanelLayout.createSequentialGroup()
-                        .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(CameraItemPanelLayout.createSequentialGroup()
-                                .addComponent(CameraCurrency)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(CameraPriceLabel))
-                            .addComponent(CameraLabel)
-                            .addComponent(CameraIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(CameraCurrency)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(CameraPriceLabel))
+                    .addComponent(CameraLabel)
+                    .addComponent(CameraIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         CameraItemPanelLayout.setVerticalGroup(
             CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,7 +413,7 @@ public class OrderPage extends JFrame {
                 .addGroup(CameraItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CameraQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CameraAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         MonitorItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -409,7 +468,7 @@ public class OrderPage extends JFrame {
                 .addGroup(MonitorItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MonitorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MonitorAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         MouseItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -464,7 +523,7 @@ public class OrderPage extends JFrame {
                 .addGroup(MouseItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MouseQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MouseAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         SmartphoneItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -509,7 +568,8 @@ public class OrderPage extends JFrame {
         SmartphoneItemPanelLayout.setVerticalGroup(
             SmartphoneItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SmartphoneItemPanelLayout.createSequentialGroup()
-                .addComponent(SmartphoneIcon)
+                .addContainerGap()
+                .addComponent(SmartphoneIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Smartphone11ProLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -555,11 +615,11 @@ public class OrderPage extends JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(SmartwatchPriceLabel))
                             .addComponent(SmartwatchLabel)
-                            .addComponent(SmartwatchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SmartwatchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(SmartwatchItemPanelLayout.createSequentialGroup()
                         .addComponent(SmartwatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addComponent(SmartwatchAddToCart)
                         .addGap(25, 25, 25))))
         );
@@ -577,7 +637,7 @@ public class OrderPage extends JFrame {
                 .addGroup(SmartwatchItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SmartwatchQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SmartwatchAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         KeyboardItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -632,8 +692,43 @@ public class OrderPage extends JFrame {
                 .addGroup(KeyboardItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(KeyboardQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KeyboardAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
+
+        javax.swing.GroupLayout ElectronicCategoryLayout = new javax.swing.GroupLayout(ElectronicCategory);
+        ElectronicCategory.setLayout(ElectronicCategoryLayout);
+        ElectronicCategoryLayout.setHorizontalGroup(
+            ElectronicCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ElectronicCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CameraItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MonitorItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MouseItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addGap(114, 114, 114))
+        );
+        ElectronicCategoryLayout.setVerticalGroup(
+            ElectronicCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ElectronicCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ElectronicCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(MouseItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(MonitorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(CameraItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        ItemsPanel.add(ElectronicCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 200));
 
         ForkItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         ForkItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
@@ -687,7 +782,7 @@ public class OrderPage extends JFrame {
                 .addGroup(ForkItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ForkQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ForkAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         SpoonItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -720,10 +815,10 @@ public class OrderPage extends JFrame {
                                 .addComponent(SpoonPriceLabel))
                             .addComponent(SpoonLabel)
                             .addComponent(SpoonIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 68, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(SpoonItemPanelLayout.createSequentialGroup()
                         .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addComponent(SpoonAddToCart)))
                 .addContainerGap())
         );
@@ -742,7 +837,7 @@ public class OrderPage extends JFrame {
                 .addGroup(SpoonItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SpoonQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SpoonAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         KnifeItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -775,10 +870,10 @@ public class OrderPage extends JFrame {
                                 .addComponent(KnifePriceLabel))
                             .addComponent(KnifeLabel)
                             .addComponent(KnifeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 67, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(KnifeItemPanelLayout.createSequentialGroup()
                         .addComponent(KnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addComponent(KnifeAddToCart)))
                 .addContainerGap())
         );
@@ -797,7 +892,7 @@ public class OrderPage extends JFrame {
                 .addGroup(KnifeItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(KnifeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KnifeAddToCart))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         PlateItemPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -852,8 +947,37 @@ public class OrderPage extends JFrame {
                 .addGroup(PlateItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PlateQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PlateAddToCart))
-                .addGap(6, 6, 6))
+                .addContainerGap())
         );
+
+        javax.swing.GroupLayout UtensilCategoryLayout = new javax.swing.GroupLayout(UtensilCategory);
+        UtensilCategory.setLayout(UtensilCategoryLayout);
+        UtensilCategoryLayout.setHorizontalGroup(
+            UtensilCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UtensilCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ForkItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SpoonItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(PlateItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(482, Short.MAX_VALUE))
+        );
+        UtensilCategoryLayout.setVerticalGroup(
+            UtensilCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UtensilCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(UtensilCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(KnifeItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(SpoonItemPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(ForkItemPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(PlateItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        ItemsPanel.add(UtensilCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 1210, 200));
 
         SawItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         SawItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
@@ -1076,6 +1200,35 @@ public class OrderPage extends JFrame {
                 .addGap(6, 6, 6))
         );
 
+        javax.swing.GroupLayout HouseholdApplianceCategoryLayout = new javax.swing.GroupLayout(HouseholdApplianceCategory);
+        HouseholdApplianceCategory.setLayout(HouseholdApplianceCategoryLayout);
+        HouseholdApplianceCategoryLayout.setHorizontalGroup(
+            HouseholdApplianceCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HouseholdApplianceCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(482, Short.MAX_VALUE))
+        );
+        HouseholdApplianceCategoryLayout.setVerticalGroup(
+            HouseholdApplianceCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HouseholdApplianceCategoryLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(HouseholdApplianceCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        ItemsPanel.add(HouseholdApplianceCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 1210, 200));
+
         BookItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         BookItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
 
@@ -1294,6 +1447,38 @@ public class OrderPage extends JFrame {
                     .addComponent(ScissorQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScissorAddToCart)))
         );
+
+        javax.swing.GroupLayout StationeryCategoryLayout = new javax.swing.GroupLayout(StationeryCategory);
+        StationeryCategory.setLayout(StationeryCategoryLayout);
+        StationeryCategoryLayout.setHorizontalGroup(
+            StationeryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StationeryCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addGap(482, 482, 482))
+        );
+        StationeryCategoryLayout.setVerticalGroup(
+            StationeryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StationeryCategoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(StationeryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addGroup(StationeryCategoryLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(StationeryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+
+        ItemsPanel.add(StationeryCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 1210, 200));
 
         NecklaceItemPanel.setBackground(new java.awt.Color(153, 153, 153));
         NecklaceItemPanel.setPreferredSize(new java.awt.Dimension(160, 160));
@@ -1518,98 +1703,34 @@ public class OrderPage extends JFrame {
                 .addGap(12, 12, 12))
         );
 
-        javax.swing.GroupLayout ItemsPanelLayout = new javax.swing.GroupLayout(ItemsPanel);
-        ItemsPanel.setLayout(ItemsPanelLayout);
-        ItemsPanelLayout.setHorizontalGroup(
-            ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ItemsPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout AccessoryCategoryLayout = new javax.swing.GroupLayout(AccessoryCategory);
+        AccessoryCategory.setLayout(AccessoryCategoryLayout);
+        AccessoryCategoryLayout.setHorizontalGroup(
+            AccessoryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AccessoryCategoryLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ItemsPanelLayout.createSequentialGroup()
-                        .addComponent(CameraItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(MonitorItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(MouseItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ItemsPanelLayout.createSequentialGroup()
-                        .addComponent(ForkItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SpoonItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(PlateItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ItemsPanelLayout.createSequentialGroup()
-                        .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ItemsPanelLayout.createSequentialGroup()
-                        .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(ItemsPanelLayout.createSequentialGroup()
-                                .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ItemsPanelLayout.createSequentialGroup()
-                                .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(GlassesItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE))))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(GlassesItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addGap(482, 482, 482))
         );
-        ItemsPanelLayout.setVerticalGroup(
-            ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ItemsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(KeyboardItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartwatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MonitorItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MouseItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SmartphoneItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CameraItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(SpoonItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ForkItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PlateItemPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(WrenchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SwissArmyKnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScrewdriverItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SawItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MarkerItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PencilItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BookItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScissorItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(ItemsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GlassesItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        AccessoryCategoryLayout.setVerticalGroup(
+            AccessoryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AccessoryCategoryLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(AccessoryCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GlassesItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BraceletItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WatchItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NecklaceItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
+
+        ItemsPanel.add(AccessoryCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 1210, 200));
 
         ItemsScrollPane.setViewportView(ItemsPanel);
 
@@ -1629,10 +1750,86 @@ public class OrderPage extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ElectronicItemPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ElectronicItemPanelMouseEntered
+        ElectronicItemPanel.setBackground(new Color(204,204,204));
+    }//GEN-LAST:event_ElectronicItemPanelMouseEntered
+
+    private void ElectronicItemPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ElectronicItemPanelMouseExited
+       ElectronicItemPanel.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_ElectronicItemPanelMouseExited
+
+    private void ElectronicItemPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ElectronicItemPanelMouseClicked
+        ElectronicCategory.setVisible(true);
+        UtensilCategory.setVisible(false);
+        HouseholdApplianceCategory.setVisible(false);
+        StationeryCategory.setVisible(false);
+        AccessoryCategory.setVisible(false);
+    }//GEN-LAST:event_ElectronicItemPanelMouseClicked
+
+    private void UtensilItemPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UtensilItemPanelMouseEntered
+        UtensilItemPanel.setBackground(new Color(204,204,204));
+    }//GEN-LAST:event_UtensilItemPanelMouseEntered
+
+    private void UtensilItemPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UtensilItemPanelMouseExited
+        UtensilItemPanel.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_UtensilItemPanelMouseExited
+
+    private void UtensilItemPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UtensilItemPanelMouseClicked
+        ElectronicCategory.setVisible(false);
+        UtensilCategory.setVisible(true);
+        HouseholdApplianceCategory.setVisible(false);
+        StationeryCategory.setVisible(false);
+        AccessoryCategory.setVisible(false);
+        ElectronicCategory.setLocation(0, 190);
+        UtensilCategory.setLocation(0, 0); // Double click to move ???
+    }//GEN-LAST:event_UtensilItemPanelMouseClicked
+
+    private void HouseholdApplianceLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HouseholdApplianceLabelMouseEntered
+        HouseholdApplianceItemPanel.setBackground(new Color(204,204,204));
+    }//GEN-LAST:event_HouseholdApplianceLabelMouseEntered
+
+    private void HouseholdApplianceLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HouseholdApplianceLabelMouseExited
+        HouseholdApplianceItemPanel.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_HouseholdApplianceLabelMouseExited
+
+    private void HouseholdApplianceLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HouseholdApplianceLabelMouseClicked
+        ElectronicCategory.setVisible(false);
+        UtensilCategory.setVisible(false);
+        HouseholdApplianceCategory.setVisible(true);
+        StationeryCategory.setVisible(false);
+        AccessoryCategory.setVisible(false);
+        HouseholdApplianceCategory.setLocation(0, 0); // Double click to move ???
+    }//GEN-LAST:event_HouseholdApplianceLabelMouseClicked
+
+    private void StationaryLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StationaryLabelMouseEntered
+       StationeryItemPanel.setBackground(new Color(204,204,204));
+    }//GEN-LAST:event_StationaryLabelMouseEntered
+
+    private void StationaryLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StationaryLabelMouseExited
+        StationeryItemPanel.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_StationaryLabelMouseExited
+
+    private void StationaryLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StationaryLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StationaryLabelMouseClicked
+
+    private void AccessoriesLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccessoriesLabelMouseEntered
+        AccessoriesItemPanel.setBackground(new Color(204,204,204));
+    }//GEN-LAST:event_AccessoriesLabelMouseEntered
+
+    private void AccessoriesLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccessoriesLabelMouseExited
+        AccessoriesItemPanel.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_AccessoriesLabelMouseExited
+
+    private void AccessoriesLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccessoriesLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AccessoriesLabelMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AccesoriesItemPanel;
+    private javax.swing.JPanel AccessoriesItemPanel;
     private javax.swing.JLabel AccessoriesLabel;
+    private javax.swing.JPanel AccessoryCategory;
     private javax.swing.JPanel Background;
     private javax.swing.JButton BookAddToCart;
     private javax.swing.JLabel BookCurrency;
@@ -1655,6 +1852,7 @@ public class OrderPage extends JFrame {
     private javax.swing.JLabel CameraLabel;
     private javax.swing.JLabel CameraPriceLabel;
     private javax.swing.JComboBox<String> CameraQty;
+    private javax.swing.JPanel ElectronicCategory;
     private javax.swing.JPanel ElectronicItemPanel;
     private javax.swing.JLabel ElectronicLabel;
     private javax.swing.JButton ForkAddToCart;
@@ -1671,6 +1869,7 @@ public class OrderPage extends JFrame {
     private javax.swing.JLabel GlassesLabel;
     private javax.swing.JLabel GlassesPriceLabel;
     private javax.swing.JComboBox<String> GlassesQty;
+    private javax.swing.JPanel HouseholdApplianceCategory;
     private javax.swing.JPanel HouseholdApplianceItemPanel;
     private javax.swing.JLabel HouseholdApplianceLabel;
     private javax.swing.JPanel ItemsPanel;
@@ -1773,8 +1972,9 @@ public class OrderPage extends JFrame {
     private javax.swing.JLabel SpoonLabel;
     private javax.swing.JLabel SpoonPriceLabel;
     private javax.swing.JComboBox<String> SpoonQty;
-    private javax.swing.JPanel StationaryItemPanel;
     private javax.swing.JLabel StationaryLabel;
+    private javax.swing.JPanel StationeryCategory;
+    private javax.swing.JPanel StationeryItemPanel;
     private javax.swing.JButton SwissArmyKnifeAddToCart;
     private javax.swing.JLabel SwissArmyKnifeCurrency;
     private javax.swing.JLabel SwissArmyKnifeIcon;
@@ -1782,6 +1982,7 @@ public class OrderPage extends JFrame {
     private javax.swing.JLabel SwissArmyKnifeLabel;
     private javax.swing.JLabel SwissArmyKnifePriceLabel;
     private javax.swing.JComboBox<String> SwissArmyKnifeQty;
+    private javax.swing.JPanel UtensilCategory;
     private javax.swing.JPanel UtensilItemPanel;
     private javax.swing.JLabel UtensilLabel;
     private javax.swing.JButton WatchAddToCart;
