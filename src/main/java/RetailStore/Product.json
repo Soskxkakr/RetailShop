@@ -1,0 +1,10 @@
+{
+    "Electronic" : [{
+            "ID" : "E01",
+            "Name" : "Camera",
+            "Stock" : "10",
+            "Price" : "RM2400",
+            "URL" : "getClass().getResource(\"/Images/Camera.png\")"
+        }
+    ]
+}

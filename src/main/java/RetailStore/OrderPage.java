@@ -14,7 +14,7 @@ public class OrderPage extends JFrame {
      */
     public OrderPage() {
         super("Order Page");
-        setSize(1380, 820);
+        setSize(1280, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
