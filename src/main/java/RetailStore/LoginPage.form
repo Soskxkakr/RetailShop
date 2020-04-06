@@ -201,6 +201,10 @@
                   <Image iconType="3" name="/Images/lock.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LockLogoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LockLogoMouseExited"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -1016,7 +1016,7 @@
                               <Component id="KnifeItemPanel" min="-2" pref="166" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="PlateItemPanel" min="-2" pref="166" max="-2" attributes="0"/>
-                              <EmptySpace pref="482" max="32767" attributes="0"/>
+                              <EmptySpace pref="479" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

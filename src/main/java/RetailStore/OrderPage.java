@@ -963,7 +963,7 @@ public class OrderPage extends JFrame {
                 .addComponent(KnifeItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PlateItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(482, Short.MAX_VALUE))
+                .addContainerGap(479, Short.MAX_VALUE))
         );
         UtensilCategoryLayout.setVerticalGroup(
             UtensilCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

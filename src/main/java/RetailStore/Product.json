@@ -4,7 +4,14 @@
             "Name" : "Camera",
             "Stock" : "10",
             "Price" : "RM2400",
-            "URL" : "getClass().getResource(\"/Images/Camera.png\")"
+            "URL" : "/Images/Camera.png"
+        },
+        {
+            "Name" : "Smartphone"
         }
-    ]
+    ],
+    "Utensil" : [{
+            "ID" : "U01",
+            "Name" : "Fork"
+        }]
 }

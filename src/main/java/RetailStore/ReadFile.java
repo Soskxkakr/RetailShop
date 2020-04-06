@@ -7,34 +7,33 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import org.json.JSONObject;
 import lombok.Data;
 
 @Data
 public class ReadFile {
-    private String Title, Username, Password, Name, ContactNo, Email;
     
-    public  HashMap<String, ArrayList<HashMap<String, String>>> ImportData(){
+    Gson JsonConverter = new Gson();
+    String JSONString = "";  
+    JSONObject JSONObj;
+    
+    public JSONObject getJSONObject(String url){
         try {
-            String JsonString = "";
-            File file = new File("C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\GroupAssignment\\src\\main\\java\\RetailStore\\Customer.json");
-            Gson g = new Gson();
+            File file = new File(url); // "C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\GroupAssignment\\src\\main\\java\\RetailStore\\Customer.json"
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()){
-                JsonString += scan.nextLine();
+                JSONString += scan.nextLine();
             }
-            JSONObject JsonObj = new JSONObject(JsonString);
-            HashMap<String, ArrayList<HashMap<String, String>>> CustomerMap = g.fromJson(JsonObj.toString(), HashMap.class);
-            return CustomerMap;
+            JSONObject JSONData = new JSONObject(JSONString);
+            Map<String, ArrayList<HashMap<String, String>>> CustomerDataMap = JsonConverter.fromJson(JSONData.toString(), HashMap.class);
+            this.JSONObj = JSONData;
         } catch (Exception e){
             e.printStackTrace();
         } finally {
-            return null;
+           return JSONObj; 
         }
-    }
-    
-    public void setData(String Title){
-        this.Title = Title;
+        
     }
 }

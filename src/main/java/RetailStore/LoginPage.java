@@ -4,6 +4,7 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.util.*;
+import org.json.JSONObject;
 /**
  *
  * @author Reinaldo Taslim
@@ -136,6 +137,14 @@ public class LoginPage extends JFrame {
         });
 
         LockLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lock.png"))); // NOI18N
+        LockLogo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LockLogoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LockLogoMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout LoginPanelLayout = new javax.swing.GroupLayout(LoginPanel);
         LoginPanel.setLayout(LoginPanelLayout);
@@ -1025,6 +1034,7 @@ public class LoginPage extends JFrame {
         int blue = g.nextInt(255);
         Color BaseColor = new Color(red, green, blue);
         AdminPanel.setBackground(BaseColor);
+       
     }//GEN-LAST:event_AdminPanelMouseExited
 
     private void CustomerPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerPanelMouseEntered
@@ -1048,11 +1058,15 @@ public class LoginPage extends JFrame {
     }//GEN-LAST:event_AdminPanelMouseClicked
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        String pw = new String(PasswordField.getPassword());
-        if (UsernameField.getText().equals("hello") && pw.equals("world")){
+        ReadFile RF = new ReadFile();
+        JSONObject CustomerDataJson = RF.getJSONObject("C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\RetailStore\\target\\classes\\JSON\\Customer.JSON");
+        LoginValidation LV = new LoginValidation();
+        String PasswordText = new String(PasswordField.getPassword());
+        
+        if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
             JOptionPane.showMessageDialog(null, "Login Successfull");
             this.dispose();
-            new AdminPage(Title.getText()).setVisible(true);
+            new OrderPage().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Login Failed");
         }
@@ -1079,11 +1093,15 @@ public class LoginPage extends JFrame {
 
     private void PasswordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordFieldKeyPressed
         if (evt.getKeyCode()==java.awt.event.KeyEvent.VK_ENTER){
-            String pw = new String(PasswordField.getPassword());
-            if (UsernameField.getText().equals("hello") && pw.equals("world")){
+            ReadFile RF = new ReadFile();
+            JSONObject CustomerDataJson = RF.getJSONObject("C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\RetailStore\\target\\classes\\JSON\\Customer.JSON");
+            LoginValidation LV = new LoginValidation();
+            String PasswordText = new String(PasswordField.getPassword());
+        
+            if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
                 JOptionPane.showMessageDialog(null, "Login Successfull");
                 this.dispose();
-                new AdminPage(Title.getText()).setVisible(true);
+                new OrderPage().setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Login Failed");
             }
@@ -1393,6 +1411,14 @@ public class LoginPage extends JFrame {
         Color BaseColor = new Color(red, green, blue);
         jPanel38.setBackground(BaseColor);
     }//GEN-LAST:event_jPanel38MouseEntered
+
+    private void LockLogoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LockLogoMouseEntered
+        
+    }//GEN-LAST:event_LockLogoMouseEntered
+
+    private void LockLogoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LockLogoMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LockLogoMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
