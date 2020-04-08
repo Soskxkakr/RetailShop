@@ -1,5 +1,8 @@
-package RetailStore;
+package pages;
 
+import pkg.ReadFile;
+import pkg.LoginValidation;
+import configs.Config;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -11,6 +14,8 @@ import org.json.JSONObject;
  */
 public class LoginPage extends JFrame {
     private Random g = new Random();
+    private Config CON = new Config();
+    
     public LoginPage() {
         super("Login Form");
         setSize(1280, 720);
@@ -111,7 +116,6 @@ public class LoginPage extends JFrame {
         UsernameField.setMargin(new java.awt.Insets(2, 5, 2, 2));
 
         PasswordField.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        PasswordField.setEchoChar('\u2610');
         PasswordField.setMargin(new java.awt.Insets(2, 5, 2, 2));
         PasswordField.setName(""); // NOI18N
         PasswordField.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1058,18 +1062,23 @@ public class LoginPage extends JFrame {
     }//GEN-LAST:event_AdminPanelMouseClicked
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+        CON.setConfigVar("CUSTOMER_JSON_PATH");
         ReadFile RF = new ReadFile();
-        JSONObject CustomerDataJson = RF.getJSONObject("C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\RetailStore\\target\\classes\\JSON\\Customer.JSON");
         LoginValidation LV = new LoginValidation();
-        String PasswordText = new String(PasswordField.getPassword());
-        
-        if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
-            JOptionPane.showMessageDialog(null, "Login Successfull");
-            this.dispose();
-            new OrderPage().setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Login Failed");
+        String PasswordText = new String( PasswordField.getPassword() );
+        try {
+            JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
+            if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
+                JOptionPane.showMessageDialog(null, "Login Successfull");
+                this.dispose();
+                new OrderPage().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Login Failed");
+            } 
+        } catch (Exception e){
+            e.printStackTrace();
         }
+        
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void CancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelButtonMouseClicked
@@ -1093,17 +1102,21 @@ public class LoginPage extends JFrame {
 
     private void PasswordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordFieldKeyPressed
         if (evt.getKeyCode()==java.awt.event.KeyEvent.VK_ENTER){
+            CON.setConfigVar("CUSTOMER_JSON_PATH");
             ReadFile RF = new ReadFile();
-            JSONObject CustomerDataJson = RF.getJSONObject("C:\\Users\\Reinaldo Taslim\\Documents\\NetBeansProjects\\RetailStore\\target\\classes\\JSON\\Customer.JSON");
             LoginValidation LV = new LoginValidation();
-            String PasswordText = new String(PasswordField.getPassword());
-        
-            if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
-                JOptionPane.showMessageDialog(null, "Login Successfull");
-                this.dispose();
-                new OrderPage().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Login Failed");
+            String PasswordText = new String( PasswordField.getPassword() );
+            try {
+                JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
+                if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
+                    JOptionPane.showMessageDialog(null, "Login Successfull");
+                    this.dispose();
+                    new OrderPage().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Login Failed");
+                } 
+            } catch (Exception e){
+                e.printStackTrace();
             }
         }
     }//GEN-LAST:event_PasswordFieldKeyPressed

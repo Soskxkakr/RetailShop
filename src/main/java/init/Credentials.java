@@ -1,4 +1,4 @@
-package RetailStore;
+package init;
 
 import lombok.Data;
 /**

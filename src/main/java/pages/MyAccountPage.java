@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package RetailStore;
+package pages;
 
 import java.awt.Color;
 

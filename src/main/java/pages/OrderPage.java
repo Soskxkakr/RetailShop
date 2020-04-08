@@ -1,4 +1,4 @@
-package RetailStore;
+package pages;
 
 import java.awt.Color;
 import javax.swing.JFrame;

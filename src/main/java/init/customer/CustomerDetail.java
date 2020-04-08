@@ -1,5 +1,6 @@
-package RetailStore;
+package init.customer;
 
+import init.Credentials;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.HashMap;

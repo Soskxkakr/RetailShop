@@ -1,6 +1,6 @@
-package RetailStore;
+package cmd;
 
-import RetailStore.Admin.AdminCustomer;
+import init.admin.AdminCustomer;
 /**
  *
  * @author Reinaldo Taslim
@@ -8,8 +8,10 @@ import RetailStore.Admin.AdminCustomer;
 public class Main {
     public static void main(String[] args) {
         try {
-//            AdminCustomer AC = new AdminCustomer();
-            new LoginPage().setVisible(true);
+            AdminCustomer AC = new AdminCustomer();
+            AC.AddCustomer();
+            
+//            new LoginPage().setVisible(true);
             System.out.println(System.getProperty("java.class.path"));
         } catch (Exception e){
             e.printStackTrace();

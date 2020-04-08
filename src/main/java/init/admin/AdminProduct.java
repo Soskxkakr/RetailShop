@@ -1,4 +1,4 @@
-package RetailStore.Admin;
+package init.admin;
 /**
  *
  * @author Reinaldo Taslim
