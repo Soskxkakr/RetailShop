@@ -2,6 +2,7 @@ package init.customer;
 
 import init.Credentials;
 import com.google.gson.Gson;
+import init.Person;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,17 +14,21 @@ import org.json.JSONObject;
  */
 @Data
 public class CustomerDetail {
-    private String ID, Name, ContactNo, Email;
+    private String ID;
+    private Person PersonDetails;
     private Credentials Credential;
-    private Gson JsonConverter = new Gson();
+
+    public CustomerDetail (String ID, String Name, String ContactNo, String Email, Credentials Credential){
+        this.ID = ID;
+        this.PersonDetails = new Person(Name, ContactNo, Email);
+        this.Credential = Credential;
+    }
     
-    public CustomerDetail (Map<String, String> CDetails){
-        if (CDetails != null){
-            this.ID = CDetails.get("ID");
-            this.Name = CDetails.get("Name");
-            this.ContactNo = CDetails.get("ContactNo");
-            this.Email = CDetails.get("Email");
-            this.Credential = new Credentials(CDetails.get("Username"), CDetails.get("Password"));
+    public CustomerDetail (Map<String, String> CustomerDetails){
+        if (CustomerDetails != null){
+            this.ID = CustomerDetails.get("ID");
+            this.PersonDetails = new Person(CustomerDetails.get("Name"), CustomerDetails.get("ContactNo"), CustomerDetails.get("Email"));
+            this.Credential = new Credentials(CustomerDetails.get("Username"), CustomerDetails.get("Password"));
         } else {
             System.out.println("INVALID USERNAME / PASSWORD");
         }

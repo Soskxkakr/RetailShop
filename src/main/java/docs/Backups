@@ -1,0 +1,30 @@
+----- HOW TO ACCESS CONFIGURATION FILE (config.properties) ----
+A METHOD HAS BEEN CREATED. USE IT.
+OPEN /target/classes/config/Config.properties TO SEE ALL CONFIGURATION PROPERTIES
+Config CONFIG = new Config()                                --- 1 INSTANTIATE THE OBJECT
+CONFIG.setConfigVar("ADMIN_JSON_FILE")                      --- 2 SET THE VARIABLE BY GIVING THE KEY
+getClass().getResourceAsStream(CONFIG.getConfigVar())       --- 3.1 IF ARGUMENT NEEDS INPUTSTREAM, GIVE THIS
+getClass().getResource(CONFIG.getConfigVar())               --- 3.2 IF ARGUMENT NEEDS URL, GIVE THIS
+getClass().getResource(CONFIG.getConfigVar()).toURI()       --- 3.3 IF ARGUMENT NEEDS URI, GIVE THIS
+----------------------------- END -----------------------------
+
+------------------------- SAMPLE JSON -------------------------
+{
+	"Customer": [{
+			"ID": "C1",
+			"Username": "mary",
+			"Password": "mary123",
+			"Name": "Mary Doe",
+			"ContactNo": "019876542",
+			"Email": "mary.doe@gmail.com"
+		},
+		{
+			"ID": "C2",
+			"Username": "gary",
+			"Password": "gary123",
+			"Name": "Gary Doe",
+			"ContactNo": "022216542",
+			"Email": "gary.doe@gmail.com"
+		}]
+}
+----------------------------- END -----------------------------

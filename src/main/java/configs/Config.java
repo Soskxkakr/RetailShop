@@ -1,8 +1,6 @@
 package configs;
 
-import java.io.File;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Properties;
 
 import lombok.Data;
@@ -19,6 +17,8 @@ public class Config {
     public Config(){
         try {
             Prop.load(this.IS);
+        } catch (NullPointerException e){
+            System.out.println("ERROR : No File in the directory");
         } catch (Exception e){
             e.printStackTrace();
         }
