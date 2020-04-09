@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 public class Config {
-    private InputStream IS = getClass().getResourceAsStream("/Resource/Config.properties");
+    private InputStream IS = getClass().getResourceAsStream("/resource/Config.properties");
     private Properties Prop = new Properties();
     private String ConfigVar;
     
