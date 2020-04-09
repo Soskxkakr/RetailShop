@@ -6,7 +6,6 @@ CONFIG.setConfigVar("ADMIN_JSON_FILE")                      --- 2 SET THE VARIAB
 getClass().getResourceAsStream(CONFIG.getConfigVar())       --- 3.1 IF ARGUMENT NEEDS INPUTSTREAM, GIVE THIS
 getClass().getResource(CONFIG.getConfigVar())               --- 3.2 IF ARGUMENT NEEDS URL, GIVE THIS
 getClass().getResource(CONFIG.getConfigVar()).toURI()       --- 3.3 IF ARGUMENT NEEDS URI, GIVE THIS
------------------------------ END -----------------------------
 
 ------------------------- SAMPLE JSON -------------------------
 {
@@ -27,4 +26,3 @@ getClass().getResource(CONFIG.getConfigVar()).toURI()       --- 3.3 IF ARGUMENT 
 			"Email": "gary.doe@gmail.com"
 		}]
 }
------------------------------ END -----------------------------

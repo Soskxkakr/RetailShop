@@ -1,0 +1,17 @@
+VERSION 1.0.0
+    - Started project with GUI
+    - Created Login, Admin, Order Page
+
+VERSION 1.1.0
+    - Add a concept of Standard Project Layout
+    - Separate each classes and methods into the correct files
+    - Added more function through the system
+        - View Customer
+        - Edit Customer
+        - View Cart
+        - Add Cart Items to Cart
+    - Added a Configuration File
+
+VERSION 1.1.1
+    - Catches more specific Exceptions
+    - Tidy code's indentations and tabs
