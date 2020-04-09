@@ -10,6 +10,7 @@ import lombok.Data;
  */
 @Data
 public class Config {
+    
     private InputStream IS = getClass().getResourceAsStream("/resource/Config.properties");
     private Properties Prop = new Properties();
     private String ConfigVar;
@@ -17,8 +18,10 @@ public class Config {
     public Config(){
         try {
             Prop.load(this.IS);
+        } catch (IllegalArgumentException e){
+            System.out.println("ERROR : Escape character sequence has been detected in the InputStream");
         } catch (NullPointerException e){
-            System.out.println("ERROR : No File in the directory");
+            System.out.println("ERROR : No such file in the directory");
         } catch (Exception e){
             e.printStackTrace();
         }

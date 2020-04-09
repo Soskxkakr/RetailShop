@@ -1,9 +1,10 @@
 package pkg;
 
-import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.google.gson.Gson;
 import org.json.JSONObject;
 
 /**
@@ -11,6 +12,7 @@ import org.json.JSONObject;
  * @author Reinaldo Taslim
  */
 public class Serializer {
+    
     private Gson JSONConverter = new Gson();
     
     public Map<String, ArrayList<Map<String, String>>> JSONToMap(JSONObject JSONObj){

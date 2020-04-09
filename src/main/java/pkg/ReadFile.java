@@ -34,7 +34,6 @@ public class ReadFile {
             e.printStackTrace();
         } finally {
            return JSONObj; 
-        }
-        
+        }  
     }
 }

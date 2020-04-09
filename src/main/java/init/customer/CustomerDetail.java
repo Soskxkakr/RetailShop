@@ -1,19 +1,18 @@
 package init.customer;
 
 import init.Credentials;
-import com.google.gson.Gson;
 import init.Person;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.Data;
-import org.json.JSONObject;
 /**
  *
  * @author Reinaldo Taslim
  */
 @Data
 public class CustomerDetail {
+    
     private String ID;
     private Person PersonDetails;
     private Credentials Credential;
@@ -32,7 +31,5 @@ public class CustomerDetail {
         } else {
             System.out.println("INVALID USERNAME / PASSWORD");
         }
-        
-        
     }
 }
