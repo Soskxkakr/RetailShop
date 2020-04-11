@@ -1,10 +1,12 @@
 package test;
 
 import configs.Config;
+import init.Item;
+import init.Order;
 import init.admin.EditCustomer;
 import init.customer.ViewCustomer;
-import init.order.Cart;
-import init.order.CartItem;
+import init.cart.Cart;
+import init.cart.CartItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,9 +53,12 @@ public class Test {
             Cart.AddCartItem(Items);
         }
         
+        Order Order = new Order();
+        String ItemID = Order.ViewOrder("C1");
+        Item Item = new Item(ItemID);
 //        CartItem Item1 = new CartItem("Camera", 2, 2000);
 //        new ViewCustomer();
-        new EditCustomer("C1", "Marieeeeee", "01111111");
+//        new EditCustomer("C1", "Marieeeeee", "01111111");
 //        System.out.println(Item1);
 //        System.out.println(Item1.getItemName());
 //        Cart Cart = new Cart();
