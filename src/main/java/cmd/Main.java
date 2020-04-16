@@ -1,6 +1,6 @@
 package cmd;
 
-import init.admin.AdminCustomer;
+import init.admin.AddCustomer;
 /**
  *
  * @author Reinaldo Taslim
@@ -8,7 +8,7 @@ import init.admin.AdminCustomer;
 public class Main {
     public static void main(String[] args) {
         try {
-            AdminCustomer AC = new AdminCustomer();
+            AddCustomer AC = new AddCustomer();
             AC.AddCustomer();
             
 //            new LoginPage().setVisible(true);
