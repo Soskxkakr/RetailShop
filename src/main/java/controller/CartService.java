@@ -1,5 +1,6 @@
-package init.cart;
+package controller;
 
+import model.CartItem;
 import java.util.ArrayList;
 import lombok.Data;
 
@@ -8,11 +9,11 @@ import lombok.Data;
  * @author Reinaldo Taslim
  */
 @Data
-public class Cart {
+public class CartService {
     private ArrayList<CartItem> CartItems = new ArrayList<>();
    
     
-    public void AddCartItem (CartItem Item){
+    public void add(CartItem Item){
         try {
             this.CartItems.add(Item);
         } catch (Exception e){
@@ -20,7 +21,7 @@ public class Cart {
         }
     }
     
-    public void ShowCart(){
+    public void viewCart(){
         System.out.println("Description \t\t Price");
         System.out.println("==============================");
         for (CartItem Item : this.CartItems){

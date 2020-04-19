@@ -1,0 +1,15 @@
+-------------- NAMINGS -----------------
+Properties name = CAPITAL LETTERS
+e.g.
+    1.  Config config = new Config();
+    2.  config.setConfigVar("ADMIN_JSON_PATH");
+
+Class name = CamelCase (Initial capital)
+Method name = camelCase
+Variable name = camelCase
+
+-------------- JSON -----------------
+ADMIN_JSON_PATH = JSONArray<JSONObject>
+CUSTOMER_JSON_PATH = JSONArray<JSONObject>
+ORDER_JSON_PATH = JSONArray<JSONObject>
+ITEM_JSON_PATH = Map<JSONArray<JSONObject>>

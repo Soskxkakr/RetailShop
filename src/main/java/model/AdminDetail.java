@@ -1,7 +1,7 @@
-package init.admin;
+package model;
 
-import init.Person;
-import init.Credentials;
+import model.Person;
+import model.Credentials;
 
 import com.google.gson.Gson;
 import java.util.Map;
@@ -12,6 +12,7 @@ import lombok.Data;
  */
 @Data
 public class AdminDetail {
+    
     private String ID;
     private Person PersonDetails;
     private Credentials Credential;

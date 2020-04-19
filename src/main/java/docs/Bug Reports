@@ -1,0 +1,4 @@
+04/19/2020 :
+    - controller -> OrderService -> viewCart : line 34 and line 38 "Class cast exception" from JSONObject
+    - controller -> AdminService -> generateId : needs improvement on code (to be continued)
+    - controller -> AdminService -> addProduct : incrementedId returns null

@@ -1,4 +1,4 @@
-package init.cart;
+package model;
 
 import configs.Config;
 import pkg.ReadFile;

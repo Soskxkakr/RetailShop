@@ -1,7 +1,7 @@
-package init.customer;
+package model;
 
-import init.Credentials;
-import init.Person;
+import model.Credentials;
+import model.Person;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

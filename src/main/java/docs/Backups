@@ -8,21 +8,66 @@ getClass().getResource(CONFIG.getConfigVar())               --- 3.2 IF ARGUMENT 
 getClass().getResource(CONFIG.getConfigVar()).toURI()       --- 3.3 IF ARGUMENT NEEDS URI, GIVE THIS
 
 ------------------------- SAMPLE JSON -------------------------
+[{
+        "ID": "C1",
+        "Username": "mary",
+        "Password": "mary123",
+        "Name": "Mary Doe",
+        "ContactNo": "019876542",
+        "Email": "mary.doe@gmail.com"
+},
 {
-	"Customer": [{
-			"ID": "C1",
-			"Username": "mary",
-			"Password": "mary123",
-			"Name": "Mary Doe",
-			"ContactNo": "019876542",
-			"Email": "mary.doe@gmail.com"
-		},
-		{
-			"ID": "C2",
-			"Username": "gary",
-			"Password": "gary123",
-			"Name": "Gary Doe",
-			"ContactNo": "022216542",
-			"Email": "gary.doe@gmail.com"
-		}]
-}
+        "ID": "C2",
+        "Username": "gary",
+        "Password": "gary123",
+        "Name": "Gary Doe",
+        "ContactNo": "022216542",
+        "Email": "gary.doe@gmail.com"
+}]
+
+------------------------- GenerateId -----------------------------
+-------- Product -------- 
+@Override
+    public int GenerateID() {
+        try {
+            CONFIG.setConfigVar("ITEM_JSON_PATH");
+            JSONObject CustomerDataJson = RF.getJSONObject(getClass().getResource(CONFIG.getConfigVar()).toURI() );
+            Map<String, ArrayList<Map<String, String>>> ProductMap = Converter.JSONToMap(CustomerDataJson); // Convert JSON to HashMap
+             
+            ArrayList ProductIdInt = new ArrayList();         
+            for (ArrayList<Map<String, String>> ProductCollection : ProductMap.values()){
+                for (Map<String, String> PC : ProductCollection){
+                    String ProductInfo = PC.get("ID").substring(1);
+                    int ProductId = Integer.parseInt(ProductInfo);
+                    ProductIdInt.add(ProductId);
+                 }
+             }
+            IncrementedID = Integer.parseInt( Collections.max(ProductIdInt).toString() ) + 1;            
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+             return IncrementedID;}
+    }
+
+-------- Admin/Customer -----
+@Override
+    public int GenerateID() {
+        try {
+            CONFIG.setConfigVar("CUSTOMER_JSON_PATH");
+            JSONObject CustomerDataJson = RF.getJSONObject(getClass().getResource(CONFIG.getConfigVar()).toURI() );
+            Map<String, ArrayList<Map<String, String>>> CustomerDataMap = Converter.JSONToMap(CustomerDataJson); // Convert JSON to HashMap
+             
+            ArrayList CustomerIdInt = new ArrayList();         
+            for (ArrayList<Map<String, String>> CustomerCollection : CustomerDataMap.values()){
+                for (Map<String, String> CC : CustomerCollection){
+                    String CustomerInfo = CC.get("ID").substring(1);
+                    int CustomerId = Integer.parseInt(CustomerInfo);
+                    CustomerIdInt.add(CustomerId);
+                 }
+             }
+            IncrementedID = Integer.parseInt( Collections.max(CustomerIdInt).toString() ) + 1;            
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+             return IncrementedID;}
+    }

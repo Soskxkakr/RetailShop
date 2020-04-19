@@ -1062,22 +1062,22 @@ public class LoginPage extends JFrame {
     }//GEN-LAST:event_AdminPanelMouseClicked
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        CON.setConfigVar("CUSTOMER_JSON_PATH");
-        ReadFile RF = new ReadFile();
-        LoginValidation LV = new LoginValidation();
-        String PasswordText = new String( PasswordField.getPassword() );
-        try {
-            JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
-            if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
-                JOptionPane.showMessageDialog(null, "Login Successfull");
-                this.dispose();
-                new OrderPage().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Login Failed");
-            } 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+//        CON.setConfigVar("CUSTOMER_JSON_PATH");
+//        ReadFile RF = new ReadFile();
+//        LoginValidation LV = new LoginValidation();
+//        String PasswordText = new String( PasswordField.getPassword() );
+//        try {
+//            JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
+//            if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
+//                JOptionPane.showMessageDialog(null, "Login Successfull");
+//                this.dispose();
+//                new OrderPage().setVisible(true);
+//            } else {
+//                JOptionPane.showMessageDialog(null, "Login Failed");
+//            } 
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
         
     }//GEN-LAST:event_LoginButtonMouseClicked
 
@@ -1101,24 +1101,24 @@ public class LoginPage extends JFrame {
     }//GEN-LAST:event_BackgroundMouseClicked
 
     private void PasswordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordFieldKeyPressed
-        if (evt.getKeyCode()==java.awt.event.KeyEvent.VK_ENTER){
-            CON.setConfigVar("CUSTOMER_JSON_PATH");
-            ReadFile RF = new ReadFile();
-            LoginValidation LV = new LoginValidation();
-            String PasswordText = new String( PasswordField.getPassword() );
-            try {
-                JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
-                if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
-                    JOptionPane.showMessageDialog(null, "Login Successfull");
-                    this.dispose();
-                    new OrderPage().setVisible(true);
-                } else {
-                    JOptionPane.showMessageDialog(null, "Login Failed");
-                } 
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
+//        if (evt.getKeyCode()==java.awt.event.KeyEvent.VK_ENTER){
+//            CON.setConfigVar("CUSTOMER_JSON_PATH");
+//            ReadFile RF = new ReadFile();
+//            LoginValidation LV = new LoginValidation();
+//            String PasswordText = new String( PasswordField.getPassword() );
+//            try {
+//                JSONObject CustomerDataJson = RF.getJSONObject( getClass().getResource(CON.getConfigVar()).toURI() );
+//                if ( LV.CheckCredentials(CustomerDataJson, UsernameField.getText(), PasswordText) != null ){
+//                    JOptionPane.showMessageDialog(null, "Login Successfull");
+//                    this.dispose();
+//                    new OrderPage().setVisible(true);
+//                } else {
+//                    JOptionPane.showMessageDialog(null, "Login Failed");
+//                } 
+//            } catch (Exception e){
+//                e.printStackTrace();
+//            }
+//        }
     }//GEN-LAST:event_PasswordFieldKeyPressed
 
     private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered

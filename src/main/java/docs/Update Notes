@@ -15,3 +15,28 @@ VERSION 1.1.0
 VERSION 1.1.1
     - Catches more specific Exceptions
     - Tidy code's indentations and tabs
+
+VERSION 2.0.0
+    - Added a new Object = 
+        - JSONArray
+    - Added new services = 
+        - AdminService 
+        - CartService 
+        - CustomerService 
+        - OrderService
+    - Added a new docs = 
+        - Guideline 
+        - Bug Reports
+
+    - Update Backup notes with =
+        - addCustomer generateId
+        - addProduct generateId
+
+    - Improve ArrayList<Map<String, String>> to ArrayList<JSONObject>
+    - Improve Map<String, ArrayList<Map<String, String>>> to Map<String, ArrayList<JSONObject>>
+
+    - Change naming variables from CamelCase to camelCase
+    - Change naming methods to camelCase
+    - Change folder "init" to "model" and "controller"
+
+    - Tidy code structures
