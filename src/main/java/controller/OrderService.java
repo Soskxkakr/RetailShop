@@ -3,6 +3,7 @@ package controller;
 import configs.Config;
 import pkg.ReadFile;
 import pkg.Serializer;
+import model.Order;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,28 +15,29 @@ import org.json.JSONObject;
  * @author Reinaldo Taslim
  */
 public class OrderService {
+    
     private String itemId, ItemName, Quantity, TotalPrice;
+    private Order userOrder;
     private Config config = new Config();
     private Serializer convert = new Serializer();
     private ReadFile fileReader = new ReadFile();
-    private ArrayList<Map<String, String>> items = new ArrayList<>();
+    private Map<String, ArrayList<Map<String, String>>> items = new HashMap<>();
     
     
-    public void viewItem(String itemId){
+    public void addOrder() {
+        
+    }
+    
+    public void viewOrder(String itemId) { // itemId is collected from order.json
         try {
             config.setConfigVar("ITEM_JSON_PATH");
-            JSONObject itemDetails = fileReader.getJSONObject( getClass().getResource(config.getConfigVar()).toURI() );
-            Map<String, ArrayList<JSONObject>> itemDetail = convert.JSONToMap(itemDetails);
+            this.items = convert.toMap(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));            
             
-            for ( String itemKey : itemDetail.keySet() ){
+            for ( String itemKey : this.items.keySet() ){
                 if ( itemKey.equals(itemId) ){
                     this.itemId = itemId;
-                    for (int i = 0; i < itemDetail.get(itemKey).size(); i++){
-                        items.add( convert.JSONToMap2(itemDetail.get(itemKey).get(i)) );
-                    }
-                    System.out.println(items);
                     System.out.println("=========================================================");
-                    for ( JSONObject items : itemDetail.get(itemKey) ){
+                    for ( Map<String, String> items : this.items.get(itemKey) ){
                         System.out.println("ID : "+items.get("ItemID"));
                         System.out.println("Item : "+items.get("ItemName"));
                         System.out.println("Quantity : "+items.get("Quantity"));

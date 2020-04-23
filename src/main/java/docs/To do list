@@ -1,0 +1,5 @@
+Requirements Missing :
+    1. Customer = Search
+    2. Product = Search
+    3. Order = Add (after GUI), Delete (after GUI), Search, Edit (after GUI)
+            *after GUI tags are connected to Order.json database*

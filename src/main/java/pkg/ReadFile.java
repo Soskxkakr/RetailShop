@@ -17,13 +17,11 @@ import org.json.JSONArray;
 public class ReadFile {
     
     private String JSONString = "";  
-    private JSONObject JSONObj;
     private File fileName;
     private Scanner scan;
-    private ArrayList<JSONObject> userArr = new ArrayList<>();
     private Serializer converter = new Serializer();
     
-    public ArrayList<JSONObject> getJSONArray(URI Path){
+    public String getJson(URI Path){
         try {
             this.fileName = new File(Path);
             this.scan = new Scanner(fileName);
@@ -31,8 +29,6 @@ public class ReadFile {
             while (this.scan.hasNextLine()){
                 this.JSONString += this.scan.nextLine();
             }
-            System.out.println(JSONString);
-            this.userArr = converter.JSONToArray(JSONString);
         } catch (IllegalStateException e){
             System.out.println("ERROR : Scanner is closed");
         } catch (NullPointerException e){
@@ -40,28 +36,7 @@ public class ReadFile {
         } catch (Exception e){
             e.printStackTrace();
         } finally {
-           return userArr; 
-        }  
-    }
-    
-    public JSONObject getJSONObject(URI Path){
-        try {
-            this.fileName = new File(Path);
-            this.scan = new Scanner(fileName);
-            
-            while (this.scan.hasNextLine()){
-                this.JSONString += this.scan.nextLine();
-            }
-            
-            this.JSONObj = new JSONObject(JSONString);
-        } catch (IllegalStateException e){
-            System.out.println("ERROR : Scanner is closed");
-        } catch (NullPointerException e){
-            System.out.println("ERROR : Invalid Path");
-        } catch (Exception e){
-            e.printStackTrace();
-        } finally {
-           return JSONObj; 
+           return JSONString; 
         }  
     }
 }

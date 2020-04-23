@@ -4,12 +4,14 @@ e.g.
     1.  Config config = new Config();
     2.  config.setConfigVar("ADMIN_JSON_PATH");
 
+Folder name = small letters
 Class name = CamelCase (Initial capital)
 Method name = camelCase
 Variable name = camelCase
 
 -------------- JSON -----------------
-ADMIN_JSON_PATH = JSONArray<JSONObject>
-CUSTOMER_JSON_PATH = JSONArray<JSONObject>
-ORDER_JSON_PATH = JSONArray<JSONObject>
-ITEM_JSON_PATH = Map<JSONArray<JSONObject>>
+ADMIN_JSON_PATH     = ArrayList<Map<String, String>>
+CUSTOMER_JSON_PATH  = ArrayList<Map<String, String>>
+ORDER_JSON_PATH     = ArrayList<Map<String, String>
+ITEM_JSON_PATH      = Map<String, ArrayList<Map<String, String>>>
+PRODUCT_JSON_PATH   = Map<String, ArrayList<Map<String, String>>>

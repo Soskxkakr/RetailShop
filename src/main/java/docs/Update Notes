@@ -40,3 +40,16 @@ VERSION 2.0.0
     - Change folder "init" to "model" and "controller"
 
     - Tidy code structures
+
+VERSION 2.1.0
+    - Convert back the object from JSONArray to ArrayList
+    - Convert back the object from JSONObject to HashMap
+
+    - Added a new docs =
+        - To do list
+
+    - Added a new method Product =
+        - Add
+        - Delete
+        - View
+        - Edit

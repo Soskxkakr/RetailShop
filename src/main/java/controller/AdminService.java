@@ -9,9 +9,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.json.simple.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -22,12 +24,16 @@ public class AdminService extends GenerateId {
     
     private Config config = new Config();
     private ReadFile fileReader = new ReadFile();
-    private Serializer converter = new Serializer();
+    private Serializer convert = new Serializer();
     private int incrementedId;
-    private ArrayList<JSONObject> customerList = new ArrayList<JSONObject>();
+    private ArrayList<Map<String, String>> customerList = new ArrayList<>();
+    private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     
-    public void addCustomer (){
-        JSONObject addCustomer =new JSONObject(); 
+    public void addCustomer(){
+        JSONArray jArr = new JSONArray();
+        JSONObject Jobj;
+        
+        Map<String, String> addCustomer = new HashMap<>(); 
         addCustomer.put("ID", "C"+incrementedId);// Auto generated ID
         addCustomer.put("Username", "");         //
         addCustomer.put("Password", "");         // Improve Later
@@ -37,22 +43,23 @@ public class AdminService extends GenerateId {
         
         try { 
             config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.customerList = fileReader.getJSONArray( getClass().getResource(config.getConfigVar()).toURI() );
+            this.customerList = convert.toArrayList( fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
             this.customerList.add(addCustomer);
             FileWriter file = new FileWriter(fileReader.getFileName());
-            file.write(this.customerList.toString());
+            file.write( convert.toString(this.customerList) );
             file.close();
+            System.out.println("File has been overwritten");
         } catch (Exception e){
             e.printStackTrace();
         }
     }
     
-    public void editCustomer (String customerId, String name, String contactNo){
+    public void editCustomer(String customerId, String name, String contactNo){
         try {
             config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.customerList = fileReader.getJSONArray( getClass().getResource(config.getConfigVar()).toURI() );
+            this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             
-            for (JSONObject customerData : this.customerList) {
+            for (Map<String, String> customerData : this.customerList) {
                 if (customerData.get("ID").equals(customerId)) {
                     customerData.put("Name", name);
                     customerData.put("ContactNo", contactNo);
@@ -72,10 +79,10 @@ public class AdminService extends GenerateId {
     public void removeCustomer(String adminId){
         try{
             config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.customerList = fileReader.getJSONArray( getClass().getResource(config.getConfigVar()).toURI() );
+            this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             
-            for (Iterator<JSONObject> iter = this.customerList.iterator(); iter.hasNext();) {
-                JSONObject customerData = iter.next();
+            for (Iterator<Map<String, String>> iter = this.customerList.iterator(); iter.hasNext();) {
+                Map<String, String> customerData = iter.next();
                 if (customerData.get("ID").equals(adminId)){
                     iter.remove();
                 }
@@ -92,11 +99,11 @@ public class AdminService extends GenerateId {
     public void viewCustomer(){
         try {
             config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.customerList = fileReader.getJSONArray( getClass().getResource(config.getConfigVar()).toURI() );
+            this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             System.out.println("ID \tName \t\tContactNo \tEmail");
             System.out.println("====================================================================");
             
-            for (JSONObject customerData : this.customerList) {
+            for (Map<String, String> customerData : this.customerList) {
                 System.out.println(
                                      customerData.get("ID")+"\t"
                                     +customerData.get("Name")+"\t"
@@ -109,7 +116,7 @@ public class AdminService extends GenerateId {
         }   
     }
     
-    public void addProduct () {
+    public void addProduct() {
         JSONObject addProduct = new JSONObject();
         addProduct.put("ID", ""+incrementedId);
         addProduct.put("Name", "");
@@ -117,17 +124,86 @@ public class AdminService extends GenerateId {
         addProduct.put("Quantity", "");
 
         try{
-            config.setConfigVar("ITEM_JSON_PATH");
-            JSONObject JSONProduct = fileReader.getJSONObject( getClass().getResource(config.getConfigVar()).toURI() );
-            Map<String, ArrayList<JSONObject>> product = converter.JSONToMap(JSONProduct);
-            for (ArrayList<JSONObject> productList : product.values()){
-                productList.add(addProduct);
-            }
-            System.out.println(product);
+//            config.setConfigVar("ITEM_JSON_PATH");
+//            JSONObject JSONProduct = fileReader.getJSONObject( getClass().getResource(config.getConfigVar()).toURI() );
+//            Map<String, ArrayList<JSONObject>> product = converter.JSONToMap(JSONProduct);
+//            for (ArrayList<JSONObject> productList : product.values()){
+//                productList.add(addProduct);
+//            }
+//            System.out.println(product);
 //            String Map = Converter.MapToString(ProductMap);
 //            FileWriter file = new FileWriter(fileReader.getFileName());
 //            file.write(Map.toString());
 //            file.close();   
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void editProduct(String productId, String name, String stock, String price){
+        try {
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            for ( ArrayList<Map<String, String>> productList : this.productData.values() ) {
+                for ( Map<String, String> productDetail : productList ) {
+                    if ( productDetail.get("ID").equals(productId) ) {
+                        productDetail.put("Name", name);
+                        productDetail.put("Stock", stock);
+                        productDetail.put("Price", price);
+                    }
+                }
+            }
+            
+            System.out.println(this.productData);
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void removeProduct(String category, String id){
+        try {
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            for ( String productKey : this.productData.keySet() ){
+                if ( productKey.equals(category) ){
+                    for ( Iterator<Map<String, String>> iter = this.productData.get(category).iterator(); iter.hasNext(); ){
+                        Map<String, String> productDetail = iter.next();
+                        System.out.println(productDetail.get("ID"));
+                        if ( productDetail.get("ID").equals(id) ) {
+                            iter.remove();
+                        }
+                    }
+                }
+            }
+            
+            System.out.println(productData);
+            
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void viewProduct(){
+        try {
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            System.out.println("====================================================================");
+            for ( String productKey : this.productData.keySet() ) {
+                System.out.println("\t "+productKey);
+                System.out.println("====================================================================");
+                for ( Map<String, String> productDetail : this.productData.get(productKey) ) {
+                    System.out.println("ID : "+productDetail.get("ID"));
+                    System.out.println("Name : "+productDetail.get("Name"));
+                    System.out.println("Stock : "+productDetail.get("Stock"));
+                    System.out.println("Price : "+productDetail.get("Price"));
+                    System.out.println("====================================================================");
+                }
+            }
+            
         } catch (Exception e){
             e.printStackTrace();
         }

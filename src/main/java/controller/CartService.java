@@ -10,22 +10,23 @@ import lombok.Data;
  */
 @Data
 public class CartService {
+    
     private ArrayList<CartItem> CartItems = new ArrayList<>();
    
-    
-    public void add(CartItem Item){
+    public void addCart(CartItem Item){
         try {
             this.CartItems.add(Item);
         } catch (Exception e){
-            e.printStackTrace();
+           e.printStackTrace();
         }
     }
     
     public void viewCart(){
         System.out.println("Description \t\t Price");
         System.out.println("==============================");
-        for (CartItem Item : this.CartItems){
-            System.out.println(Item.getQuantity()+"x "+Item.getItemName()+"\t\tRM "+Item.getQuantity()*Item.getPrice());
+        for (CartItem item : this.CartItems){
+            System.out.println(item.getQuantity()+"x "+item.getItemName()+"\t\tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()));
+//            System.out.println(Item.getQuantity()+"x "+Item.getItemName()+"\t\tRM "+Item.getQuantity()*Item.getPrice());
         }
     }
 }
