@@ -29,26 +29,22 @@ public class AdminService extends GenerateId {
     private ArrayList<Map<String, String>> customerList = new ArrayList<>();
     private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     
-    public void addCustomer(){
-        JSONArray jArr = new JSONArray();
-        JSONObject Jobj;
-        
-        Map<String, String> addCustomer = new HashMap<>(); 
-        addCustomer.put("ID", "C"+incrementedId);// Auto generated ID
-        addCustomer.put("Username", "");         //
-        addCustomer.put("Password", "");         // Improve Later
-        addCustomer.put("Name", "");             //
-        addCustomer.put("ContactNo", "");        //
-        addCustomer.put("Email", "");            //
-        
+    public void addCustomer(){  
         try { 
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList( fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
+            Map<String, String> addCustomer = new HashMap<>(); 
+            addCustomer.put("ID", "C"+incrementedId);// Auto generated ID
+            addCustomer.put("Username", "");         //
+            addCustomer.put("Password", "");         // Improve Later
+            addCustomer.put("Name", "");             //
+            addCustomer.put("ContactNo", "");        //
+            addCustomer.put("Email", "");            //
             this.customerList.add(addCustomer);
             FileWriter file = new FileWriter(fileReader.getFileName());
             file.write( convert.toString(this.customerList) );
             file.close();
-            System.out.println("File has been overwritten");
+//            System.out.println("File has been overwritten");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -115,30 +111,45 @@ public class AdminService extends GenerateId {
             e.printStackTrace();
         }   
     }
-    
-    public void addProduct() {
-        JSONObject addProduct = new JSONObject();
-        addProduct.put("ID", ""+incrementedId);
-        addProduct.put("Name", "");
-        addProduct.put("Price", "");
-        addProduct.put("Quantity", "");
-
-        try{
-//            config.setConfigVar("ITEM_JSON_PATH");
-//            JSONObject JSONProduct = fileReader.getJSONObject( getClass().getResource(config.getConfigVar()).toURI() );
-//            Map<String, ArrayList<JSONObject>> product = converter.JSONToMap(JSONProduct);
-//            for (ArrayList<JSONObject> productList : product.values()){
-//                productList.add(addProduct);
-//            }
-//            System.out.println(product);
-//            String Map = Converter.MapToString(ProductMap);
-//            FileWriter file = new FileWriter(fileReader.getFileName());
-//            file.write(Map.toString());
-//            file.close();   
-        } catch (Exception e){
+     
+    public void searchCustomer(String input){
+    try{
+        config.setConfigVar("CUSTOMER_JSON_PATH");
+        this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
+        for (Map<String, String> customerCollection : this.customerList) {
+            if (input.equals(customerCollection.get("ID").toString())) {
+              System.out.println(customerCollection.get("ID")+" "+customerCollection.get("Name")+" "+customerCollection.get("ContactNo")+" "+customerCollection.get("Email"));
+            }
+        }
+        
+    }catch (Exception e) {
             e.printStackTrace();
         }
     }
+   
+    public void addProduct(String input) {        
+        try{
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+             for (String productKey : this.productData.keySet()) {
+               for (Map<String, String> addProduct : this.productData.get(productKey) ){      
+                    if(input.equals(productKey)){
+                        addProduct.put("ID", ""+incrementedId);
+                        addProduct.put("Name", "");
+                        addProduct.put("Stock", "");
+                        addProduct.put("Price", "");
+                    }
+                }
+            FileWriter file = new FileWriter(fileReader.getFileName());
+            file.write(this.productData.toString());
+            file.close();  
+        
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+         }
+    }
+     
     
     public void editProduct(String productId, String name, String stock, String price){
         try {
@@ -208,28 +219,43 @@ public class AdminService extends GenerateId {
             e.printStackTrace();
         }
     }
+    public void searchProduct(String input){
+        try{
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            for (String productKey : this.productData.keySet()){
+                for (Map<String, String> productDetail : this.productData.get(productKey) ){
+                    if (input.equals(productDetail.get("ID"))) {
+                    System.out.println(productDetail.get("ID")+" "+productDetail.get("Name")+" "+productDetail.get("Stock")+" "+productDetail.get("Price"));
+                    }
+                }   
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+    }
+    
+    }
     
     @Override
     public int generateId() {
+    int incrementedId = 0;
         try {
-//            config.setConfigVar("ITEM_JSON_PATH");
-//            JSONObject CustomerDataJson = fileReader.getJSONObject( getClass().getResource(config.getConfigVar()).toURI() );
-//            Map<String, ArrayList<Map<String, String>>> ProductMap = converter.JSONToMap(CustomerDataJson); // Convert JSON to HashMap
-//             
-//            ArrayList ProductIdInt = new ArrayList();         
-//            for (ArrayList<Map<String, String>> ProductCollection : ProductMap.values()){
-//                for (Map<String, String> PC : ProductCollection){
-//                    String ProductInfo = PC.get("ID").substring(1);
-//                    int ProductId = Integer.parseInt(ProductInfo);
-//                    ProductIdInt.add(ProductId);
-//                 }
-//             }
-//            IncrementedID = Integer.parseInt( Collections.max(ProductIdInt).toString() ) + 1;            
-        } catch (Exception e){
+            config.setConfigVar("CUSTOMER_JSON_PATH");
+            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+             ArrayList CustomerIdInt = new ArrayList();         
+                 for (Map<String, String> CC : customerList){
+                     String CustomerInfo = CC.get("ID").toString().substring(1);
+                     int CustomerId = Integer.parseInt(CustomerInfo);
+                     CustomerIdInt.add(CustomerId);
+                 }
+                 System.out.println(CustomerIdInt);
+                 incrementedId = Integer.parseInt( Collections.max(CustomerIdInt).toString() ) + 1;   
+                 System.out.println(incrementedId);
+         } catch (Exception e){
             e.printStackTrace();
         } finally {
-//             return IncrementedID;
-            return 0;
+            return incrementedId;
         }
     }
 }
+

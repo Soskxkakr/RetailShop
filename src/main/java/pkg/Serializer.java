@@ -28,6 +28,7 @@ public class Serializer {
     }
     
     public ArrayList<Map<String, String>> toArrayList (String arr) {
+        System.out.println(arr);
         return JSONConverter.fromJson(arr.toString(), ArrayList.class);
 //        ArrayList<Map<String, String>> userArr = new ArrayList<>();
 //        JSONArray JSONArr = new JSONArray(arr);
