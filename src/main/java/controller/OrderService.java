@@ -28,7 +28,7 @@ public class OrderService {
         
     }
     
-    public void viewOrder(String itemId) { // itemId is collected from order.json
+    public boolean viewOrder(String itemId) { // itemId is collected from order.json
         try {
             config.setConfigVar("ITEM_JSON_PATH");
             this.items = convert.toMap(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));            
@@ -44,12 +44,15 @@ public class OrderService {
                         System.out.println("Total Price : "+items.get("TotalPrice"));
                         System.out.println("=========================================================");
                     }
+                    return true;
                 } else {
                     System.out.println("Item ID does not exist in database");
+                    return false;
                 }
             }
         } catch (Exception e){
             e.printStackTrace();
         }
+        return false;
     }
 }

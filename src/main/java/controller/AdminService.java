@@ -20,7 +20,7 @@ import org.json.JSONObject;
  *
  * @author Reinaldo Taslim
  */
-public class AdminService extends GenerateId {
+public class AdminService extends OrderService implements GenerateId {
     
     private Config config = new Config();
     private ReadFile fileReader = new ReadFile();
@@ -149,7 +149,6 @@ public class AdminService extends GenerateId {
             e.printStackTrace();
          }
     }
-     
     
     public void editProduct(String productId, String name, String stock, String price){
         try {
@@ -219,6 +218,7 @@ public class AdminService extends GenerateId {
             e.printStackTrace();
         }
     }
+    
     public void searchProduct(String input){
         try{
             config.setConfigVar("PRODUCT_JSON_PATH");
@@ -237,7 +237,7 @@ public class AdminService extends GenerateId {
     }
     
     @Override
-    public int generateId() {
+    public int generateId(boolean a, boolean b, boolean c) {
     int incrementedId = 0;
         try {
             config.setConfigVar("CUSTOMER_JSON_PATH");

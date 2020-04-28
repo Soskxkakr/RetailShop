@@ -6,10 +6,12 @@ import configs.Config;
  *
  * @author Hendika
  */
-abstract public class GenerateId {
+public interface GenerateId {
     
-    public int xyz(){
-        return 2;
-    }
-    abstract public int generateId();
+//    public int xyz(){
+//        return 2;
+//    } // userId 
+    // generatId("C1");
+    public int generateId(boolean userId, boolean productId, boolean itemId);
+    
 }

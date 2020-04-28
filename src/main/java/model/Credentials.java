@@ -7,10 +7,18 @@ import lombok.Data;
  */
 @Data
 public class Credentials {
-    private String Username, Password;
+    private String username, password;
     
-    public Credentials(String Username, String Password){
-        this.Username = Username;
-        this.Password = Password;
+    public Credentials(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+    
+    public boolean isEmpty(){
+        if ( this.username == "" && this.password == "" ){
+           return true;
+        } else {
+            return false;
+        }
     }
 }

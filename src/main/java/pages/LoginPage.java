@@ -116,6 +116,7 @@ public class LoginPage extends JFrame {
         UsernameField.setMargin(new java.awt.Insets(2, 5, 2, 2));
 
         PasswordField.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        PasswordField.setEchoChar('\u2610');
         PasswordField.setMargin(new java.awt.Insets(2, 5, 2, 2));
         PasswordField.setName(""); // NOI18N
         PasswordField.addKeyListener(new java.awt.event.KeyAdapter() {

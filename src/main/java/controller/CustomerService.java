@@ -11,7 +11,7 @@ import pkg.Serializer;
  *
  * @author Reinaldo Taslim
  */
-public class CustomerService {
+public class CustomerService extends OrderService {
     
     
     

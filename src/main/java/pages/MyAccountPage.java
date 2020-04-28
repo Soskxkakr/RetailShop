@@ -6,21 +6,34 @@
 package pages;
 
 import java.awt.Color;
+import model.User;
 
 /**
  *
  * @author Reinaldo Taslim
  */
 public class MyAccountPage extends javax.swing.JFrame {
-
+    private User user;
     /**
      * Creates new form MyAccountPage
      */
-    public MyAccountPage() {
+    public MyAccountPage(User user) {
         super("My Account Page");
+        this.user = user;
+        System.out.println(this.user.getName());
         setSize(1280, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        try {
+            NameValueLabel.setText( this.user.getName() );
+            UsernameValueLabel.setText( this.user.getCredential().getUsername() );
+            PasswordValueLabel.setText( this.user.getCredential().getPassword() );
+            ContactNoValueLabel.setText( this.user.getContactNo() );
+            EmailValueLabel.setText( this.user.getEmail() );
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        
         initComponents();
     }
 
@@ -42,7 +55,7 @@ public class MyAccountPage extends javax.swing.JFrame {
         NameValueLabel = new javax.swing.JLabel();
         UsernameValueLabel = new javax.swing.JLabel();
         PasswordValueLabel = new javax.swing.JLabel();
-        ConntactNoValueLabel = new javax.swing.JLabel();
+        ContactNoValueLabel = new javax.swing.JLabel();
         EmailValueLabel = new javax.swing.JLabel();
         ChangePasswordPanel = new javax.swing.JPanel();
         ChangePasswordLabel = new javax.swing.JLabel();
@@ -68,7 +81,7 @@ public class MyAccountPage extends javax.swing.JFrame {
         });
 
         BackLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        BackLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
+        BackLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/Back.png"))); // NOI18N
         BackLabel.setText("Back");
 
         javax.swing.GroupLayout BackPanelLayout = new javax.swing.GroupLayout(BackPanel);
@@ -78,7 +91,7 @@ public class MyAccountPage extends javax.swing.JFrame {
             .addGroup(BackPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(BackLabel)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BackPanelLayout.setVerticalGroup(
             BackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,8 +157,8 @@ public class MyAccountPage extends javax.swing.JFrame {
         PasswordValueLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         PasswordValueLabel.setText("<password>");
 
-        ConntactNoValueLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        ConntactNoValueLabel.setText("<contact no>");
+        ContactNoValueLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        ContactNoValueLabel.setText("<contact no>");
 
         EmailValueLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         EmailValueLabel.setText("<e-mail>");
@@ -164,7 +177,7 @@ public class MyAccountPage extends javax.swing.JFrame {
         });
 
         ChangePasswordLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        ChangePasswordLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/reset.png"))); // NOI18N
+        ChangePasswordLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/Reset.png"))); // NOI18N
         ChangePasswordLabel.setText("   Change Password");
 
         javax.swing.GroupLayout ChangePasswordPanelLayout = new javax.swing.GroupLayout(ChangePasswordPanel);
@@ -198,7 +211,7 @@ public class MyAccountPage extends javax.swing.JFrame {
         });
 
         CompleteLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        CompleteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/checkmark.png"))); // NOI18N
+        CompleteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/Checkmark.png"))); // NOI18N
         CompleteLabel.setText("Complete");
 
         javax.swing.GroupLayout CompletePanelLayout = new javax.swing.GroupLayout(CompletePanel);
@@ -245,7 +258,7 @@ public class MyAccountPage extends javax.swing.JFrame {
                                 .addComponent(PasswordValueLabel)
                                 .addGap(49, 49, 49)
                                 .addComponent(ChangePasswordPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(ConntactNoValueLabel)
+                            .addComponent(ContactNoValueLabel)
                             .addComponent(EmailValueLabel)))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(533, 533, 533)
@@ -279,14 +292,14 @@ public class MyAccountPage extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ContacNoLabel)
-                    .addComponent(ConntactNoValueLabel))
+                    .addComponent(ContactNoValueLabel))
                 .addGap(56, 56, 56)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailLabel)
                     .addComponent(EmailValueLabel))
                 .addGap(51, 51, 51)
                 .addComponent(CompletePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
@@ -304,7 +317,7 @@ public class MyAccountPage extends javax.swing.JFrame {
 
     private void BackPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackPanelMouseClicked
         this.dispose();
-        new AdminPage("Title").setVisible(true);     
+        new AdminPage(user).setVisible(true);     
     }//GEN-LAST:event_BackPanelMouseClicked
 
     private void ChangePasswordPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangePasswordPanelMouseEntered
@@ -329,7 +342,7 @@ public class MyAccountPage extends javax.swing.JFrame {
 
     private void CompletePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CompletePanelMouseClicked
         this.dispose();
-        new AdminPage("Title").setVisible(true);
+        new AdminPage(user).setVisible(true);
     }//GEN-LAST:event_CompletePanelMouseClicked
 
 
@@ -341,8 +354,8 @@ public class MyAccountPage extends javax.swing.JFrame {
     private javax.swing.JPanel ChangePasswordPanel;
     private javax.swing.JLabel CompleteLabel;
     private javax.swing.JPanel CompletePanel;
-    private javax.swing.JLabel ConntactNoValueLabel;
     private javax.swing.JLabel ContacNoLabel;
+    private javax.swing.JLabel ContactNoValueLabel;
     private javax.swing.JLabel EmailLabel;
     private javax.swing.JLabel EmailValueLabel;
     private javax.swing.JLabel GreetingLabel;

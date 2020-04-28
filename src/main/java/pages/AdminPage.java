@@ -5,11 +5,14 @@ package pages;
  */
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import model.User;
 
 public class AdminPage extends javax.swing.JFrame {
-
-    public AdminPage(String Title) {
+    private User user;
+    
+    public AdminPage(User user) {
         super("Admin Page");
+        this.user = user;
         setSize(1280, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
@@ -58,7 +61,7 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        CustomerLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/customer.png"))); // NOI18N
+        CustomerLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Customer.png"))); // NOI18N
 
         CustomerLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         CustomerLabel.setText("Customer");
@@ -72,7 +75,7 @@ public class AdminPage extends javax.swing.JFrame {
                 .addComponent(CustomerLogo)
                 .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CustomerPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(83, Short.MAX_VALUE)
                 .addComponent(CustomerLabel)
                 .addGap(78, 78, 78))
         );
@@ -100,7 +103,7 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        ProductLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/product.png"))); // NOI18N
+        ProductLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Product.png"))); // NOI18N
 
         ProductLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         ProductLabel.setText("Product");
@@ -142,7 +145,7 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        OrderLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/order.png"))); // NOI18N
+        OrderLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Order.png"))); // NOI18N
 
         OrderLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         OrderLabel.setText("Order");
@@ -185,7 +188,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         MyAccountLabel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        MyAccountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/my_account.png"))); // NOI18N
+        MyAccountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/MyAccount.png"))); // NOI18N
         MyAccountLabel.setText("My Account");
 
         javax.swing.GroupLayout MyAccountPanelLayout = new javax.swing.GroupLayout(MyAccountPanel);
@@ -218,7 +221,7 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        LogoutLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
+        LogoutLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/Logout.png"))); // NOI18N
 
         javax.swing.GroupLayout LogoutPanelLayout = new javax.swing.GroupLayout(LogoutPanel);
         LogoutPanel.setLayout(LogoutPanelLayout);
@@ -242,7 +245,7 @@ public class AdminPage extends javax.swing.JFrame {
         BackgroundLayout.setHorizontalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                .addContainerGap(124, Short.MAX_VALUE)
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(CustomerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100)
                 .addComponent(ProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -295,7 +298,7 @@ public class AdminPage extends javax.swing.JFrame {
 
     private void MyAccountPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MyAccountPanelMouseClicked
         this.dispose();
-        new MyAccountPage().setVisible(true);
+        new MyAccountPage(user).setVisible(true);
     }//GEN-LAST:event_MyAccountPanelMouseClicked
 
     private void LogoutPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutPanelMouseEntered
