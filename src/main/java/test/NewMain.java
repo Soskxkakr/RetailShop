@@ -28,6 +28,7 @@ public class NewMain extends javax.swing.JFrame {
     private JPanel itemsPanel = new JPanel();
     private JPanel electronicPanel = new JPanel();
     private JPanel utensilPanel = new JPanel();
+    private JPanel houseHold = new JPanel();
     private Config config = new Config();
     private Map<String, ArrayList<Map<String, String>>> products = new HashMap<>();
     
@@ -62,7 +63,69 @@ public class NewMain extends javax.swing.JFrame {
                     
                 }
             }
-        }
+            if (key.equals("Utensil")) {
+                for ( Map<String, String> productDetail : products.get(key) ){
+                    System.out.print("sesuatu"+productDetail);
+                    JPanel utensilItem = new JPanel();
+                    javax.swing.JLabel utensilIcon = new javax.swing.JLabel();
+                    javax.swing.JLabel utensilName = new javax.swing.JLabel();
+                    
+                    utensilIcon.setIcon(new ImageIcon ( getClass().getResource(productDetail.get("URL"))));
+                    utensilName.setText(productDetail.get("Name"));
+                    utensilItem.add(utensilIcon);
+                    utensilItem.add(utensilName);
+                    GroupLayout utensilItemLayout = new GroupLayout(utensilItem);
+                    utensilItemLayout.setHorizontalGroup(utensilItemLayout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(utensilIcon));
+                    utensilPanel.add(utensilItem);
+                }
+            } 
+            if (key.equals("Household Appliance")) {
+                for ( Map<String, String> productDetail : products.get(key) ){
+                    JPanel houseHoldItem = new JPanel();
+                    javax.swing.JLabel houseHoldIcon = new javax.swing.JLabel();
+                    javax.swing.JLabel houseHoldName = new javax.swing.JLabel();
+                    
+                    houseHoldIcon.setIcon(new ImageIcon ( getClass().getResource(productDetail.get("URL"))));
+                    houseHoldName.setText(productDetail.get("Name"));
+                    houseHoldItem.add(houseHoldIcon);
+                    houseHoldItem.add(houseHoldName);
+                    GroupLayout houseHoldItemLayout = new GroupLayout(houseHoldItem);
+                    houseHoldItemLayout.setHorizontalGroup(houseHoldItemLayout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(houseHoldIcon));
+                    utensilPanel.add(houseHoldItem);
+                }
+            }
+            if (key.equals("Stationery")) {
+                for ( Map<String, String> productDetail : products.get(key) ){
+                    JPanel stationeryItem = new JPanel();
+                    javax.swing.JLabel stationeryIcon = new javax.swing.JLabel();
+                    javax.swing.JLabel stationeryName = new javax.swing.JLabel();
+                    
+                    stationeryIcon.setIcon(new ImageIcon ( getClass().getResource(productDetail.get("URL"))));
+                    stationeryName.setText(productDetail.get("Name"));
+                    stationeryItem.add(stationeryIcon);
+                    stationeryItem.add(stationeryName);
+                    GroupLayout stationeryItemLayout = new GroupLayout(stationeryItem);
+                    stationeryItemLayout.setHorizontalGroup(stationeryItemLayout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(stationeryIcon));
+                    utensilPanel.add(stationeryItem);
+                }
+            }
+            if (key.equals("Accessories")) {
+                for ( Map<String, String> productDetail : products.get(key) ){
+                    System.out.println("sesuatu"+productDetail);
+                    JPanel accessoriesItem = new JPanel();
+                    javax.swing.JLabel accessoriesIcon = new javax.swing.JLabel();
+                    javax.swing.JLabel accessoriesName = new javax.swing.JLabel();
+                    
+                    accessoriesIcon.setIcon(new ImageIcon ( getClass().getResource(productDetail.get("URL"))));
+                    accessoriesName.setText(productDetail.get("Name"));
+                    accessoriesItem.add(accessoriesIcon);
+                    accessoriesItem.add(accessoriesName);
+                    GroupLayout utensilItemLayout = new GroupLayout(accessoriesItem);
+                    utensilItemLayout.setHorizontalGroup(utensilItemLayout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(accessoriesIcon));
+                    utensilPanel.add(accessoriesItem);
+                }
+            }
+        }   
         initComponents();
     }
     
