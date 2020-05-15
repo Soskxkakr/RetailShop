@@ -37,7 +37,7 @@ public class Serializer {
 //        return userArr;
     }
     
-    public String prettyWriting(String jsonString){
+    public String prettyWriting(Object jsonString){
         return gson.toJson(jsonString);
     }
     

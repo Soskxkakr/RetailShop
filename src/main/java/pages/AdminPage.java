@@ -298,7 +298,7 @@ public class AdminPage extends javax.swing.JFrame {
 
     private void MyAccountPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MyAccountPanelMouseClicked
         this.dispose();
-        new MyAccountPage(user).setVisible(true);
+        new NewMyAccountPage(user).setVisible(true);
     }//GEN-LAST:event_MyAccountPanelMouseClicked
 
     private void LogoutPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutPanelMouseEntered
@@ -316,7 +316,7 @@ public class AdminPage extends javax.swing.JFrame {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.YES_NO_OPTION, null, options, options[0]);
         if (choice == 0){
             this.dispose();
-            new LoginPage().setVisible(true);
+            new NewLoginPage().setVisible(true);
         }
     }//GEN-LAST:event_LogoutPanelMouseClicked
 

@@ -19,11 +19,11 @@ public class MyAccountPage extends javax.swing.JFrame {
      */
     public MyAccountPage(User user) {
         super("My Account Page");
-        this.user = user;
-        System.out.println(this.user.getName());
         setSize(1280, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        initComponents();
+        
         try {
             NameValueLabel.setText( this.user.getName() );
             UsernameValueLabel.setText( this.user.getCredential().getUsername() );
@@ -33,8 +33,6 @@ public class MyAccountPage extends javax.swing.JFrame {
         } catch (Exception e){
             e.printStackTrace();
         }
-        
-        initComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -263,7 +261,7 @@ public class MyAccountPage extends javax.swing.JFrame {
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(533, 533, 533)
                         .addComponent(CompletePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

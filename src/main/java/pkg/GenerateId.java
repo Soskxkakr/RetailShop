@@ -8,10 +8,5 @@ import configs.Config;
  */
 public interface GenerateId {
     
-//    public int xyz(){
-//        return 2;
-//    } // userId 
-    // generatId("C1");
-    public int generateId(boolean userId, boolean productId, boolean itemId);
-    
+    public int generateId(boolean userId, boolean productId, boolean itemId); 
 }

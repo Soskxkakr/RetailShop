@@ -41,10 +41,11 @@ public class AdminService extends OrderService implements GenerateId {
             addCustomer.put("ContactNo", "");        //
             addCustomer.put("Email", "");            //
             this.customerList.add(addCustomer);
+            
             FileWriter file = new FileWriter(fileReader.getFileName());
-            file.write( convert.toString(this.customerList) );
+            file.write( convert.prettyWriting(this.customerList).toString() );
             file.close();
-//            System.out.println("File has been overwritten");
+            System.out.println("Customer has been added");
         } catch (Exception e){
             e.printStackTrace();
         }
