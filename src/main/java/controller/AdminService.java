@@ -25,21 +25,29 @@ public class AdminService extends OrderService implements GenerateId {
     private Config config = new Config();
     private ReadFile fileReader = new ReadFile();
     private Serializer convert = new Serializer();
-    private int incrementedId;
+    private int IncrementedID;
     private ArrayList<Map<String, String>> customerList = new ArrayList<>();
     private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     
-    public void addCustomer(){  
+    public void addCustomer(String usernameInput, String passwordInput, String nameInput, String contactNoInput, String emailInput){  
         try { 
+            ArrayList<Integer> id = new ArrayList<>();
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList( fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
             Map<String, String> addCustomer = new HashMap<>(); 
-            addCustomer.put("ID", "C"+incrementedId);// Auto generated ID
-            addCustomer.put("Username", "");         //
-            addCustomer.put("Password", "");         // Improve Later
-            addCustomer.put("Name", "");             //
-            addCustomer.put("ContactNo", "");        //
-            addCustomer.put("Email", "");            //
+            
+            // Loop to get id
+            for (Map<String, String> CC : customerList){
+                     String CustomerInfo = CC.get("ID").toString().substring(1);
+                     id.add(Integer.parseInt(CustomerInfo));
+            }
+            
+            addCustomer.put("ID", "C"+generateId(id));// Auto generated ID
+            addCustomer.put("Username", usernameInput);         //
+            addCustomer.put("Password", passwordInput);         // Improve Later
+            addCustomer.put("Name", nameInput);             //
+            addCustomer.put("ContactNo", contactNoInput);        //
+            addCustomer.put("Email", emailInput);            //
             this.customerList.add(addCustomer);
             
             FileWriter file = new FileWriter(fileReader.getFileName());
@@ -128,24 +136,33 @@ public class AdminService extends OrderService implements GenerateId {
         }
     }
    
-    public void addProduct(String input) {        
+    public void addProduct(String input, String name, String stock, String price) {        
         try{
+            Map<String, String> newItem = new HashMap<>();
+            
             config.setConfigVar("PRODUCT_JSON_PATH");
             this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
-             for (String productKey : this.productData.keySet()) {
+            ArrayList<Integer> id = new ArrayList<>();
+            
+            for (String productKey : this.productData.keySet()) {
                for (Map<String, String> addProduct : this.productData.get(productKey) ){      
                     if(input.equals(productKey)){
-                        addProduct.put("ID", ""+incrementedId);
-                        addProduct.put("Name", "");
-                        addProduct.put("Stock", "");
-                        addProduct.put("Price", "");
+                        String productId = addProduct.get("ID").toString().substring(1);
+                        String productIdType = addProduct.get("ID").toString().substring(0,1);
+                        id.add(Integer.parseInt(productId));
+                        
+                        newItem.put("ID", productIdType + generateId(id));
+                        newItem.put("Name", name);
+                        newItem.put("Stock", stock);
+                        newItem.put("Price", "RM"+ price);
                     }
                 }
-            FileWriter file = new FileWriter(fileReader.getFileName());
-            file.write(this.productData.toString());
-            file.close();  
-        
+               this.productData.get(productKey).add(newItem);
             }
+            
+            FileWriter file = new FileWriter(fileReader.getFileName());
+            file.write(convert.prettyWriting(this.productData).toString()); // pretty writing
+            file.close();
         }catch (Exception e){
             e.printStackTrace();
          }
@@ -238,24 +255,14 @@ public class AdminService extends OrderService implements GenerateId {
     }
     
     @Override
-    public int generateId(boolean a, boolean b, boolean c) {
-    int incrementedId = 0;
+    public int generateId(ArrayList<Integer> incrementedId) {
         try {
-            config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
-             ArrayList CustomerIdInt = new ArrayList();         
-                 for (Map<String, String> CC : customerList){
-                     String CustomerInfo = CC.get("ID").toString().substring(1);
-                     int CustomerId = Integer.parseInt(CustomerInfo);
-                     CustomerIdInt.add(CustomerId);
-                 }
-                 System.out.println(CustomerIdInt);
-                 incrementedId = Integer.parseInt( Collections.max(CustomerIdInt).toString() ) + 1;   
-                 System.out.println(incrementedId);
+                 IncrementedID = Integer.parseInt( Collections.max(incrementedId).toString() ) + 1;   
+                    System.out.println(IncrementedID);
          } catch (Exception e){
             e.printStackTrace();
-        } finally {
-            return incrementedId;
+        }finally {
+            return IncrementedID;
         }
     }
 }

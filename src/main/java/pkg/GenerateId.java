@@ -1,6 +1,6 @@
 package pkg;
 
-import configs.Config;
+import java.util.ArrayList;
 
 /**
  *
@@ -8,5 +8,5 @@ import configs.Config;
  */
 public interface GenerateId {
     
-    public int generateId(boolean userId, boolean productId, boolean itemId); 
+    public int generateId(ArrayList<Integer> id); 
 }
