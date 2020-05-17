@@ -33,7 +33,6 @@ public class AdminService extends OrderService implements GenerateId {
     private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     private UsernameCheck uc = new UsernameCheck();
 
-    
     public AdminService(User user) {
         super(user);
         Object[] adminMenu = { "Add", "Delete", "Edit", "View", "Search" };
@@ -88,8 +87,8 @@ public class AdminService extends OrderService implements GenerateId {
                 }
             }
         } else if ( option == 1 ) {
-            Object[] add = { "Delete Customer", "Delete Product", "Back" };
-            int delOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, add, null);
+            Object[] del = { "Delete Customer", "Delete Product", "Back" };
+            int delOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, del, null);
             if ( delOption == 0 ) {
                 viewCustomer();
                 String customerId = JOptionPane.showInputDialog("Enter Customer Id to be removed: ");
@@ -102,8 +101,8 @@ public class AdminService extends OrderService implements GenerateId {
             }
             
         } else if ( option == 2 ) {
-            Object[] add = { "Edit Customer", "Edit Product", "Back" };
-            int editOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, add, null);
+            Object[] edit = { "Edit Customer", "Edit Product", "Back" };
+            int editOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, edit, null);
             if ( editOption == 0 ) {
                 viewCustomer();
                 String customerId = JOptionPane.showInputDialog("Enter Customer Id to be edited: ");
@@ -119,7 +118,14 @@ public class AdminService extends OrderService implements GenerateId {
                 editProduct(productId, productNewName, productStock, productPrice);
             }
         } else if ( option == 3 ) {
+            Object[] view = { "View Customer", "View Product", "Back" };
+            int viewOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, view, null);
             
+            if ( viewOption == 0 ) {
+                viewCustomer();
+            } else if ( viewOption == 1 ) {
+                viewProduct();
+            }
         }
     }
     

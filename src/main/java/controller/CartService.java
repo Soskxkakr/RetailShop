@@ -44,7 +44,7 @@ public class CartService {
 //        System.out.println("Description \t\t Price");
 //        System.out.println("==============================");
         for (CartItem item : this.cartItems){
-            empty = empty + item.getQuantity()+"x "+item.getItemName()+"                \tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()) + "\n";
+            empty = empty + item.getQuantity()+"x "+item.getItemName().toLowerCase()+"                \tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()) + "\n";
 //            System.out.println(item.getQuantity()+"x "+item.getItemName()+"\t\tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()));
 //            System.out.println(Item.getQuantity()+"x "+Item.getItemName()+"\t\tRM "+Item.getQuantity()*Item.getPrice());
         }
