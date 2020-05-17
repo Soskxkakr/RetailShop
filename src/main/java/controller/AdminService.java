@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import javax.swing.JOptionPane;
+import model.CartItem;
 
 import org.json.simple.JSONArray;
 import org.json.JSONObject;
@@ -32,105 +33,157 @@ public class AdminService extends OrderService implements GenerateId {
     private ArrayList<Map<String, String>> customerList = new ArrayList<>();
     private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     private UsernameCheck uc = new UsernameCheck();
+    private CartItem cart;
+    private CartService cartService = new CartService();
 
     public AdminService(User user) {
         super(user);
-        Object[] adminMenu = { "Add", "Delete", "Edit", "View", "Search" };
-        int option = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, adminMenu, null);
-        if( option == 0 ) {
-            Object[] add = { "Add Customer", "Add Product", "Back" };
-            int addOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, add, null);
-            if( addOption == 0 ){
-                for(;;){
-                    String customerUsername = JOptionPane.showInputDialog("Username:");
-                    uc.CustomerUserName(customerUsername);
-                    if ( uc.CustomerUserName(customerUsername) == true ){
-                        JOptionPane.showMessageDialog(null, "The username is already exist please try again");
+        for (;;) {
+            Object[] adminMenu = { "Add", "Delete", "Edit", "View", "Search", "Cancel" };
+            int option = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, adminMenu, null);
+            if( option == 0 ) {
+                Object[] add = { "Add Customer", "Add Product", "Add Order", "Back" };
+                int addOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, add, null);
+                if( addOption == 0 ){
+                    for(;;){
+                        String customerUsername = JOptionPane.showInputDialog("Username:");
+                        uc.CustomerUserName(customerUsername);
+                        if ( uc.CustomerUserName(customerUsername) == true ){
+                            JOptionPane.showMessageDialog(null, "The username is already exist please try again");
+                        } else {
+                            String customerPassword = JOptionPane.showInputDialog("Password:");
+                            String customerName = JOptionPane.showInputDialog("Name:");
+                            String customerContactNo = JOptionPane.showInputDialog("ContactNo:");
+                            String customerEmail = JOptionPane.showInputDialog("Email:");
+                            addCustomer(customerUsername, customerPassword, customerName, customerContactNo, customerEmail);
+                            System.out.println("Customer has been added!");
+                            break;
+                        }
+                    }    
+                } else if ( addOption == 1 ) {
+                    Object[] product = { "Electronic" , "Utensil" , "Household Appliance" , "Stationery" , "Accessories" };
+                    int productOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, product, null);
+                    if(productOption == 0) {
+                        String productName = JOptionPane.showInputDialog("Name:");
+                        String productStock = JOptionPane.showInputDialog("Stock:");
+                        String productPrice = JOptionPane.showInputDialog("Price:");
+                        addProduct("Electronic", productName, productStock, productPrice);
+                    } else if ( productOption == 1 ){
+                        String productName = JOptionPane.showInputDialog("Name:");
+                        String productStock = JOptionPane.showInputDialog("Stock:");
+                        String productPrice = JOptionPane.showInputDialog("Price:");
+                        addProduct("Utensil", productName, productStock, productPrice);
+                    } else if ( productOption == 2 ) {
+                        String productName = JOptionPane.showInputDialog("Name:");
+                        String productStock = JOptionPane.showInputDialog("Stock:");
+                        String productPrice = JOptionPane.showInputDialog("Price:");
+                        addProduct("Household Appliance", productName, productStock, productPrice);
+                    } else if ( productOption == 3 ) {
+                        String productName = JOptionPane.showInputDialog("Name:");
+                        String productStock = JOptionPane.showInputDialog("Stock:");
+                        String productPrice = JOptionPane.showInputDialog("Price:");
+                        addProduct("Stationery", productName, productStock, productPrice);
                     } else {
-                        String customerPassword = JOptionPane.showInputDialog("Password:");
-                        String customerName = JOptionPane.showInputDialog("Name:");
-                        String customerContactNo = JOptionPane.showInputDialog("ContactNo:");
-                        String customerEmail = JOptionPane.showInputDialog("Email:");
-                        addCustomer(customerUsername, customerPassword, customerName, customerContactNo, customerEmail);
-                        System.out.println("Customer has been added!");
-                        break;
+                        String productName = JOptionPane.showInputDialog("Name:");
+                        String productStock = JOptionPane.showInputDialog("Stock:");
+                        String productPrice = JOptionPane.showInputDialog("Price:");
+                        addProduct("Accessories", productName, productStock, productPrice);
                     }
-                }    
-            } else if ( addOption == 1 ) {
-                Object[] product = { "Electronic" , "Utensil" , "Household Appliance" , "Stationery" , "Accessories" };
-                int productOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, product, null);
-                if(productOption == 0) {
-                    String productName = JOptionPane.showInputDialog("Name:");
-                    String productStock = JOptionPane.showInputDialog("Stock:");
-                    String productPrice = JOptionPane.showInputDialog("Price:");
-                    addProduct("Electronic", productName, productStock, productPrice);
-                } else if ( productOption == 1 ){
-                    String productName = JOptionPane.showInputDialog("Name:");
-                    String productStock = JOptionPane.showInputDialog("Stock:");
-                    String productPrice = JOptionPane.showInputDialog("Price:");
-                    addProduct("Utensil", productName, productStock, productPrice);
-                } else if ( productOption == 2 ) {
-                    String productName = JOptionPane.showInputDialog("Name:");
-                    String productStock = JOptionPane.showInputDialog("Stock:");
-                    String productPrice = JOptionPane.showInputDialog("Price:");
-                    addProduct("Household Appliance", productName, productStock, productPrice);
-                } else if ( productOption == 3 ) {
-                    String productName = JOptionPane.showInputDialog("Name:");
-                    String productStock = JOptionPane.showInputDialog("Stock:");
-                    String productPrice = JOptionPane.showInputDialog("Price:");
-                    addProduct("Stationery", productName, productStock, productPrice);
-                } else {
-                    String productName = JOptionPane.showInputDialog("Name:");
-                    String productStock = JOptionPane.showInputDialog("Stock:");
-                    String productPrice = JOptionPane.showInputDialog("Price:");
-                    addProduct("Accessories", productName, productStock, productPrice);
+                } else if ( addOption == 2 ) {
+                    super.viewProduct();
+                    for (;;) {
+                        String customerInput = JOptionPane.showInputDialog(null, "Enter the item name you want to buy: ").toLowerCase();
+                        if ( super.addOrder(customerInput) != null ) {
+                            Map<String, String> product = super.addOrder(customerInput);
+                            String quantity = JOptionPane.showInputDialog("How many do you want to buy: ");
+                            cart = new CartItem(product.get("ID"), product.get("Name"), quantity, product.get("Price"));
+                            cartService.addCart(cart);
+                            System.out.println( cartService.viewCart() );
+                            break;
+                        }
+                    }
                 }
-            }
-        } else if ( option == 1 ) {
-            Object[] del = { "Delete Customer", "Delete Product", "Back" };
-            int delOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, del, null);
-            if ( delOption == 0 ) {
-                viewCustomer();
-                String customerId = JOptionPane.showInputDialog("Enter Customer Id to be removed: ");
-                removeCustomer(customerId);
-            } else if ( delOption == 1 ) {
-                viewProduct();
-                String category = JOptionPane.showInputDialog("Enter Product's Category to be removed: ");
-                String productId = JOptionPane.showInputDialog("Enter Product's Id to be removed: ");
-                removeProduct(category, productId);
-            }
-            
-        } else if ( option == 2 ) {
-            Object[] edit = { "Edit Customer", "Edit Product", "Back" };
-            int editOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, edit, null);
-            if ( editOption == 0 ) {
-                viewCustomer();
-                String customerId = JOptionPane.showInputDialog("Enter Customer Id to be edited: ");
-                String customerNewName = JOptionPane.showInputDialog("Enter Customer's new name to be edited: ");
-                String customerNewContactNo = JOptionPane.showInputDialog("Enter Customer's new Contact No. to be edited: ");
-                editCustomer(customerId, customerNewName, customerNewContactNo);
-            } else if ( editOption == 1 ) {
-                viewProduct();
-                String productId = JOptionPane.showInputDialog("Enter Product's Id to be edited: ");
-                String productNewName = JOptionPane.showInputDialog("Enter Product's new name to be edited: ");
-                String productStock = JOptionPane.showInputDialog("Enter Product's stock to be edited: ");
-                String productPrice = JOptionPane.showInputDialog("Enter Product's price to be edited: ");
-                editProduct(productId, productNewName, productStock, productPrice);
-            }
-        } else if ( option == 3 ) {
-            Object[] view = { "View Customer", "View Product", "Back" };
-            int viewOption = JOptionPane.showInternalOptionDialog(null, "Add", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, view, null);
-            
-            if ( viewOption == 0 ) {
-                viewCustomer();
-            } else if ( viewOption == 1 ) {
-                viewProduct();
+            } else if ( option == 1 ) {
+                Object[] del = { "Delete Customer", "Delete Product", "Delete Order", "Back" };
+                int delOption = JOptionPane.showInternalOptionDialog(null, "Delete", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, del, null);
+                if ( delOption == 0 ) {
+                    viewCustomer();
+                    String customerId = JOptionPane.showInputDialog("Enter Customer Id to be removed: ");
+                    removeCustomer(customerId);
+                } else if ( delOption == 1 ) {
+                    viewProduct();
+                    String category = JOptionPane.showInputDialog("Enter Product's Category to be removed: ");
+                    String productId = JOptionPane.showInputDialog("Enter Product's Id to be removed: ");
+                    removeProduct(category, productId);
+                } else if ( delOption == 2 ) {
+                    super.viewOrder();
+                    String itemId = JOptionPane.showInputDialog("Enter Item Id to be removed: ");
+                    super.removeOrder(itemId);
+                }
+            } else if ( option == 2 ) {
+                Object[] edit = { "Edit Customer", "Edit Product", "Edit Order", "Back" };
+                int editOption = JOptionPane.showInternalOptionDialog(null, "Edit", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, edit, null);
+                if ( editOption == 0 ) {
+                    viewCustomer();
+                    String customerId = JOptionPane.showInputDialog("Enter Customer Id to be edited: ");
+                    String customerNewName = JOptionPane.showInputDialog("Enter Customer's new name to be edited: ");
+                    String customerNewContactNo = JOptionPane.showInputDialog("Enter Customer's new Contact No. to be edited: ");
+                    editCustomer(customerId, customerNewName, customerNewContactNo);
+                } else if ( editOption == 1 ) {
+                    viewProduct();
+                    String productId = JOptionPane.showInputDialog("Enter Product's Id to be edited: ");
+                    String productNewName = JOptionPane.showInputDialog("Enter Product's new name to be edited: ");
+                    String productStock = JOptionPane.showInputDialog("Enter Product's stock to be edited: ");
+                    String productPrice = JOptionPane.showInputDialog("Enter Product's price to be edited: ");
+                    editProduct(productId, productNewName, productStock, productPrice);
+                } else if ( editOption == 2 ) {
+                    if ( !cartService.getCartItems().isEmpty() ) {
+                        cartService = super.editOrder(cartService);
+                    } else {
+                        System.out.println("You haven't made any purchase yet");
+                    }
+                }
+            } else if ( option == 3 ) {
+                Object[] view = { "View Customer", "View Product", "View Cart", "View Item", "View Order", "Back" };
+                int viewOption = JOptionPane.showInternalOptionDialog(null, "View", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, view, null);
+
+                if ( viewOption == 0 ) {
+                    viewCustomer();
+                } else if ( viewOption == 1 ) {
+                    viewProduct();
+                } else if ( viewOption == 2 ) {
+                    System.out.println( cartService.viewCart() );
+                } else if ( viewOption == 3 ) {
+                    super.viewItem();
+                } else if ( viewOption == 4 ) {
+                    super.viewOrder();
+                }
+            } else if ( option == 4 ) {
+                Object[] search = { "Search Customer", "Search Product", "Search Item", "Search Order", "Back" };
+                int searchOption = JOptionPane.showInternalOptionDialog(null, "Search", " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, search, null);
+
+                if ( searchOption == 0 ) {
+                    String customerName = JOptionPane.showInputDialog("Enter customer's name ");
+                    searchCustomer(customerName.toLowerCase());
+                } else if ( searchOption == 1 ) {
+                    String productName = JOptionPane.showInputDialog("Enter product's name ");
+                    searchProduct(productName);
+                } else if ( searchOption == 2 ) {
+                    String itemId = JOptionPane.showInputDialog("Enter item's id ");
+                    super.searchItem(itemId);
+                } else if ( searchOption == 3 ) {
+                    String userId = JOptionPane.showInputDialog("Enter user's id ");
+                    super.searchOrder(userId);
+                }
+            } else {
+                break;
             }
         }
     }
     
-    public void addCustomer(String usernameInput, String passwordInput, String nameInput, String contactNoInput, String emailInput){  
+    public void addCustomer(String usernameInput, String passwordInput, String nameInput, String contactNoInput, String emailInput) {  
         try { 
+            fileReader.clear();
             ArrayList<Integer> id = new ArrayList<>();
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList( fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
@@ -161,6 +214,7 @@ public class AdminService extends OrderService implements GenerateId {
     
     public void editCustomer(String customerId, String name, String contactNo){
         try {
+            fileReader.clear();
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             
@@ -183,6 +237,7 @@ public class AdminService extends OrderService implements GenerateId {
     
     public void removeCustomer(String customerId){
         try{
+            fileReader.clear();
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             
@@ -203,6 +258,7 @@ public class AdminService extends OrderService implements GenerateId {
     
     public void viewCustomer(){
         try {
+            fileReader.clear();
             config.setConfigVar("CUSTOMER_JSON_PATH");
             this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
             System.out.println("ID \tName \t\tContactNo \tEmail");
@@ -225,15 +281,16 @@ public class AdminService extends OrderService implements GenerateId {
         try {
             fileReader.clear();
             config.setConfigVar("CUSTOMER_JSON_PATH");
-            this.customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
-            for (Map<String, String> customerCollection : this.customerList) {
-                if ( input.equals(customerCollection.get("ID").toString()) ) {
-                  System.out.println(customerCollection.get("ID")+" "+customerCollection.get("Name")+" "+customerCollection.get("ContactNo")+" "+customerCollection.get("Email"));
+            ArrayList<Map<String, String>> customerList = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
+            
+            for (Map<String, String> customerCollection : customerList) {
+                if ( input.toLowerCase().equals(customerCollection.get("Name").toString().toLowerCase()) ) {
+                    System.out.println(customerCollection.get("ID")+" "+customerCollection.get("Name")+" "+customerCollection.get("ContactNo")+" "+customerCollection.get("Email"));
                 }
             }
-
+            
         } catch (Exception e) {
-                e.printStackTrace();
+            e.printStackTrace();
         }
     }
    
@@ -297,6 +354,7 @@ public class AdminService extends OrderService implements GenerateId {
     
     public void removeProduct(String category, String id){
         try {
+            fileReader.clear();
             config.setConfigVar("PRODUCT_JSON_PATH");
             this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
             
@@ -321,6 +379,7 @@ public class AdminService extends OrderService implements GenerateId {
     
     public void viewProduct(){
         try {
+            fileReader.clear();
             config.setConfigVar("PRODUCT_JSON_PATH");
             this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
             
@@ -343,17 +402,18 @@ public class AdminService extends OrderService implements GenerateId {
     }
     
     public void searchProduct(String input){
-        try{
+        try {
+            fileReader.clear();
             config.setConfigVar("PRODUCT_JSON_PATH");
             this.productData = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
             for (String productKey : this.productData.keySet()){
                 for (Map<String, String> productDetail : this.productData.get(productKey) ){
-                    if (input.equals(productDetail.get("ID"))) {
-                    System.out.println(productDetail.get("ID")+" "+productDetail.get("Name")+" "+productDetail.get("Stock")+" "+productDetail.get("Price"));
+                    if (input.toLowerCase().equals(productDetail.get("Name").toLowerCase())) {
+                        System.out.println(productDetail.get("ID")+" "+productDetail.get("Name")+" "+productDetail.get("Stock")+" RM "+productDetail.get("Price"));
                     }
                 }   
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

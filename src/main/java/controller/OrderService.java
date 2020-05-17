@@ -106,14 +106,58 @@ public class OrderService implements GenerateId {
        
     }
     
+    public boolean viewItem () {
+        try {
+            fileReader.clear();
+            config.setConfigVar("ITEM_JSON_PATH");
+            Map<String, ArrayList<Map<String, String>>> items = convert.toMap(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() )); 
+            
+            for ( String itemId : items.keySet() ) {
+                System.out.println("Item Id: "+itemId);
+                System.out.println("=========================================================");                
+                for ( Map<String, String> itemData : items.get(itemId) ) {
+                    System.out.println("Item Name: "+itemData.get("ItemName"));
+                    System.out.println("Quantity: "+itemData.get("Quantity"));
+                    System.out.println("Total Price: "+itemData.get("TotalPrice"));
+                    System.out.println();
+                }
+                System.out.println("=========================================================");
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+    
+    public void viewOrder() {
+        try {
+            int count = 1;
+            fileReader.clear();
+            config.setConfigVar("ORDER_JSON_PATH");
+            ArrayList<Map<String, String>> order = convert.toArrayList(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));
+            System.out.println("=========================================================");
+            for ( Map<String, String> orderData : order ) {
+                System.out.println( "Order No."+count+" = "+orderData.get("orderId") + " " + orderData.get("userId") + " " + orderData.get("itemId") );
+                System.out.println("=========================================================");
+                count++;
+            }
+            count = 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     public boolean viewOrder(String itemId) { // itemId is collected from order.json
         try {
+            fileReader.clear();
             config.setConfigVar("ITEM_JSON_PATH");
             this.items = convert.toMap(fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI() ));            
             
             for ( String itemKey : this.items.keySet() ){
                 if ( itemKey.equals(itemId) ){
                     this.itemId = itemId;
+                    System.out.println( "Order Id: "+this.itemId );
                     System.out.println("=========================================================");
                     for ( Map<String, String> items : this.items.get(itemKey) ){
                         System.out.println("ID : "+items.get("ItemID"));
@@ -134,9 +178,9 @@ public class OrderService implements GenerateId {
         return false;
     }
     
-    public void removeOrder(String id){
+    public void removeOrder(String id) {
         // Remove from Item.json
-        try{
+        try {
             fileReader.clear();
             config.setConfigVar("ITEM_JSON_PATH");
             Map<String, ArrayList<Map<String, String>>> itemCollection = convert.toMap(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
@@ -173,7 +217,31 @@ public class OrderService implements GenerateId {
         }
     }
     
-    public void searchOrder(String itemId) {
+    public void searchOrder(String userId) {
+        try {
+            int count = 1;
+            fileReader.clear();
+            config.setConfigVar("ORDER_JSON_PATH");
+            ArrayList<Map<String, String>> orderList = convert.toArrayList(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) ); 
+            
+            for ( Map<String, String> orderData : orderList ) {
+                if ( orderData.get("userId").toLowerCase().equals(userId.toLowerCase()) ) {
+                    System.out.println("Order No."+count);
+                    System.out.println("Order Id: "+orderData.get("orderId"));
+                    System.out.println("User Id: "+orderData.get("userId"));
+                    System.out.println("Item Id: "+orderData.get("itemId"));
+                    System.out.println("=========================================================");
+                    count++;
+                }
+            }
+            
+            count = 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void searchOrder(User user) {
         // Open from Order.json
         try {
             fileReader.clear();
@@ -188,7 +256,6 @@ public class OrderService implements GenerateId {
                     Map<String, ArrayList<Map<String, String>>> itemCollection = convert.toMap(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
                     for ( String id : itemCollection.keySet() ) {
                         if ( orderData.get("itemId").equals(id) ) {
-                            System.out.println("LMAOOOOOOOOOOOOOOO");
                             System.out.println( itemCollection.get(id) );
                         }
                     }
@@ -200,29 +267,56 @@ public class OrderService implements GenerateId {
         }
     }
     
+    public void searchItem (String itemId) {
+        try {
+            fileReader.clear();
+            config.setConfigVar("ITEM_JSON_PATH");
+            Map<String, ArrayList<Map<String, String>>> itemCollection = convert.toMap(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            for ( String id : itemCollection.keySet() ) {
+                if ( id.toLowerCase().equals(itemId.toLowerCase()) ) {
+                    System.out.println( itemId );
+                    System.out.println("=========================================================");
+                    for ( Map<String, String> itemDetails : itemCollection.get(itemId) ) {
+                        System.out.println( itemDetails.get("ItemID") + " " + itemDetails.get("ItemName") + " " + itemDetails.get("Quantity") + " RM " + itemDetails.get("TotalPrice") );
+                        System.out.println("=========================================================");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     public CartService editOrder(CartService cart){
         try {
+            if ( cart.getCartItems().isEmpty() ) {
+                System.out.println("You haven't made any purchase yet");
+                return null;
+            }
             Object[] userChoice = { "Edit Quantity", "Remove", "Cancel" };
             
             CartService newCart;
             ArrayList<CartItem> myCart = cart.getCartItems();
             System.out.println( cart.viewCart() );
-            System.out.println("Which one do you want to edit");
-            String choice = JOptionPane.showInputDialog("Which item would you like to edit");
+            String choice = JOptionPane.showInputDialog("Which item would you like to edit (Item Name): ");
             
             for ( CartItem item : myCart ) {
-                if ( item.getItemName().equals(choice) ) {
-                    int manipulate = JOptionPane.showOptionDialog(null, "Edit an Item", "Edit", 0, 0, null, userChoice, userChoice[0]);
+                if ( item.getItemName().toLowerCase().equals(choice.toLowerCase()) ) {
+                    int manipulate = JOptionPane.showInternalOptionDialog(null, "Editing "+item.getItemName(), " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, userChoice, null);
                     if (manipulate == 0) {
                         // Edit Quantity
                         String newQuantity = JOptionPane.showInputDialog("Enter Quantity");
                         item.setQuantity(newQuantity);
                     } else if (manipulate == 1) {
                         // Remove Item
-                        String name = JOptionPane.showInputDialog("Enter name to delete");
-                        cart.removeItem(myCart, name);
+                        System.out.println("LMAO LOOK AT THIS: "+cart);
+                        myCart = cart.removeItem(myCart, item.getItemName().toLowerCase());
+                        System.out.println("OH MY GOSH: "+cart);
                     } else {
                         newCart = new CartService(myCart);
+                        System.out.println("This is your new Cart");
+                        System.out.println( cart.viewCart() );
                         return newCart;  
                     }
                 }

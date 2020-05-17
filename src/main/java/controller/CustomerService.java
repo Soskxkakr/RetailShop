@@ -27,11 +27,10 @@ public class CustomerService extends OrderService {
         super(user);
         Object[] customerMenu = { "Search Item", "Order" };
         int customerOption = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, customerMenu, null);
-        if( customerOption == 0 ) {
+        if ( customerOption == 0 ) {
             String customerInput = JOptionPane.showInputDialog("Item Name:").toLowerCase();
             SearchProduct(customerInput);
-        } 
-        else if ( customerOption == 1 ) {
+        } else if ( customerOption == 1 ) {
             for(;;){
                 super.viewProduct();
                 String customerInput = JOptionPane.showInputDialog("Enter the item name you want to buy: ").toLowerCase();
@@ -48,7 +47,7 @@ public class CustomerService extends OrderService {
                     System.out.println("Thank you");
                     break;
                 }
-                else{
+                else {
                     JOptionPane.showMessageDialog(null, "Sorry the item doesn't exist");
                 }
             }
