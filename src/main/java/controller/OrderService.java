@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.UUID;
 import javax.swing.JOptionPane;
 import model.CartItem;
 import model.User;
@@ -31,6 +32,7 @@ public class OrderService implements GenerateId {
     private ReadFile fileReader = new ReadFile();
     private Map<String, ArrayList<Map<String, String>>> items = new HashMap<>();
     private ArrayList<Map<String, String>> order = new ArrayList<>();
+    private int incrementedId;
     
     public OrderService() {
         // NOthing
@@ -63,11 +65,16 @@ public class OrderService implements GenerateId {
     public void addOrder(CartService cart) {
         // Update Item.json
         try {
-            int generatedId = generateId(null);
+            ArrayList<Integer> id = new ArrayList<>();
             fileReader.clear();
             config.setConfigVar("ITEM_JSON_PATH");
             Map<String, ArrayList<Map<String, String>>> itemCollection = convert.toMap(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
             ArrayList<Map<String, String>> newOrder = new ArrayList<>();
+            
+            for ( String itemId : itemCollection.keySet() ){
+                     String number = itemId.substring(1);
+                     id.add(Integer.parseInt(number));
+            }
             
             for ( CartItem item : cart.getCartItems() ) {
                 Map<String, String> newItem = new HashMap<>();
@@ -79,7 +86,7 @@ public class OrderService implements GenerateId {
                 newOrder.add(newItem);
             }
             
-            itemCollection.put("i"+generatedId, newOrder);
+            itemCollection.put("i"+generateId(id), newOrder);
             
             FileWriter itemFile = new FileWriter(fileReader.getFileName());
             itemFile.write( convert.prettyWriting(itemCollection).toString() );
@@ -91,9 +98,9 @@ public class OrderService implements GenerateId {
             ArrayList<Map<String, String>> orderList = convert.toArrayList(fileReader.getJson(getClass().getResource(config.getConfigVar()).toURI()) );
             Map<String, String> newOrder2 = new HashMap<>();
             
-            newOrder2.put("id", "generatedId"); // AND THIS
-            newOrder2.put("userId", "this is a fucking user id"); // THIS
-            newOrder2.put("itemId", "i"+generatedId);
+            newOrder2.put("orderId", UUID.randomUUID().toString()); // AND THIS
+            newOrder2.put("userId", this.user.getUserId()); // THIS
+            newOrder2.put("itemId", "i"+generateId(id));
             
             orderList.add(newOrder2);
             
@@ -357,19 +364,10 @@ public class OrderService implements GenerateId {
     
     @Override
     public int generateId(ArrayList<Integer> ids){
-        int incrementedId = 0;
         try {
-            fileReader.clear();
-            config.setConfigVar("ITEM_JSON_PATH");
-            this.items = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
-            ArrayList CustomerIdInt = new ArrayList();         
-                 for (String itemId : this.items.keySet()){
-                     String id = itemId.toString().substring(1);
-                     int newItemId = Integer.parseInt(id);
-                     CustomerIdInt.add(newItemId);
-                 }
-                 incrementedId = Integer.parseInt( Collections.max(CustomerIdInt).toString() ) + 1;   
-         } catch (Exception e){
+            incrementedId = Integer.parseInt( Collections.max(ids).toString() ) + 1;   
+            System.out.println(incrementedId);
+        } catch (Exception e){
             e.printStackTrace();
         } finally {
             return incrementedId;

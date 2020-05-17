@@ -39,7 +39,7 @@ public class AdminService extends OrderService implements GenerateId {
     public AdminService(User user) {
         super(user);
         for (;;) {
-            Object[] adminMenu = { "Add", "Delete", "Edit", "View", "Search", "Cancel" };
+            Object[] adminMenu = { "Add", "Delete", "Edit", "View", "Search", "Checkout", "Cancel" };
             int option = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, adminMenu, null);
             if( option == 0 ) {
                 Object[] add = { "Add Customer", "Add Product", "Add Order", "Back" };
@@ -174,6 +174,16 @@ public class AdminService extends OrderService implements GenerateId {
                 } else if ( searchOption == 3 ) {
                     String userId = JOptionPane.showInputDialog("Enter user's id ");
                     super.searchOrder(userId);
+                }
+            } else if ( option == 5 ) {
+                if ( !cartService.getCartItems().isEmpty() ) {
+                    System.out.println( cartService.viewCart() );
+                    int i = JOptionPane.showInternalConfirmDialog(null, "Would you like to checkout?", "Checkout", JOptionPane.YES_NO_OPTION);
+                    if ( i == 0 ) {
+                        super.addOrder(cartService);
+                    }
+                } else if ( cartService.getCartItems().isEmpty() ) {
+                    JOptionPane.showMessageDialog(null, "Your shopping cart is empty!");
                 }
             } else {
                 break;
