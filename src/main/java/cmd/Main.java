@@ -3,9 +3,8 @@ package cmd;
 import javax.swing.JOptionPane;
 import model.User;
 import pkg.LoginValidation;
-import pkg.UsernameCheck;
 import controller.AdminService;
-import controller.OrderService;
+import controller.CustomerService;
 /**
  *
  * @author Reinaldo Taslim
@@ -38,8 +37,7 @@ public class Main {
                 if( id.equals("A") ) {
                     AdminService as = new AdminService(user);
                 } else {
-                    OrderService os = new OrderService(user);
-                    Object[] customerMenu ={"Add", "Delete", "Edit", "View", "Search"};
+                    CustomerService cs = new CustomerService(user);
                 }
             }
         } catch (NullPointerException e) {

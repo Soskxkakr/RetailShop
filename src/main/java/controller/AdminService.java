@@ -255,7 +255,7 @@ public class AdminService extends OrderService implements GenerateId {
                         newItem.put("ID", productIdType + generateId(id));
                         newItem.put("Name", name);
                         newItem.put("Stock", stock);
-                        newItem.put("Price", "RM"+ price);
+                        newItem.put("Price", price);
                     }
                 }
             }

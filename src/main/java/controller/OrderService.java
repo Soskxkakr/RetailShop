@@ -32,8 +32,32 @@ public class OrderService implements GenerateId {
     private Map<String, ArrayList<Map<String, String>>> items = new HashMap<>();
     private ArrayList<Map<String, String>> order = new ArrayList<>();
     
+    public OrderService() {
+        // NOthing
+    }
+    
     public OrderService(User user){
         this.user = user;
+    }
+    
+    public Map<String, String> addOrder(String itemName) {
+        try {
+            fileReader.clear();
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            Map<String, ArrayList<Map<String, String>>> products = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            for ( ArrayList<Map<String, String>> productList : products.values() ) {
+                for ( Map<String, String> productData : productList ) {
+                    if ( productData.get("Name").toLowerCase().equals(itemName.toLowerCase()) ) {
+                        return productData;
+                    }
+                }
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
     
     public void addOrder(CartService cart) {
@@ -211,6 +235,30 @@ public class OrderService implements GenerateId {
             e.printStackTrace();
         }
         return null;
+    }
+    
+    public void viewProduct() {
+        try {
+            int count = 1;
+            fileReader.clear();
+            config.setConfigVar("PRODUCT_JSON_PATH");
+            Map<String, ArrayList<Map<String, String>>> products = convert.toMap( fileReader.getJson( getClass().getResource(config.getConfigVar()).toURI()) );
+            
+            for ( String productKey : products.keySet() ) {
+                System.out.println("======================================================");
+                System.out.println( productKey );
+                System.out.println("======================================================");
+                for ( Map<String, String> productData : products.get(productKey) ) {
+                    System.out.println(count+". Name: "+productData.get("Name")+"   "+productData.get("Price"));
+                    count++;
+                }
+                count = 1;
+            }
+            
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     @Override
