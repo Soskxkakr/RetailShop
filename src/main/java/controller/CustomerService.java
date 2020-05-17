@@ -30,21 +30,27 @@ public class CustomerService extends OrderService {
         if( customerOption == 0 ) {
             String customerInput = JOptionPane.showInputDialog("Item Name:").toLowerCase();
             SearchProduct(customerInput);
-        } else if ( customerOption == 1 ) {
-            super.viewProduct();
-            String customerInput = JOptionPane.showInputDialog("Enter the item name you want to buy: ").toLowerCase();
-            // customerInput == Camera
-            if ( super.addOrder(customerInput) != null ) {
-                Map<String, String> product = super.addOrder(customerInput);
-                String quantity = JOptionPane.showInputDialog("How many do you want to buy: ");
-                cart = new CartItem(product.get("ID"), product.get("Name"), quantity, product.get("Price"));
-                System.out.println("Adding Item...");
-                cartService.addCart(cart);
-                System.out.println("Item has been added");
-                System.out.println("Viewing Cart...");
-                System.out.println( cartService.viewCart() );
-                System.out.println("Thank you");
-
+        } 
+        else if ( customerOption == 1 ) {
+            for(;;){
+                super.viewProduct();
+                String customerInput = JOptionPane.showInputDialog("Enter the item name you want to buy: ").toLowerCase();
+                // customerInput == Camera
+                if ( super.addOrder(customerInput) != null ) {
+                    Map<String, String> product = super.addOrder(customerInput);
+                    String quantity = JOptionPane.showInputDialog("How many do you want to buy: ");
+                    cart = new CartItem(product.get("ID"), product.get("Name"), quantity, product.get("Price"));
+                    System.out.println("Adding Item...");
+                    cartService.addCart(cart);
+                    System.out.println("Item has been added");
+                    System.out.println("Viewing Cart...");
+                    System.out.println( cartService.viewCart() );
+                    System.out.println("Thank you");
+                    break;
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Sorry the item doesn't exist");
+                }
             }
         }
     }
