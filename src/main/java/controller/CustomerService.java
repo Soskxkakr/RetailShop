@@ -25,31 +25,48 @@ public class CustomerService extends OrderService {
      
     public CustomerService(User user) {
         super(user);
-        Object[] customerMenu = { "Search Item", "Order" };
-        int customerOption = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, customerMenu, null);
-        if ( customerOption == 0 ) {
-            String customerInput = JOptionPane.showInputDialog("Item Name:").toLowerCase();
-            SearchProduct(customerInput);
-        } else if ( customerOption == 1 ) {
-            for(;;){
-                super.viewProduct();
-                String customerInput = JOptionPane.showInputDialog("Enter the item name you want to buy: ").toLowerCase();
-                // customerInput == Camera
-                if ( super.addOrder(customerInput) != null ) {
-                    Map<String, String> product = super.addOrder(customerInput);
-                    String quantity = JOptionPane.showInputDialog("How many do you want to buy: ");
-                    cart = new CartItem(product.get("ID"), product.get("Name"), quantity, product.get("Price"));
-                    System.out.println("Adding Item...");
-                    cartService.addCart(cart);
-                    System.out.println("Item has been added");
-                    System.out.println("Viewing Cart...");
-                    System.out.println( cartService.viewCart() );
-                    System.out.println("Thank you");
-                    break;
+        for(;;){
+            Object[] customerMenu = { "Search Item", "Order", "Checkout" };
+            int customerOption = JOptionPane.showInternalOptionDialog(null, "Admin " + user.getName(), "Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, customerMenu, null);
+            if ( customerOption == 0 ) {
+                String customerInput = JOptionPane.showInputDialog("Item Name:").toLowerCase();
+                SearchProduct(customerInput);
+            } 
+            else if ( customerOption == 1 ) {
+                for(;;){
+                    super.viewProduct();
+                    String customerInput = JOptionPane.showInputDialog("Enter the item name you want to buy: ").toLowerCase();
+                    // customerInput == Camera
+                    if ( super.addOrder(customerInput) != null ) {
+                        Map<String, String> product = super.addOrder(customerInput);
+                        String quantity = JOptionPane.showInputDialog("How many do you want to buy: ");
+                        cart = new CartItem(product.get("ID"), product.get("Name"), quantity, product.get("Price"));
+                        System.out.println("Adding Item...");
+                        cartService.addCart(cart);
+                        System.out.println("Item has been added");
+                        System.out.println("Viewing Cart...");
+                        System.out.println( cartService.viewCart() );
+                        System.out.println("Thank you");
+                        break;
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null, "Sorry the item doesn't exist");
+                    }
                 }
-                else {
-                    JOptionPane.showMessageDialog(null, "Sorry the item doesn't exist");
+            } 
+            else if ( customerOption == 2){
+                if ( !cartService.getCartItems().isEmpty() ) {
+                    System.out.println( "HELLO" + cartService.viewCart() );
+                    int i = JOptionPane.showInternalConfirmDialog(null, "Would you like to checkout?", "Checkout", JOptionPane.YES_NO_OPTION);
+                    if ( i == 0 ) {
+                        super.addOrder(cartService);
+                    }
+                } else if ( cartService.getCartItems().isEmpty() ) {
+                    JOptionPane.showMessageDialog(null, "Your shopping cart is empty!");
                 }
+            }
+            else{
+                break;
             }
         }
     }
