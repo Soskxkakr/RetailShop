@@ -1,8 +1,12 @@
-# Java GUI - Retail Shop
+# Java - Retail Shop
 
 ## Recommended System Requirements
 - Windows 10
 - Apache Netbeans IDE 11.x
+
+## Requirements
+- JSON File (Admin, Customer, Item, Order, Product)
+- Config.properties
 
 ## How to use Git in Apache Netbeans IDE
 ### Initialize the Git Repository
@@ -29,11 +33,4 @@
 How to test the program:
 > **run** Main.java
 
-## Properties
-- JFrame Resolution : 1280x720
-- Font-Family : Yu Gothic UI Semibold
-- Font-Weight : Plain
-- Font-Size : 18
-- Background-Color : rgb(153,153,153)
-
-**Note the program is still not complete**
+**Note the program is completed but not perfect**
