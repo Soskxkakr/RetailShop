@@ -1,13 +1,14 @@
 package controller;
 
 import model.CartItem;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import javax.swing.JOptionPane;
-import lombok.Data;
 
+import lombok.Data;
 /**
  *
  * @author Reinaldo Taslim
@@ -56,19 +57,15 @@ public class CartService {
                 cartItem.add(ci);
             } 
         }
-        
-        System.out.println("YOUR NEW CART ITEM: "+cartItem);
+   
         return cartItem;
     }
     
     public String viewCart(){
         String empty = "Description \t\t Price" + "\n" + "==============================" + "\n";
-//        System.out.println("Description \t\t Price");
-//        System.out.println("==============================");
         for (CartItem item : this.cartItems){
-            empty = empty + item.getQuantity()+"x "+item.getItemName().toLowerCase()+"                \tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()) + "\n";
-//            System.out.println(item.getQuantity()+"x "+item.getItemName()+"\t\tRM "+Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()));
-//            System.out.println(Item.getQuantity()+"x "+Item.getItemName()+"\t\tRM "+Item.getQuantity()*Item.getPrice());
+            empty = empty + item.getQuantity()+"x "+item.getItemName().toLowerCase()+"                \tRM "+
+                    Integer.parseInt(item.getQuantity())*Integer.parseInt(item.getPrice()) + "\n";
         }
         return empty;
     }

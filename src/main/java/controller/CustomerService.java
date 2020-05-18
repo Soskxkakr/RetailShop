@@ -1,14 +1,15 @@
 package controller;
 
 import configs.Config;
-import java.util.ArrayList;
-import java.util.HashMap;
-import model.User;
-import java.util.Map;
-import javax.swing.JOptionPane;
 import model.CartItem;
+import model.User;
 import pkg.ReadFile;
 import pkg.Serializer;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -56,7 +57,6 @@ public class CustomerService extends OrderService {
             } 
             else if ( customerOption == 2){
                 if ( !cartService.getCartItems().isEmpty() ) {
-                    System.out.println( "HELLO" + cartService.viewCart() );
                     int i = JOptionPane.showInternalConfirmDialog(null, "Would you like to checkout?", "Checkout", JOptionPane.YES_NO_OPTION);
                     if ( i == 0 ) {
                         super.addOrder(cartService);

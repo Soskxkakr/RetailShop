@@ -12,12 +12,12 @@ import java.util.Map;
  * @author Reinaldo Taslim
  */
 public class LoginValidation {
+    
     private Serializer convert = new Serializer();
     private ReadFile fileReader = new ReadFile();
     private Config config = new Config();
     private ArrayList<Map<String, String>> userDetail = new ArrayList<>();
     private User userData;
-    
     
     public User checkCredentials(String username, String password){
         try {

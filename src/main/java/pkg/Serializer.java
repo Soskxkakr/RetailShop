@@ -7,7 +7,6 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.json.JSONObject;
-
 /**
  *
  * @author Reinaldo Taslim
@@ -29,12 +28,6 @@ public class Serializer {
     
     public ArrayList<Map<String, String>> toArrayList (String arr) {
         return JSONConverter.fromJson(arr.toString(), ArrayList.class);
-//        ArrayList<Map<String, String>> userArr = new ArrayList<>();
-//        JSONArray JSONArr = new JSONArray(arr);
-//        for (int i = 0; i < JSONArr.length(); i++){
-//            userArr.add(JSONArr.getJSONObject(i));
-//        }
-//        return userArr;
     }
     
     public String prettyWriting(Object jsonString){

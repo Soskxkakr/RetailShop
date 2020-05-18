@@ -1,14 +1,13 @@
 package pkg;
 
-import com.google.gson.Gson;
 import java.io.File;
 import java.util.Scanner;
 import java.net.URI;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
 import org.json.JSONObject;
 import lombok.Data;
-import org.json.JSONArray;
 /**
  *
  * @author Reinaldo Taslim

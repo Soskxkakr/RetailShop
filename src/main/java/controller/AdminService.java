@@ -4,7 +4,9 @@ import configs.Config;
 import pkg.ReadFile;
 import pkg.Serializer;
 import pkg.GenerateId;
+import pkg.UsernameCheck;
 import model.User;
+import model.CartItem;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,11 +16,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import javax.swing.JOptionPane;
-import model.CartItem;
-
-import org.json.simple.JSONArray;
-import org.json.JSONObject;
-import pkg.UsernameCheck;
 
 /**
  *
@@ -29,7 +26,6 @@ public class AdminService extends OrderService implements GenerateId {
     private Config config = new Config();
     private ReadFile fileReader = new ReadFile();
     private Serializer convert = new Serializer();
-    private int IncrementedID;
     private ArrayList<Map<String, String>> customerList = new ArrayList<>();
     private Map<String, ArrayList<Map<String, String>>> productData = new HashMap<>();
     private UsernameCheck uc = new UsernameCheck();
@@ -429,14 +425,15 @@ public class AdminService extends OrderService implements GenerateId {
     }
     
     @Override
-    public int generateId(ArrayList<Integer> incrementedId) {
+    public int generateId(ArrayList<Integer> incrementedIds) {
+        int incrementedId = 0;
         try {
-            IncrementedID = Integer.parseInt( Collections.max(incrementedId).toString() ) + 1;   
-            System.out.println(IncrementedID);
+            incrementedId = Integer.parseInt( Collections.max(incrementedIds).toString() ) + 1;   
+            System.out.println(incrementedId);
         } catch (Exception e){
             e.printStackTrace();
         } finally {
-            return IncrementedID;
+            return incrementedId;
         }
     }
 }

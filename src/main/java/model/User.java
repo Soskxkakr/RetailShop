@@ -1,13 +1,13 @@
 package model;
 
 import lombok.Data;
-
 /**
  *
  * @author Reinaldo Taslim
  */
 @Data
 public class User {
+    
     private String userId, name, contactNo, email;
     private Credentials credential;
     

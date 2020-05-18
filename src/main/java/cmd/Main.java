@@ -1,10 +1,11 @@
 package cmd;
 
-import javax.swing.JOptionPane;
 import model.User;
 import pkg.LoginValidation;
 import controller.AdminService;
 import controller.CustomerService;
+
+import javax.swing.JOptionPane;
 /**
  *
  * @author Reinaldo Taslim

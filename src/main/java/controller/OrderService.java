@@ -1,10 +1,11 @@
 package controller;
 
 import configs.Config;
-import java.io.FileWriter;
 import pkg.ReadFile;
 import pkg.Serializer;
-import model.Order;
+import pkg.GenerateId;
+import model.CartItem;
+import model.User;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,12 +13,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
-import model.CartItem;
-import model.User;
 
-import org.json.JSONObject;
-import pkg.GenerateId;
 /**
  *
  * @author Reinaldo Taslim
@@ -25,7 +23,6 @@ import pkg.GenerateId;
 public class OrderService implements GenerateId {
     
     private String itemId, itemName, quantity, totalPrice;
-    private Order userOrder;
     private User user;
     private Config config = new Config();
     private Serializer convert = new Serializer();
@@ -310,19 +307,17 @@ public class OrderService implements GenerateId {
             
             for ( CartItem item : myCart ) {
                 if ( item.getItemName().toLowerCase().equals(choice.toLowerCase()) ) {
-                    int manipulate = JOptionPane.showInternalOptionDialog(null, "Editing "+item.getItemName(), " ", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, userChoice, null);
+                    int manipulate = JOptionPane.showInternalOptionDialog(null, "Editing "+item.getItemName(), " ", 
+                            JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, userChoice, null);
                     if (manipulate == 0) {
                         // Edit Quantity
                         String newQuantity = JOptionPane.showInputDialog("Enter Quantity");
                         item.setQuantity(newQuantity);
                     } else if (manipulate == 1) {
                         // Remove Item
-                        System.out.println("LMAO LOOK AT THIS: "+cart);
                         myCart = cart.removeItem(myCart, item.getItemName().toLowerCase());
-                        System.out.println("OH MY GOSH: "+cart);
                     } else {
                         newCart = new CartService(myCart);
-                        System.out.println("This is your new Cart");
                         System.out.println( cart.viewCart() );
                         return newCart;  
                     }
